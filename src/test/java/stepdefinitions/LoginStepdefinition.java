@@ -3,8 +3,9 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import steps.LoginSteps;
-
 
 
 public class LoginStepdefinition {
@@ -17,13 +18,14 @@ public class LoginStepdefinition {
     }
 
     @Then("user enters {string} and {string}")
-    public void userEntersAndUsernameAndPassword(String Username, String Password) throws InterruptedException {
-        loginSteps.entersUsernameAndPassword(Username,Password);
+    public void userEntersAndUsernameAndPassword(String username, String password) {
+        loginSteps.entersUsernameAndPassword(username, password);
     }
 
     @And("clicks on login button")
     public void clicksOnLoginButton() {
-    loginSteps.clickLoginButton();
+        loginSteps.clickLoginButton();
+        loginSteps.closeBrowser();
 
     }
 
