@@ -1,7 +1,7 @@
 @issue:001
 @author:
 Feature: Login to Suite CRM Application
-
+@log
   Scenario Outline: Login to Suite CRM Application using valid credentials
     Given launch browser
     Then user enters "<Username>" and "<Password>"

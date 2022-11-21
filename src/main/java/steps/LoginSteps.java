@@ -11,7 +11,6 @@ public class LoginSteps {
 
     WebDriver driver = null;
 
-
     public void openBrowser() {
         System.setProperty("webdriver.chrome.driver", "C:\\Webdrivers\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
