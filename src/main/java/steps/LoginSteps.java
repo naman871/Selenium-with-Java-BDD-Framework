@@ -11,6 +11,8 @@ public class LoginSteps {
 
     WebDriver driver = null;
 
+    LoginPage loginPage;
+
     public void openBrowser() {
         System.setProperty("webdriver.chrome.driver", "C:\\Webdrivers\\chromedriver_win32\\chromedriver.exe");
         driver = new ChromeDriver();
@@ -21,19 +23,29 @@ public class LoginSteps {
     }
 
     public void entersUsernameAndPassword(String Username, String Password) {
-        LoginPage loginPage = new LoginPage(this.driver);
+        loginPage = new LoginPage(this.driver);
         loginPage.enterUsername.sendKeys(Username);
         loginPage.enterpassword.sendKeys(Password);
 
     }
 
     public void clickLoginButton() {
-        LoginPage loginPage = new LoginPage(this.driver);
+        loginPage = new LoginPage(this.driver);
         loginPage.loginButton.click();
 
     }
     public void closeBrowser() {
         driver.quit();
+    }
+    public void clickSuiteDashBoard(){
+        loginPage.suiteCrmDashboardButton.isDisplayed();
+
+    }
+    public void clickOpportunitiesModule(){
+        loginPage.opportunitiesModule.click();
+    }
+    public void clickOnHomePage(){
+        loginPage.homePage.click();
     }
 
 

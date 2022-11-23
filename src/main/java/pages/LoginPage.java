@@ -15,6 +15,15 @@ public class LoginPage {
     @FindBy(xpath = "//button[@id='login-button']")
     public WebElement loginButton;
 
+    @FindBy(xpath = "//a[@id='tab0']")
+    public WebElement suiteCrmDashboardButton;
+
+    @FindBy(xpath = "//a[@href='#/opportunities']")
+    public WebElement opportunitiesModule;
+
+    @FindBy(xpath = "//a[@class='home-nav-link']")
+     public WebElement homePage;
+
     WebDriver driver;
     public  LoginPage(WebDriver driver){
         this.driver=driver;

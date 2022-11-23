@@ -21,8 +21,14 @@ public class LoginStepdefinition {
     }
 
     @And("clicks on login button")
-    public void clicksOnLoginButton() {
+    public void clicksOnLoginButton() throws InterruptedException {
         loginSteps.clickLoginButton();
+        Thread.sleep(8000);
+        loginSteps.clickOnHomePage();
+        loginSteps.clickOpportunitiesModule();
+        Thread.sleep(5000);
+//        loginSteps.clickSuiteDashBoard();
+
         loginSteps.closeBrowser();
 
     }
