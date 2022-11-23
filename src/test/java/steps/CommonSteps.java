@@ -1,17 +1,19 @@
 package steps;
 
+import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.LoginPage;
+import pages.CommonPage;
 import java.time.Duration;
 
 
 
-public class LoginSteps {
+public class CommonSteps {
 
     WebDriver driver = null;
 
-    LoginPage loginPage;
+    CommonPage commonPage;
+
 
     public void openBrowser() {
         System.setProperty("webdriver.chrome.driver", "C:\\Webdrivers\\chromedriver_win32\\chromedriver.exe");
@@ -23,30 +25,29 @@ public class LoginSteps {
     }
 
     public void entersUsernameAndPassword(String Username, String Password) {
-        loginPage = new LoginPage(this.driver);
-        loginPage.enterUsername.sendKeys(Username);
-        loginPage.enterpassword.sendKeys(Password);
+        commonPage = new CommonPage(this.driver);
+        commonPage.enterUsername.sendKeys(Username);
+        commonPage.enterpassword.sendKeys(Password);
 
 
     }
 
     public void clickLoginButton() {
-//        loginPage = new LoginPage(this.driver);
-        loginPage.loginButton.click();
+        commonPage.loginButton.click();
 
     }
     public void closeBrowser() {
         driver.quit();
     }
-    public void clickSuiteDashBoard(){
-        loginPage.suiteCrmDashboardButton.isDisplayed();
+    public void verifySuiteDashBoard(){
+        commonPage.suiteCrmDashboardButton.isDisplayed();
 
     }
     public void clickOpportunitiesModule(){
-        loginPage.opportunitiesModule.click();
+        commonPage.opportunitiesModule.click();
     }
     public void clickOnHomePage(){
-        loginPage.homePage.click();
+        commonPage.homePage.click();
 
     }
 

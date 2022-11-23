@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class CommonPage {
     @FindBy(xpath = "//input[@name='username']")
     public WebElement enterUsername;
 
@@ -25,9 +25,9 @@ public class LoginPage {
      public WebElement homePage;
 
     WebDriver driver;
-    public  LoginPage(WebDriver driver){
+    public CommonPage(WebDriver driver){
         this.driver=driver;
-        PageFactory.initElements(driver, LoginPage.this);
+        PageFactory.initElements(driver, CommonPage.this);
 
     }
 
