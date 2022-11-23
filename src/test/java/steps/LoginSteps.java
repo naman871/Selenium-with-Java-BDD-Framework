@@ -27,6 +27,7 @@ public class LoginSteps {
         loginPage.enterUsername.sendKeys(Username);
         loginPage.enterpassword.sendKeys(Password);
 
+
     }
 
     public void clickLoginButton() {
@@ -46,6 +47,7 @@ public class LoginSteps {
     }
     public void clickOnHomePage(){
         loginPage.homePage.click();
+
     }
 
 
