@@ -31,7 +31,7 @@ public class LoginSteps {
     }
 
     public void clickLoginButton() {
-        loginPage = new LoginPage(this.driver);
+//        loginPage = new LoginPage(this.driver);
         loginPage.loginButton.click();
 
     }
