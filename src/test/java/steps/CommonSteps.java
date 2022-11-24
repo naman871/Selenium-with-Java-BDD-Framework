@@ -3,6 +3,7 @@ package steps;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import pages.CommonPage;
 import java.time.Duration;
 
@@ -29,7 +30,6 @@ public class CommonSteps {
         commonPage.enterUsername.sendKeys(Username);
         commonPage.enterpassword.sendKeys(Password);
 
-
     }
 
     public void clickLoginButton() {
@@ -39,8 +39,11 @@ public class CommonSteps {
     public void closeBrowser() {
         driver.quit();
     }
+
     public void verifySuiteDashBoard(){
         commonPage.suiteCrmDashboardButton.isDisplayed();
+//        Actions action = new Actions(driver);
+//        action.moveToElement(commonPage.opportunitiesModule).build().perform();  // build().perform
 
     }
     public void clickOpportunitiesModule(){
