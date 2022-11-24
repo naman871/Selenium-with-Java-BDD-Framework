@@ -1,9 +1,7 @@
 package steps;
 
-import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import pages.CommonPage;
 import java.time.Duration;
 
@@ -21,18 +19,15 @@ public class CommonSteps {
         driver.get("https://suite8demo.suiteondemand.com/#/Login");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
     }
 
     public void entersUsernameAndPassword(String Username, String Password) {
         commonPage = new CommonPage(driver);
         commonPage.enterUsername.sendKeys(Username);
         commonPage.enterpassword.sendKeys(Password);
-
     }
 
     public void clickLoginButton() {
-        commonPage = new CommonPage(driver);
         commonPage.loginButton.click();
 
     }
