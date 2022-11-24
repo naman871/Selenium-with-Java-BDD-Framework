@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CommonPage {
+public class CommonPage extends PageFactory {
     @FindBy(xpath = "//input[@name='username']")
     public WebElement enterUsername;
 
@@ -14,15 +14,6 @@ public class CommonPage {
 
     @FindBy(xpath = "//button[@id='login-button']")
     public WebElement loginButton;
-
-    @FindBy(xpath = "//a[@id='tab0']")
-    public WebElement suiteCrmDashboardButton;
-
-    @FindBy(xpath = "//a[@href='#/opportunities']")
-    public WebElement opportunitiesModule;
-
-    @FindBy(xpath = "//a[@class='home-nav-link']")
-     public WebElement homePage;
 
     WebDriver driver;
     public CommonPage(WebDriver driver){

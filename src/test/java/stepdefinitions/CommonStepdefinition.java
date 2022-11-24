@@ -27,17 +27,4 @@ public class CommonStepdefinition {
 
     }
 
-    @Then("User is on HomePage")
-    public void userIsOnHomePage() throws InterruptedException {
-        Thread.sleep(8000);
-        commonSteps.clickOnHomePage();
-
-    }
-
-    @Then("clicks on Opportunities")
-    public void clicksOnOpportunities() throws InterruptedException {
-        commonSteps.clickOpportunitiesModule();
-        Thread.sleep(5000);
-        commonSteps.closeBrowser();
-    }
 }

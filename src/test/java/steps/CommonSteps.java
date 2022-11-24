@@ -10,8 +10,7 @@ import java.time.Duration;
 
 
 public class CommonSteps {
-
-    WebDriver driver = null;
+    public static WebDriver driver ;
 
     CommonPage commonPage;
 
@@ -26,32 +25,19 @@ public class CommonSteps {
     }
 
     public void entersUsernameAndPassword(String Username, String Password) {
-        commonPage = new CommonPage(this.driver);
+        commonPage = new CommonPage(driver);
         commonPage.enterUsername.sendKeys(Username);
         commonPage.enterpassword.sendKeys(Password);
 
     }
 
     public void clickLoginButton() {
+        commonPage = new CommonPage(driver);
         commonPage.loginButton.click();
 
     }
     public void closeBrowser() {
         driver.quit();
-    }
-
-    public void verifySuiteDashBoard(){
-        commonPage.suiteCrmDashboardButton.isDisplayed();
-//        Actions action = new Actions(driver);
-//        action.moveToElement(commonPage.opportunitiesModule).build().perform();  // build().perform
-
-    }
-    public void clickOpportunitiesModule(){
-        commonPage.opportunitiesModule.click();
-    }
-    public void clickOnHomePage(){
-        commonPage.homePage.click();
-
     }
 
 
