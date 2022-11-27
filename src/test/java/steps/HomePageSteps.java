@@ -1,5 +1,7 @@
 package steps;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -7,7 +9,9 @@ import pages.HomePage;
 
 public class HomePageSteps extends CommonSteps {
 
-        HomePage homePage;
+    private static final Logger logger = LogManager.getLogger(HomePageSteps.class);
+
+    public HomePage homePage;
 
 
     public void verifySuiteDashBoard() {
@@ -18,12 +22,12 @@ public class HomePageSteps extends CommonSteps {
     }
 
     public void clickOpportunitiesModule() {
-        homePage = new HomePage(this.driver);
+        homePage = new HomePage(driver);
         homePage.opportunitiesModule.click();
     }
 
     public void clickOnHomePage() {
-        homePage = new HomePage(this.driver);
+        homePage = new HomePage(driver);
         homePage.homePageButton.click();
     }
 }

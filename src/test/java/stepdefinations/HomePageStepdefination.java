@@ -1,10 +1,10 @@
-package stepdefinitions;
+package stepdefinations;
 
 import io.cucumber.java.en.Then;
 import steps.CommonSteps;
 import steps.HomePageSteps;
 
-public class HomePageStepdefinition {
+public class HomePageStepdefination {
 
     public HomePageSteps homePageSteps = new HomePageSteps();
 

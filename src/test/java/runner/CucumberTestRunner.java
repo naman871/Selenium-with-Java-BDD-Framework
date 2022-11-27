@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"stepdefinitions"},
+        glue = {"stepdefinations"},
         monochrome = true,
         tags = "@log10",
         plugin = {"pretty",
