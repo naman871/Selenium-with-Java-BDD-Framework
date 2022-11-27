@@ -1,6 +1,5 @@
 package logger;
 
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -12,7 +11,7 @@ import org.apache.logging.log4j.Logger;
 
 public class Log4j2PropertiesConf {
 
-    private static Logger logger = LogManager.getLogger(Log4j2PropertiesConf.class);
+    private static final Logger logger = LogManager.getLogger(Log4j2PropertiesConf.class);
 
     public static void main (String[] args) {
         logger.debug("This is a debug message");
