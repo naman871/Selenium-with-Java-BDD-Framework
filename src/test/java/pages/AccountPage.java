@@ -20,6 +20,9 @@ public class AccountPage extends PageFactory {
 
     @FindBy(xpath = "//a[contains(text(),' Create Account')]")
     public WebElement createaccount;
+
+    @FindBy(xpath = "(//input[@type='text'])[2]")
+    public WebElement name;
     @FindBy(xpath = "//span[text()='Create']")
     public WebElement createaccountpage;
 

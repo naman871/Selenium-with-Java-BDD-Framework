@@ -6,15 +6,19 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import pages.AccountPage;
 import pages.CommonPage;
+import pages.HomePage;
+
 public class AccountSteps extends CommonSteps{
     private static final Logger logger = LogManager.getLogger(AccountSteps.class);
 
     public     AccountPage accountPage;
      public CommonPage commonPage;
+     public HomePage homePage;
 
 
     public void clickAccountDropdown() {
         accountPage = new AccountPage(driver);
+        //driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@src=\"./legacy/index.php?module=Home\"]")));
         accountPage.accountDropdown.click();
     }
 
@@ -48,10 +52,11 @@ public class AccountSteps extends CommonSteps{
         Assert.assertTrue(accountPage.viewaccountlist.isDisplayed());
     }
 
-    public void enterrequireddetails() {
+    public void enterrequireddetails() throws InterruptedException {
         accountPage = new AccountPage(driver);
-        driver.switchTo().frame(20);
-        driver.findElement(By.xpath("(//input[@type='text'])[2]")).sendKeys("Ganga");
+       // driver.switchTo().frame(homePage.iframeForHomepage);
+        Thread.sleep(5000);
+        accountPage.name.sendKeys("Ganga");
     }
 
     public void clickSave() {
