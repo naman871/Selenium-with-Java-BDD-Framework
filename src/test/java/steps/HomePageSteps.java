@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import pages.CommonPage;
 import pages.HomePage;
 
 public class HomePageSteps extends CommonSteps {
@@ -35,7 +36,33 @@ public class HomePageSteps extends CommonSteps {
     }
 
     public void verifyMyCallsLabel(){
-        driver.switchTo().frame(homePage.iframeForHomepage);
+        //driver.switchTo().frame(homePage.iframeForHomepage);
         Assert.assertTrue(homePage.myCallsLabel.isDisplayed());
+    }
+
+    public void validateSuiteCRM() {
+        homePage = new HomePage(driver);
+        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@src=\"./legacy/index.php?module=Home\"]")));
+        homePage.suiteCrmDashboardButton.isDisplayed();
+    }
+
+    public void validateHomepageDashboard() {
+        homePage = new HomePage(driver);
+        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@src=\"./legacy/index.php?module=Home\"]")));
+        Assert.assertTrue(homePage.myaccounts.isDisplayed());
+        Assert.assertTrue(homePage.mycalls.isDisplayed());
+        Assert.assertTrue(homePage.myleads.isDisplayed());
+        Assert.assertTrue(homePage.myactivitystream.isDisplayed());
+        Assert.assertTrue(homePage.mymeetings.isDisplayed());
+        Assert.assertTrue(homePage.mytopopenoppurtunities.isDisplayed());
+    }
+    public void validateErrorMessage() {
+        homePage = new HomePage(driver);
+        Assert.assertTrue(homePage.InvalidErrorMsg.isDisplayed());
+
+    }
+    public void validateMissingMessage() {
+        homePage = new HomePage(driver);
+        Assert.assertTrue(homePage.MissingErrorMsg.isDisplayed());
     }
 }
