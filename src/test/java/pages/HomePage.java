@@ -17,6 +17,9 @@ public class HomePage extends PageFactory {
     @FindBy(xpath = "//a[@class='home-nav-link']")
     public WebElement homePageButton;
 
+    @FindBy(xpath = "//span[text()[normalize-space()='My Calls']]")
+     public WebElement myCallsLabel;
+
     WebDriver driver;
     public HomePage(WebDriver driver){
         this.driver=driver;

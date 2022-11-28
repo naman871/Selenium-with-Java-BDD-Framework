@@ -11,9 +11,10 @@ public class HomePageStepdefination {
     public CommonSteps commonSteps = new CommonSteps();
 
 
-    @Then("User is on HomePage")
+    @Then("user is on HomePage")
     public void userIsOnHomePage() throws InterruptedException {
         Thread.sleep(8000);
+
         homePageSteps.clickOnHomePage();
 
     }
