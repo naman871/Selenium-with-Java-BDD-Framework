@@ -18,17 +18,18 @@ public class CommonSteps {
 
 
     public void openBrowser() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Webdrivers\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\CSQA\\Downloads\\chromedriver_win32\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
         driver = new ChromeDriver(options);
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\CSQA\\Downloads\\chromedriver_win32\\chromedriver.exe");
-        driver = new ChromeDriver();
         driver.get("https://suite8demo.suiteondemand.com/#/Login");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         logger.info("Driver is Chrome");
     }
+
+
+
 
     public void entersUsernameAndPassword(String Username, String Password) {
         commonPage = new CommonPage(driver);

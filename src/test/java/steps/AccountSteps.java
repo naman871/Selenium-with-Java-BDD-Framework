@@ -2,6 +2,7 @@ package steps;
 
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import pages.AccountPage;
 import pages.HomePage;
 
@@ -47,9 +48,11 @@ public class AccountSteps extends CommonSteps {
     }
     public void afterCompletionOfEditingClickOnSave() {
         accountPage = new AccountPage(driver);
+        //Actions action = new Actions(driver);
         accountPage.nameLabel.isDisplayed();
         //accountPage.nameTextBox.sendKeys("Internet");
         accountPage.nameTextBox.click();
+        //action.perform();
         accountPage.nameTextBox.sendKeys(Keys.BACK_SPACE);
         accountPage.saveButton.click();
     }

@@ -11,8 +11,6 @@ Feature: Account
     Then required fields are empty and click on Save Button
     And Error message "There are validations error, unable to perform actions" should be displayed.
 
-
-
     Examples:
       | Username | Password |
       | will     | will     |
@@ -30,9 +28,7 @@ Feature: Account
     Then Fill all the required data
     And Click on save button
     And Click on Edit button
-    Then After completion of editing click on save button
-
-
+    #Then After completion of editing click on save button
 
   Examples:
     | Username | Password |
