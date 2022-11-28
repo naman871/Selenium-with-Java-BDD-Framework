@@ -33,12 +33,37 @@ public class AccountPage extends PageFactory {
 
     @FindBy(xpath = "//body/app-root[1]/div[1]/scrm-create-record[1]/div[1]/scrm-record-container[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/scrm-record-content[1]/div[1]/div[1]/div[1]/div[1]/scrm-field-layout[1]/form[1]/div[2]/div[1]/div[2]/div[1]/scrm-field[1]/scrm-dynamic-field[1]/scrm-varchar-edit[1]/input[1]")
     public WebElement websiteTextBox;
+
     @FindBy(xpath = "//body/app-root[1]/div[1]/scrm-create-record[1]/div[1]/scrm-record-container[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/scrm-record-content[1]/div[1]/div[1]/div[1]/div[1]/scrm-field-layout[1]/form[1]/div[1]/div[2]/div[2]/div[1]/scrm-field[1]/scrm-dynamic-field[1]/scrm-varchar-edit[1]/input[1]")
     public WebElement officePhoneTextbox;
-
-
     @FindBy(xpath = "//button[contains(text(),'Edit')]")
     public WebElement editButton;
+    @FindBy(xpath = "//button[contains(text(),'Cancel')]")
+    public WebElement cancelButton;
+
+    @FindBy(xpath = "//scrm-module-title[contains(text(),'ACCOUNTS')]")
+    public WebElement accounPage;
+    @FindBy(xpath = " //scrm-label[contains(text(),'Ok')]")
+    public WebElement okButton;
+
+    @FindBy(xpath = "/html/body/app-root/div/scrm-record/div/scrm-record-header/div/div/div[2]/div/div[2]/scrm-action-group-menu/div/scrm-button-group/div/scrm-button[1]/button")
+    public WebElement newButton;
+
+    @FindBy(xpath = "//span[contains(text(),'Create')]")
+    public WebElement createPage;
+
+    @FindBy(xpath = "//button[contains(text(),'Actions')]")
+    public WebElement actionDropdown;
+
+    @FindBy(xpath = "//div[@class=\"dropdown-menu show\"]")
+    public WebElement actionDropdowndisplay;
+
+    //div[contains(text(),'Delete')]
+    @FindBy(xpath = "  //div[contains(text(),'Delete')]")
+    public WebElement deleteOptionDropdown;
+
+    @FindBy(xpath = "//scrm-label[contains(text(),'Proceed')]")
+    public WebElement proceedButton;
 
 
 
