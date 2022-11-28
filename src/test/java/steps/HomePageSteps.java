@@ -35,7 +35,7 @@ public class HomePageSteps extends CommonSteps {
     }
 
     public void verifyMyCallsLabel(){
-        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@src=\"./legacy/index.php?module=Home\"]")));
+        driver.switchTo().frame(homePage.iframeForHomepage);
         Assert.assertTrue(homePage.myCallsLabel.isDisplayed());
     }
 }

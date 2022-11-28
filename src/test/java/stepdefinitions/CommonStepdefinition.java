@@ -1,4 +1,4 @@
-package stepdefinations;
+package stepdefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 import steps.CommonSteps;
 
 
-public class CommonStepdefination {
+public class CommonStepdefinition {
 
     CommonSteps commonSteps = new CommonSteps();
 

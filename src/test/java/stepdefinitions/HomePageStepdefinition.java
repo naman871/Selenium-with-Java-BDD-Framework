@@ -1,10 +1,10 @@
-package stepdefinations;
+package stepdefinitions;
 
 import io.cucumber.java.en.Then;
 import steps.CommonSteps;
 import steps.HomePageSteps;
 
-public class HomePageStepdefination {
+public class HomePageStepdefinition {
 
     public HomePageSteps homePageSteps = new HomePageSteps();
 
@@ -14,8 +14,7 @@ public class HomePageStepdefination {
     @Then("user is on HomePage")
     public void userIsOnHomePage() throws InterruptedException {
         Thread.sleep(8000);
-
-        homePageSteps.clickOnHomePage();
+        homePageSteps.verifyMyCallsLabel();
 
     }
 
