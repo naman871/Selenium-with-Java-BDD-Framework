@@ -16,8 +16,8 @@ Feature: Account
       | will     | will     |
 
 
-@TC_010Minal
-
+@TC_010
+  @minal
   Scenario Outline:Verify the user is able to edit the created account.
   Given launch browser
     Then user enters "<Username>" and "<Password>"
@@ -33,3 +33,20 @@ Feature: Account
   Examples:
     | Username | Password |
     | will     | will     |
+
+  @TC_011
+    @minal
+  Scenario Outline:Verify the user is able to edit the created account.
+    Given launch browser
+    Then user enters "<Username>" and "<Password>"
+    And clicks on login button
+    Then User is on HomePage
+    And Navigate to Account module
+    And click on Create Account option from the dropdown list
+    And click on cancel button
+    And click on ok button on popup message
+    Then account page should be displayed
+
+    Examples:
+      | Username | Password |
+      | will     | will     |
