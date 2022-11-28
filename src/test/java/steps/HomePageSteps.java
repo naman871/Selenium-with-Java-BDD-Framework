@@ -18,15 +18,16 @@ public class HomePageSteps extends CommonSteps {
     public HomePage homePage;
 
 
-    public void verifySuiteDashBoard() {
+    public void verifySuiteCRMDashBoardButton() {
+        homePage = new HomePage(driver);
+        driver.switchTo().frame(homePage.iframeForHomepage);
         homePage.suiteCrmDashboardButton.isDisplayed();
-//       Actions action = new Actions(driver);
-//        action.moveToElement(commonPage.opportunitiesModule).build().perform();  // build().perform
 
     }
 
     public void clickOpportunitiesModule() {
         homePage = new HomePage(driver);
+        driver.switchTo().frame(homePage.iframeForHomepage);
         homePage.opportunitiesModule.click();
     }
 
@@ -36,6 +37,8 @@ public class HomePageSteps extends CommonSteps {
     }
 
     public void verifyMyCallsLabel(){
+        homePage = new HomePage(driver);
+        driver.switchTo().frame(homePage.iframeForHomepage);
         //driver.switchTo().frame(homePage.iframeForHomepage);
         Assert.assertTrue(homePage.myCallsLabel.isDisplayed());
     }
