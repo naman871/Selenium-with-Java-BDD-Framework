@@ -35,7 +35,10 @@ public class HomePageSteps extends CommonSteps {
     }
 
     public void verifyMyCallsLabel(){
-        driver.switchTo().frame(homePage.iframeForHomepage);
+        //driver.switchTo().frame(homePage.iframeForHomepage);
         Assert.assertTrue(homePage.myCallsLabel.isDisplayed());
+    }
+
+    public void validateSuiteCRM() {
     }
 }

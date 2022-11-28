@@ -14,8 +14,12 @@ public class HomePageStepdefinition {
     @Then("user is on HomePage")
     public void userIsOnHomePage() throws InterruptedException {
         Thread.sleep(8000);
-        homePageSteps.verifyMyCallsLabel();
+        homePageSteps.clickOnHomePage();
 
+    }
+    @Then("Validate SuiteCRM DashBoard")
+    public void validateSuiteCRMDashBoard() {
+        homePageSteps.validateSuiteCRM();
     }
 
     @Then("clicks on Opportunities")
