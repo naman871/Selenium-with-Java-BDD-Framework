@@ -20,6 +20,9 @@ public class HomePage extends PageFactory {
     @FindBy(xpath = "//span[text()[normalize-space()='My Calls']]")
      public WebElement myCallsLabel;
 
+    @FindBy(xpath = "//iframe[@src=\"./legacy/index.php?module=Home\"]")
+    public WebElement iframeForHomepage;
+
     WebDriver driver;
     public HomePage(WebDriver driver){
         this.driver=driver;
