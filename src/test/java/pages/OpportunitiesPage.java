@@ -7,19 +7,34 @@ import org.openqa.selenium.support.PageFactory;
 
 public class OpportunitiesPage extends PageFactory {
 
+    /*
+    comment - CSS locators are notworking at all and sometimes Xpath are also not working
+     */
+
     @FindBy(xpath = "//a[@href='#/opportunities/edit?return_module=Opportunities&return_action=DetailView']")
     public WebElement createOpporunity;
 
     @FindBy(xpath = "//a[@href='#/opportunities/index?return_module=Opportunities&return_action=DetailView']")
     public WebElement viewOpportunities;
 
+    @FindBy(xpath = "//span[text()='Create']")
+    public WebElement createLabel;
+
+    @FindBy(xpath = "//button[contains(text(),'Save')]")
+     public WebElement saveButton;
+
+    @FindBy(xpath = "//input[@class='form-control form-control-sm ng-pristine ng-invalid is-invalid ng-touched']\n")
+     public WebElement opportunitiyName;
+
+
 
 
 
     WebDriver driver;
-    public OpportunitiesPage(WebDriver driver){
+
+    public OpportunitiesPage(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
 
     }
 
