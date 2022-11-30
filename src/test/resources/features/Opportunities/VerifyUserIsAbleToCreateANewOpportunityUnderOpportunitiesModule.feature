@@ -8,6 +8,7 @@ Feature: Verify user is able to create a new opportunity under opportunities mod
     And clicks on login button
     Then user is on HomePage
     And clicks on create opportunity under opportunities dropdown
+    Then enter mandatory fields like opportunity name "Ab Drivers Limited" sales stage "Prospecting"
 
     Examples:
       |Username|Password|
