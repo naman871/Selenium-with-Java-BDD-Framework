@@ -16,7 +16,7 @@ public class CommonSteps {
 
 
     public void openBrowser() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Webdrivers\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\chromebrowser\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://suite8demo.suiteondemand.com/#/Login");
         driver.manage().window().maximize();

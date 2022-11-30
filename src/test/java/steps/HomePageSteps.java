@@ -7,7 +7,7 @@ import pages.HomePage;
 
 public class HomePageSteps extends CommonSteps {
 
-        HomePage homePage;
+    HomePage homePage;
 
 
     public void verifySuiteDashBoard() {
@@ -25,5 +25,22 @@ public class HomePageSteps extends CommonSteps {
     public void clickOnHomePage() {
         homePage = new HomePage(this.driver);
         homePage.homePageButton.click();
+    }
+
+    public void clickContactsModule() {
+        homePage = new HomePage(this.driver);
+        homePage.contactsModule.click();
+
+    }
+
+    public void clickOnCreateContact() {
+        homePage = new HomePage(this.driver);
+        homePage.createContact.click();
+
+    }
+
+    public void clickOnViewContact() {
+        homePage = new HomePage(this.driver);
+        homePage.viewContact.click();
     }
 }

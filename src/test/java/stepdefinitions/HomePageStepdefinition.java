@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import steps.CommonSteps;
 import steps.HomePageSteps;
@@ -27,4 +28,25 @@ public class HomePageStepdefinition {
         commonSteps = new CommonSteps();
         commonSteps.closeBrowser();
     }
-}
+
+    @Then("clicks on Contacts")
+    public void clicksOnContact() throws InterruptedException {
+        homePageSteps = new HomePageSteps();
+        homePageSteps.clickContactsModule();
+       Thread.sleep(1000);
+
+    }
+  @And("User is able to select create contact")
+    public void clickOnCreateContact(){
+      homePageSteps = new HomePageSteps();
+      homePageSteps.clickOnCreateContact();
+
+    }
+
+    @And("User is able to select view contact")
+    public void clickOnViewContact() {
+        homePageSteps = new HomePageSteps();
+        homePageSteps.clickOnViewContact();
+    }
+    }
+
