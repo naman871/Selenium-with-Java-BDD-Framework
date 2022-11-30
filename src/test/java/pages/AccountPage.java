@@ -41,15 +41,6 @@ public class AccountPage extends PageFactory {
     @FindBy(xpath = "//a[contains(text(),' View Accounts')]")
     public WebElement viewaccount;
 
-    WebDriver driver;
-
-    public AccountPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-
-    }
-
-
     @FindBy(xpath = "//a[@href='#/accounts']")
     public WebElement accountModule;
 
@@ -107,6 +98,14 @@ public class AccountPage extends PageFactory {
     @FindBy(xpath = "//scrm-label[contains(text(),'Proceed')]")
     public WebElement proceedButton;
 
+
+    WebDriver driver;
+
+    public AccountPage(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+
+    }
 
 
 }

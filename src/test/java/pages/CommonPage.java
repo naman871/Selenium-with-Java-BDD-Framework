@@ -18,8 +18,9 @@ public class CommonPage extends PageFactory {
     public WebElement loginButton;
 
     WebDriver driver;
-    public CommonPage(WebDriver driver){
-        this.driver=driver;
+
+    public CommonPage(WebDriver driver) {
+        this.driver = driver;
         PageFactory.initElements(driver, CommonPage.this);
     }
 

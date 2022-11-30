@@ -60,6 +60,7 @@ public class AccountStepdefinition {
     public void deleteTheAccount() {
         accountSteps.deleteAccount();
     }
+
     @And("Navigate to Account module")
     public void navigateToAccountModule() {
         accountSteps.navigateToAccountModule();
@@ -120,7 +121,9 @@ public class AccountStepdefinition {
     public void clickOnButton(String arg0) {
         accountSteps.clickOnNewButton();
 
-    }@Then("create page should be displayed")
+    }
+
+    @Then("create page should be displayed")
     public void createPageShouldBeDisplayed() {
         accountSteps.createPageDisplayed();
     }
