@@ -1,14 +1,13 @@
-@issue:001
-@author:
+@issue:Basic-Login-Test
+@author:Naman
+
 Feature: Login to Suite CRM Application
-@log
+  @log15
   Scenario Outline: Login to Suite CRM Application using valid credentials
     Given launch browser
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
 
     Examples:
-    |Username|Password|
-    |will    |will    |
-
-
+      | Username | Password |
+      | will     | will     |

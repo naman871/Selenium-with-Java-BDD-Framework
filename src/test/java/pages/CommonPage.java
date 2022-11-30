@@ -1,5 +1,7 @@
 package pages;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,10 +18,10 @@ public class CommonPage extends PageFactory {
     public WebElement loginButton;
 
     WebDriver driver;
-    public CommonPage(WebDriver driver){
-        this.driver=driver;
-        PageFactory.initElements(driver, CommonPage.this);
 
+    public CommonPage(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, CommonPage.this);
     }
 
 }
