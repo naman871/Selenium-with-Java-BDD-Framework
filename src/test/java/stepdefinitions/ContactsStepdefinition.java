@@ -27,10 +27,6 @@ public class ContactsStepdefinition {
     }
 
 
-
-    public ContactsSteps contactsSteps = new ContactsSteps();
-
-    public CommonSteps commonSteps = new CommonSteps();
     @When("click on Contacts dropdown")
     public void clickonContactsdropdown() throws InterruptedException {
         Thread.sleep(8000);
