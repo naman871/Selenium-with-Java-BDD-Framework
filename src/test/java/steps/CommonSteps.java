@@ -45,4 +45,10 @@ public class CommonSteps {
     }
 
 
+    public void clickonNewButton() {
+        commonPage = new CommonPage(driver);
+        commonPage.NewButton.click();
+
+
+    }
 }
