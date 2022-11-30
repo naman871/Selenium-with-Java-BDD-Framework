@@ -82,12 +82,6 @@ public class AccountSteps extends CommonSteps{
         accountPage.actiondropdown.click();
         accountPage.delete.click();
     }
-import java.util.List;
-
-public class AccountSteps extends CommonSteps {
-    private static final Logger logger = LogManager.getLogger(AccountSteps.class);
-    AccountPage accountPage;
-
     public void navigateToAccountModule() {
         accountPage = new AccountPage(driver);
         accountPage.accountModule.click();
@@ -185,6 +179,8 @@ public class AccountSteps extends CommonSteps {
         accountPage = new AccountPage(driver);
         accountPage.proceedButton.click();
     }
+
+
 
 }
 

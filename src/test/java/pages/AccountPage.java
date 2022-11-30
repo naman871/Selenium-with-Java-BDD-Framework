@@ -109,15 +109,4 @@ public class AccountPage extends PageFactory {
 
 
 
-
-
-
-
-
-    WebDriver driver;
-    public AccountPage(WebDriver driver){
-        this.driver=driver;
-        PageFactory.initElements(driver,this);
-    }
-
 }

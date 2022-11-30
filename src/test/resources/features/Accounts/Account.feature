@@ -1,10 +1,10 @@
 Feature: Account
-  @TC_009minal
+  @TC_009Minal
   Scenario Outline:Verify user is able to create an account without filling required fields.
     Given launch browser
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
-    Then User is on HomePage
+    Then user is on HomePage
     And Navigate to Account module
     And click on Create Account option from the dropdown list
     Then required fields are empty and click on Save Button
@@ -20,7 +20,7 @@ Feature: Account
   Given launch browser
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
-    Then User is on HomePage
+    Then user is on HomePage
     And Navigate to Account module
     And click on Create Account option from the dropdown list
     Then Fill all the required data
@@ -38,7 +38,7 @@ Feature: Account
     Given launch browser
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
-    Then User is on HomePage
+    Then user is on HomePage
     And Navigate to Account module
     And click on Create Account option from the dropdown list
     And Fill all the required data
@@ -56,7 +56,7 @@ Feature: Account
     Given launch browser
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
-    Then User is on HomePage
+    Then user is on HomePage
     And Navigate to Account module
     And click on Create Account option from the dropdown list
     And Fill all the required data
@@ -73,7 +73,7 @@ Feature: Account
     Given launch browser
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
-    Then User is on HomePage
+    Then user is on HomePage
     And Navigate to Account module
     And click on Create Account option from the dropdown list
     And Fill all the required data
@@ -91,7 +91,7 @@ Feature: Account
     Given launch browser
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
-    Then User is on HomePage
+    Then user is on HomePage
     And Navigate to Account module
     And click on Create Account option from the dropdown list
     And Fill all the required data
