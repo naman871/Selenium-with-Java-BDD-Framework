@@ -78,14 +78,5 @@ public class HomePageSteps extends CommonSteps {
 
     }
 
-    public void clickOnCreateContact() {
-        homePage = new HomePage(this.driver);
-        homePage.createContact.click();
 
-    }
-
-    public void clickOnViewContact() {
-        homePage = new HomePage(this.driver);
-        homePage.viewContact.click();
-    }
 }

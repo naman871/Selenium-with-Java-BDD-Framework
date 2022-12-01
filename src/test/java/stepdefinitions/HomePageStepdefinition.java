@@ -54,18 +54,6 @@ public class HomePageStepdefinition {
 
     }
 
-    @And("User is able to select create contact")
-    public void clickOnCreateContact() {
-        homePageSteps = new HomePageSteps();
-        homePageSteps.clickOnCreateContact();
 
-    }
-
-
-    @And("User is able to select view contact")
-    public void clickOnViewContact() {
-        homePageSteps = new HomePageSteps();
-        homePageSteps.clickOnViewContact();
-    }
 }
 
