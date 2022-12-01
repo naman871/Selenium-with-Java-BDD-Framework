@@ -13,19 +13,19 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ContactsPage extends PageFactory{
 
-    @FindBy(xpath = "//a[@href=\"#/contacts\"]")
+    @FindBy(xpath = "//a[@href='#/contacts']")
     public WebElement contactModule;
 
-    @FindBy(xpath = "//body/app-root[1]/div[1]/scrm-navbar-ui[1]/scrm-base-navbar[1]/div[1]/nav[1]/div[1]/ul[1]/li[2]/scrm-menu-item[1]/scrm-base-menu-item[1]/div[1]\n")
+    @FindBy(xpath = "//a[normalize-space()='Contacts']")
     public WebElement contactModuleDropdown;
 
-    @FindBy(xpath = "//body[1]/app-root[1]/div[1]/scrm-navbar-ui[1]/scrm-base-navbar[1]/div[1]/nav[1]/div[1]/ul[1]/li[2]/scrm-menu-item[1]/scrm-base-menu-item[1]/div[1]/div[1]/scrm-menu-item-link[1]/scrm-base-menu-item-link[1]/a[1]")
+    @FindBy(xpath = "//a[@href='#/contacts/edit?return_module=Contacts&return_action=DetailView']")
     public WebElement createAccountOption;
 
-    @FindBy(xpath = "//body/app-root[1]/div[1]/scrm-navbar-ui[1]/scrm-base-navbar[1]/div[1]/nav[1]/div[1]/ul[1]/li[2]/scrm-menu-item[1]/scrm-base-menu-item[1]/div[1]/div[2]/scrm-menu-item-link[1]/scrm-base-menu-item-link[1]/a[1]")
+    @FindBy(xpath = "//a[@href='#/contacts/importvcard']")
     public WebElement createContactsForVcartOption;
 
-    @FindBy(xpath = "//body/app-root[1]/div[1]/scrm-navbar-ui[1]/scrm-base-navbar[1]/div[1]/nav[1]/div[1]/ul[1]/li[2]/scrm-menu-item[1]/scrm-base-menu-item[1]/div[1]/div[3]/scrm-menu-item-link[1]/scrm-base-menu-item-link[1]/a[1]")
+    @FindBy(xpath = "//a[@href='#/contacts/index?return_module=Contacts&return_action=DetailView']")
     public WebElement viewedContactsOption;
     @FindBy(xpath = "//a[@href='#/contacts']")
     public WebElement contactsDropdown;
