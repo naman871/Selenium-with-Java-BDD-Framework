@@ -119,12 +119,8 @@ public class AccountSteps extends CommonSteps{
 
     public void afterCompletionOfEditingClickOnSave() {
         accountPage = new AccountPage(driver);
-        //Actions action = new Actions(driver);
-        accountPage.nameLabel.isDisplayed();
-        //accountPage.nameTextBox.sendKeys("Internet");
-        accountPage.nameTextBox.click();
-        //action.perform();
-        accountPage.nameTextBox.sendKeys(Keys.BACK_SPACE);
+        accountPage.editButton.click();
+        accountPage.nameTextBoxEdit.clear();
         accountPage.saveButton.click();
     }
 
