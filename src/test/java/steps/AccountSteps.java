@@ -3,15 +3,8 @@ package steps;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import pages.AccountPage;
 import pages.CommonPage;
 import pages.HomePage;
@@ -32,32 +25,32 @@ public class AccountSteps extends CommonSteps{
 
     public void verifyAccountDropdownoptions() {
         accountPage = new AccountPage(driver);
-        Assert.assertTrue(accountPage.createaccount.isDisplayed());
-        Assert.assertTrue(accountPage.viewaccount.isDisplayed());
-        Assert.assertTrue(accountPage.importaccount.isDisplayed());
+        Assert.assertTrue(accountPage.createAccount.isDisplayed());
+        Assert.assertTrue(accountPage.viewAccount.isDisplayed());
+        Assert.assertTrue(accountPage.importAccount.isDisplayed());
 
     }
     public void validatecreateaccountPage() {
         accountPage = new AccountPage(driver);
-        accountPage.createaccountpage.isDisplayed();
+        accountPage.createAccountPage.isDisplayed();
     }
 
     public void clickcreateaccount() throws InterruptedException {
         accountPage = new AccountPage(driver);
         Thread.sleep(2000);
-        accountPage.createaccount.click();
+        accountPage.createAccount.click();
 
 
     }
 
     public void clickViewAccount() {
         accountPage = new AccountPage(driver);
-        accountPage.viewaccount.click();
+        accountPage.viewAccount.click();
     }
 
     public void validateAccountspage() {
         accountPage = new AccountPage(driver);
-        Assert.assertTrue(accountPage.viewaccountlist.isDisplayed());
+        Assert.assertTrue(accountPage.viewAccountList.isDisplayed());
     }
 
     public void enterrequireddetails() throws InterruptedException {
@@ -73,7 +66,7 @@ public class AccountSteps extends CommonSteps{
     }
     public void validateSavedAccount() {
         accountPage = new AccountPage(driver);
-        Assert.assertTrue(accountPage.savedaccount.isDisplayed());
+        Assert.assertTrue(accountPage.savedAccount.isDisplayed());
     }
 
     public void deleteAccount() {

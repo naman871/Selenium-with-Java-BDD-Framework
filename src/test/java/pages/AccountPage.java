@@ -9,28 +9,28 @@ import org.openqa.selenium.support.PageFactory;
 public class AccountPage extends PageFactory {
 
     @FindBy(xpath = "//a[contains(text(),' Import Accounts')]")
-    public WebElement importaccount;
+    public WebElement importAccount;
 
     @FindBy(xpath = "//a[@href='#/accounts']")
     public WebElement accountDropdown;
 
     @FindBy(xpath = "//a[contains(text(),' Create Account')]")
-    public WebElement createaccount;
+    public WebElement createAccount;
 
     @FindBy(xpath = "(//input[@type='text'])[2]")
     public WebElement name;
 
     @FindBy(xpath = "//span[text()='Create']")
-    public WebElement createaccountpage;
+    public WebElement createAccountPage;
 
     @FindBy(xpath = "//scrm-module-title[@class='list-view-title']")
-    public WebElement viewaccountlist;
+    public WebElement viewAccountList;
 
     @FindBy(xpath = "//button[contains(text(),' Save ')]")
     public WebElement save;
 
     @FindBy(xpath = "//scrm-dynamic-label[@class='ng-star-inserted']")
-    public WebElement savedaccount;
+    public WebElement savedAccount;
 
     @FindBy(xpath = "//button[contains(text(),' Actions ')]")
     public WebElement actiondropdown;
@@ -39,7 +39,7 @@ public class AccountPage extends PageFactory {
     public WebElement delete;
 
     @FindBy(xpath = "//a[contains(text(),' View Accounts')]")
-    public WebElement viewaccount;
+    public WebElement viewAccount;
 
     @FindBy(xpath = "//a[@href='#/accounts']")
     public WebElement accountModule;
