@@ -26,6 +26,7 @@ public class ContactsStepdefinition {
         Thread.sleep(8000);
         contactsSteps.navigateToContactModule();
     }
+
     @When("Contact Dropdown should display submodules")
     public void contactModuleDisplaySubmodules() throws InterruptedException {
         Thread.sleep(8000);
@@ -58,9 +59,6 @@ public class ContactsStepdefinition {
         contactsSteps.validateCreatePage();
     }
 
-    public ContactsSteps contactsSteps = new ContactsSteps();
-
-    public CommonSteps commonSteps = new CommonSteps();
 
     @And("User is able to select create contact")
     public void clickOnCreateContact() {
@@ -90,7 +88,7 @@ public class ContactsStepdefinition {
     }
 
     @Then("User Clicks on Edit Button")
-    public void clickOnEditButton(){
+    public void clickOnEditButton() {
         contactsSteps = new ContactsSteps();
         contactsSteps.clickOnEditButton();
 
