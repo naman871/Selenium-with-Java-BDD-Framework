@@ -36,7 +36,7 @@ public class HomePageSteps extends CommonSteps {
         homePage.homePageButton.click();
     }
 
-    public void verifyMyCallsLabel(){
+    public void verifyMyCallsLabel() {
         homePage = new HomePage(driver);
         driver.switchTo().frame(homePage.iframeForHomepage);
         //driver.switchTo().frame(homePage.iframeForHomepage);
@@ -59,13 +59,24 @@ public class HomePageSteps extends CommonSteps {
         Assert.assertTrue(homePage.mymeetings.isDisplayed());
         Assert.assertTrue(homePage.mytopopenoppurtunities.isDisplayed());
     }
+
     public void validateErrorMessage() {
         homePage = new HomePage(driver);
         Assert.assertTrue(homePage.InvalidErrorMsg.isDisplayed());
 
     }
+
     public void validateMissingMessage() {
         homePage = new HomePage(driver);
         Assert.assertTrue(homePage.MissingErrorMsg.isDisplayed());
     }
+
+
+    public void clickContactsModule() {
+        homePage = new HomePage(this.driver);
+        homePage.contactsModule.click();
+
+    }
+
+
 }

@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = {"stepdefinitions"},
         monochrome = true,
-        tags = "@TC_014Minal",
+        tags = "@log10",
         plugin = {"pretty",
                 "html:target/cucumber-html-report",
                 "junit:target/cucumber-report/cucumber.xml"

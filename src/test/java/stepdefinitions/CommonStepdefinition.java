@@ -31,4 +31,10 @@ public class CommonStepdefinition {
     public void closeBrowser() {
         commonSteps.closeBrowser();
     }
+
+
+    @And("Click on New Button")
+    public void clickOnNewButton() {
+        commonSteps.clickonNewButton();
+    }
 }

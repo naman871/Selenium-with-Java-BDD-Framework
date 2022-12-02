@@ -14,9 +14,24 @@ public class OpportunitiesStepdefinition {
         opportunitiesSteps.createOpportunity();
     }
 
+    @Then("enter mandatory fields like opportunity name {string} sales stage {string} and amount {string} date {string} Account name {string}")
+    public void enterManditoryFieldsUnderOpportunity(String opportunityName,String salesStageName,String amount,String date,String accountName) {
+        opportunitiesSteps.enterDetailsToCreateOpportunity(opportunityName,salesStageName,amount,date,accountName);
+    }
 
-    @Then("enter mandatory fields like opportunity name {string} sales stage {string}")
-    public void enterManditoryFieldsUnderOpportunity(String opportunityName , String salesStageName) {
-        opportunitiesSteps.enterDetailsToCreateOpportunity(opportunityName,salesStageName);
+    @And("clicks on recently viewed items under opportunities dropdown")
+    public void clicksOnRecentlyViewedItemsUnderOpportunitiesDropdown() {
+        opportunitiesSteps.clickOpportunities();
+        opportunitiesSteps.clickRecentlyView();
+    }
+
+    @And("user clicks on opportunities module")
+    public void userClicksOnOpportunitiesModule() {
+        opportunitiesSteps.clickOpportunities();
+    }
+
+    @Then("user verify submodules are displayed under opportunities")
+    public void userVerifySubmodulesAreDisplayedUnderOpportunies() {
+        opportunitiesSteps.verifySubModules();
     }
 }
