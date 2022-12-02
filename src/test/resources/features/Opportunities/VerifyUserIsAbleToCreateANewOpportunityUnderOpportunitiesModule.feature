@@ -13,3 +13,4 @@ Feature: Verify user is able to create a new opportunity under opportunities mod
     Examples:
       |Username|Password|
       |will    |will    |
+

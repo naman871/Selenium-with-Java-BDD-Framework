@@ -18,7 +18,8 @@ public class CommonSteps {
 
 
     public void openBrowser() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\CSQA\\Downloads\\chromedriver_win32\\chromedriver.exe");
+        String path=System.getProperty("user.dir");
+        System.setProperty("webdriver.chrome.driver",""+path+"\\Drivers\\chromedriver_win32\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
         driver = new ChromeDriver(options);

@@ -3,6 +3,7 @@ package steps;
 import io.cucumber.datatable.DataTable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
@@ -36,9 +37,11 @@ public class OpportunitiesSteps extends CommonSteps {
         opportunitiesPage.opportunitiyName.sendKeys(opportunityName);
         opportunitiesPage.salesStage.sendKeys(salesStageName);
         actions.doubleClick().click(opportunitiesPage.prospecting);
-
-
-
     }
-
+    public void verifySubModules() {
+        opportunitiesPage = new OpportunitiesPage(driver);
+        Assert.assertTrue(opportunitiesPage.createOpportunity.isDisplayed());
+        Assert.assertTrue(opportunitiesPage.viewOpportunities.isDisplayed());
+        Assert.assertTrue(opportunitiesPage.importOpportunities.isDisplayed());
+    }
 }

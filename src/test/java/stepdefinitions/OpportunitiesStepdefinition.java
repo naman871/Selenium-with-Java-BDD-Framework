@@ -19,4 +19,14 @@ public class OpportunitiesStepdefinition {
     public void enterManditoryFieldsUnderOpportunity(String opportunityName , String salesStageName) {
         opportunitiesSteps.enterDetailsToCreateOpportunity(opportunityName,salesStageName);
     }
+
+    @And("user clicks on opportunities module")
+    public void userClicksOnOpportunitiesModule() {
+        opportunitiesSteps.clickOpportunities();
+    }
+
+    @Then("user verify submodules are displayed under opportunities")
+    public void userVerifySubmodulesAreDisplayedUnderOpportunies() {
+        opportunitiesSteps.verifySubModules();
+    }
 }

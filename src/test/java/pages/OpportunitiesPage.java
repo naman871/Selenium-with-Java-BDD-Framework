@@ -18,6 +18,12 @@ public class OpportunitiesPage extends PageFactory {
 
     @FindBy(xpath = "//a[@href=\"#/opportunities\"]")
     public WebElement opportunity;
+
+    @FindBy(xpath = "//a[@href=\"#/quotes\"]")
+    public WebElement quotes;
+
+
+
     @FindBy(xpath = "//a[@href=\"#/opportunities/edit?return_module=Opportunities&return_action=DetailView\"]")
     public WebElement createOpportunity;
     @FindBy(xpath = "//a[contains(text(),' View Opportunities')]")
@@ -41,6 +47,15 @@ public class OpportunitiesPage extends PageFactory {
 
     @FindBy(xpath = "//div[@title='Prospecting']")
     public WebElement prospecting;   // only work when sales stage is given prospecting
+
+    @FindBy(xpath = "//a[@id='ngb-nav-0']")
+    public WebElement CreateOpportunities;
+
+    @FindBy(xpath = "//a[@id='ngb-nav-1']")
+    public WebElement ClickOpportunities;
+
+    @FindBy(xpath = "//a[@id='ngb-nav-2']")
+    public WebElement ImportOpportunities;
 
     WebDriver driver;
 
