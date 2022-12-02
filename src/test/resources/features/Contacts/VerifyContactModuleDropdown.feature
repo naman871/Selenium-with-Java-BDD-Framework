@@ -1,15 +1,15 @@
-@issue:TC_016
-@author-Ramya
+@issue:TC_015
+@author:MinalTule
 
-Feature: Verify user is able to access Contacts Module
+Feature:Verify Contact module dropdown
 
-  Scenario Outline:Verify user is able to access Contacts Module.
+  Scenario Outline:Verify Contact module dropdown
     Given launch browser
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
     Then user is on HomePage
-    Then clicks on Contacts
-
+    And Navigate to contact module
+    And Contact Dropdown should display submodules
 
     Examples:
       | Username | Password |
