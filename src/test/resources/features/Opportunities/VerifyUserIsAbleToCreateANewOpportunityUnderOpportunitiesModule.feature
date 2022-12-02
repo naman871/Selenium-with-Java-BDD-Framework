@@ -1,4 +1,6 @@
 @TC_043
+@issue:TC_043
+@author:Vindhyana
 @author:Naman
 Feature: Verify user is able to create a new opportunity under opportunities module
   @log11
@@ -11,6 +13,8 @@ Feature: Verify user is able to create a new opportunity under opportunities mod
     #Then enter mandatory fields like opportunity name "Ab Drivers Limited" sales stage "Prospecting"
     And Close Browser
     Then enter mandatory fields like opportunity name "Ab Drivers Limited" sales stage "Prospecting" and amount "5000" date "2022-11-28" Account name "AB Drivers Limited"
+    And Close Browser
+
 
     Examples:
       |Username|Password|

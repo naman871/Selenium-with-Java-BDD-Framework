@@ -12,10 +12,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import pages.AccountPage;
-import pages.LeadsPage;
-import pages.CommonPage;
-import pages.HomePage;
+import pages.*;
 
 public class LeadsSteps extends CommonSteps {
     private static final Logger logger = LogManager.getLogger(LeadsSteps.class);
@@ -99,5 +96,24 @@ public class LeadsSteps extends CommonSteps {
         leadsPage.OkButtonLeadsPopupwindow.click();
     }
 
+    public void clickleads() {
+        leadsPage = new LeadsPage(driver);
+        leadsPage.leads.click();
+    }
+    public void createlead() {
+        leadsPage = new LeadsPage(driver);
+        leadsPage.createLead.click();
+    }
+
+    public void enterDetailsToCreatelead(String leadName, String mobileNumber, String accountName) {
+        Actions actions = new Actions(driver);
+        leadsPage=new LeadsPage(driver);
+        LeadsPage.enterleadName.sendKeys(leadName);
+        logger.info(leadName);
+        LeadsPage.enterAccountName.sendKeys(accountName);
+        logger.info(accountName);
+        LeadsPage.leadnum.sendKeys(mobileNumber);
+        logger.info(mobileNumber);
+    }
 }
 
