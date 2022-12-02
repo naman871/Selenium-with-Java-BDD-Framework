@@ -97,7 +97,7 @@ public class AccountStepdefinition {
         accountSteps.clickOnEditButton();
     }
 
-    @Then("After completion of editing click on save button")
+    @Then("After completion of editing click on save button and data edited successfully")
     public void afterCompletionOfEditingClickOnSaveButton() {
         accountSteps.afterCompletionOfEditingClickOnSave();
     }

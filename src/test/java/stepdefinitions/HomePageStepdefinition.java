@@ -35,6 +35,7 @@ public class HomePageStepdefinition {
     public void validateHomepageDashBoard() {
         homePageSteps.validateHomepageDashboard();
     }
+
     @Then("user validates invalid error message")
     public void userValidatesInvalidErrorMessage() {
         homePageSteps.validateErrorMessage();
@@ -45,5 +46,14 @@ public class HomePageStepdefinition {
         homePageSteps.validateMissingMessage();
     }
 
+    @Then("clicks on Contacts")
+    public void clicksOnContact() throws InterruptedException {
+        homePageSteps = new HomePageSteps();
+        homePageSteps.clickContactsModule();
+        Thread.sleep(1000);
+
+    }
+
 
 }
+
