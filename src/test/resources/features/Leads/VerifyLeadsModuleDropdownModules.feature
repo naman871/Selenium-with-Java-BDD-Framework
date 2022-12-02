@@ -1,4 +1,4 @@
-@issue:TC_025
+@TC_025
 @author:Madhuri
 
 Feature:Leads Module

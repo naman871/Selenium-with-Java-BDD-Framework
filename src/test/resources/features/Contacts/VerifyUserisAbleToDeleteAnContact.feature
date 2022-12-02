@@ -1,9 +1,9 @@
-@issue:TC_022
+@TC_024
 @author:Sunitha
+Feature:Delete Contact
 
-Feature:Verify whether "New" button is working.
-@TC022
-  Scenario Outline:Verify whether "New" button is working
+
+  Scenario Outline:Verify User is able to Delete Contact
     Given launch browser
     Then user enters "<Username>" and "<Password>"
     And  clicks on login button
@@ -11,10 +11,10 @@ Feature:Verify whether "New" button is working.
     And  click on create contacts
     Then Enter required details on create contacts page
     And  click save
-    Then Delete the account
-    And  Click on New Button
-    Then Validate create page
+    And  Click on "Actions" dropdown list
+    Then Delete the contact
     And  Close Browser
+
 
     Examples:
       | Username | Password |

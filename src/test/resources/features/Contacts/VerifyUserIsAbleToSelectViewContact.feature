@@ -1,4 +1,4 @@
-@issue:TC_018
+@TC_018
 @author-Ramya
 
 Feature: Verify user is able to access view contact

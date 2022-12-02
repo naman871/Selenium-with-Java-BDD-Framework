@@ -60,12 +60,12 @@ public class ContactsStepdefinition {
     }
 
 
-    @And("User is able to select create contact")
-    public void clickOnCreateContact() {
-        contactsSteps = new ContactsSteps();
-        contactsSteps.clickOnCreateContact();
-
-    }
+//    @And("User is able to select create contact")
+//    public void clickOnCreateContact() {
+//        contactsSteps = new ContactsSteps();
+//        contactsSteps.clickOnCreateContact();
+//
+//    }
 
 
     @And("User is able to select view contact")
@@ -74,18 +74,18 @@ public class ContactsStepdefinition {
         contactsSteps.clickOnViewContact();
     }
 
-    @Then("User Enters required details")
-    public void enterDetailsInFileds() {
-        contactsSteps = new ContactsSteps();
-        contactsSteps.enterDetailsInFields();
+//    @Then("User Enters required details")
+//    public void enterDetailsInFileds() {
+//        contactsSteps = new ContactsSteps();
+//        contactsSteps.enterDetailsInFields();
+//
+//    }
 
-    }
-
-    @And("Click on Save button")
-    public void clickOnSaveButton() {
-        contactsSteps = new ContactsSteps();
-        contactsSteps.clickOnSaveButton();
-    }
+//    @And("Click on Save button")
+//    public void clickOnSaveButton() {
+//        contactsSteps = new ContactsSteps();
+//        contactsSteps.clickOnSaveButton();
+//    }
 
     @Then("User Clicks on Edit Button")
     public void clickOnEditButton() {
@@ -94,4 +94,9 @@ public class ContactsStepdefinition {
 
     }
 
+    @Then("Delete the contact")
+    public void deleteTheContact() {
+        contactsSteps = new ContactsSteps();
+        contactsSteps.DeleteContact();
+    }
 }

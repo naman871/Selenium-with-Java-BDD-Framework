@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import pages.AccountPage;
 import pages.CommonPage;
@@ -62,6 +63,7 @@ public class AccountSteps extends CommonSteps{
 
     public void clickSave() {
         accountPage = new AccountPage(driver);
+        Assert.assertTrue(accountPage.save.isEnabled());
         accountPage.save.click();
     }
     public void validateSavedAccount() {
@@ -70,10 +72,10 @@ public class AccountSteps extends CommonSteps{
     }
 
     public void deleteAccount() {
-       // accountPage = new AccountPage(this.driver);
         accountPage = new AccountPage(driver);
         accountPage.actiondropdown.click();
         accountPage.delete.click();
+        driver.findElement(By.xpath("(//button[@type='button'])[20]")).click();
     }
     public void navigateToAccountModule() {
         accountPage = new AccountPage(driver);

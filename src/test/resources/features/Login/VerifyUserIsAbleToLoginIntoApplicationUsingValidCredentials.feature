@@ -1,4 +1,4 @@
-@issue:TC_002
+@TC_002
 @author:Sunitha
 
 Feature:Verify user is able to login with valid data

@@ -11,6 +11,7 @@ Feature: Quotes Module
     Then Click on Create Quotes option
     And Enter all the required fields
     And Click on Save
+    And Close Browser
 
     Examples:
       | Username | Password |

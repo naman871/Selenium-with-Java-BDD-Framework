@@ -1,4 +1,4 @@
-@issue:TC_015
+@TC_015
 @author:MinalTule
 
 Feature:Verify Contact module dropdown
