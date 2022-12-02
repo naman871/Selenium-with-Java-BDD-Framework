@@ -27,14 +27,6 @@ public class LeadsPage extends PageFactory{
     @FindBy(xpath = "//span[text()='Create']")
     public WebElement createleadpage;
 
-
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
-public class LeadsPage extends PageFactory{
     @FindBy(xpath = "//a[@href='#/leads']")
     public WebElement leadsModule;
 
@@ -73,14 +65,6 @@ public class LeadsPage extends PageFactory{
     public LeadsPage(WebDriver driver){
         this.driver=driver;
         PageFactory.initElements(driver,this);
-    }
-
-    WebDriver driver;
-
-    public LeadsPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-
     }
 
 }

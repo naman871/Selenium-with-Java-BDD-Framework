@@ -6,34 +6,28 @@ import pages.QuotesPage;
 
 import static steps.CommonSteps.driver;
 
-public class QuotesSteps {
-
-    public QuotesPage quotesPage;
-
-    public void clickQuotes() {
-        quotesPage = new QuotesPage(driver);
-        quotesPage.quotes.click();
-    }
-    public void clickCreateQuotes(){
-        quotesPage = new QuotesPage(driver);
-        quotesPage.createQuotes.click();
-    }
-    public void clickSave(){
-        quotesPage = new QuotesPage(driver);
-        quotesPage.saveQuotes.click();
-    }
-    public void verifyErrorMessage(String errorMessage){
-        quotesPage = new QuotesPage(driver);
-        String errorMessageText = quotesPage.errorMessageAfterSave.getText();
-        System.out.println(errorMessageText);
-        Assert.assertEquals("Error message is not displayed",errorMessageText,errorMessage);
-    }
-}
-import pages.QuotesPage;
-
 public class QuotesSteps extends CommonSteps {
 
      public QuotesPage quotespage;
+
+    public void clickQuotes() {
+        quotespage = new QuotesPage(driver);
+        quotespage.quotes.click();
+    }
+    public void clickCreateQuotes(){
+        quotespage = new QuotesPage(driver);
+        quotespage.createQuotes.click();
+    }
+    public void clickSave(){
+        quotespage = new QuotesPage(driver);
+        quotespage.saveQuotes.click();
+    }
+    public void verifyErrorMessage(String errorMessage){
+        quotespage = new QuotesPage(driver);
+        String errorMessageText = quotespage.errorMessageAfterSave.getText();
+        System.out.println(errorMessageText);
+        Assert.assertEquals("Error message is not displayed",errorMessageText,errorMessage);
+    }
      public void clickOnQuotesDropdown() {
           quotespage= new QuotesPage(this.driver);
           quotespage.quotesDropdown.click();

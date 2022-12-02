@@ -50,12 +50,7 @@ public class LeadsSteps extends CommonSteps {
         leadsPage=new LeadsPage(driver);
         leadsPage.createleadpage.isDisplayed();
     }
-import org.junit.Assert;
-import pages.HomePage;
-import pages.LeadsPage;
 
-public class LeadsSteps extends CommonSteps{
-    LeadsPage leadsPage;
     public void clickLeadsModule() {
         leadsPage= new LeadsPage(this.driver);
         leadsPage.leadsModule.click();

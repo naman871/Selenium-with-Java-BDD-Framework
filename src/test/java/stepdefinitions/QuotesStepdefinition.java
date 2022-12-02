@@ -28,9 +28,6 @@ public class QuotesStepdefinition {
         quotesSteps.verifyErrorMessage(arg0);
     }
 
-    QuotesSteps quotesSteps = new QuotesSteps();
-
-
     @And("click on Quotes module")
     public void clickOnQuotesDropdown() {
         quotesSteps.clickOnQuotesDropdown();
