@@ -18,7 +18,6 @@ public class OpportunitiesPage extends PageFactory {
 
     @FindBy(xpath = "//a[@href='#/opportunities']")
     public WebElement opportunity;
-    @FindBy(xpath = "//a[@href='#/opportunities/edit?return_module=Opportunities&return_action=DetailView']")
 
     @FindBy(xpath = "//a[@href=\"#/quotes\"]")
     public WebElement quotes;
