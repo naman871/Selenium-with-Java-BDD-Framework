@@ -14,6 +14,12 @@ public class HomePage extends PageFactory {
     @FindBy(xpath = "//a[@href='#/opportunities']")
     public WebElement opportunitiesModule;
 
+
+    @FindBy(xpath = "//a[@href='#/contacts']")
+    public WebElement contactsModule;
+
+
+
     @FindBy(xpath = "//a[@class='home-nav-link']")
     public WebElement homePageButton;
 
@@ -51,6 +57,8 @@ public class HomePage extends PageFactory {
 
     @FindBy(xpath = "//span[text()[normalize-space()='My Leads']]")
     public WebElement myLeads;
+
+
     WebDriver driver;
 
     public HomePage(WebDriver driver) {
