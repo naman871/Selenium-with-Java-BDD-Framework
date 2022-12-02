@@ -90,5 +90,11 @@ public class LeadsStepdefinition {
         leadsSteps.createlead();
 
     }
+
+    @Then("enter mandatory fields like lead name {string}  and mobile number {string}  Account name {string}")
+    public void enterMandatoryFieldsLikeLeadNameAndMobileNumberAccountName(String leadName, String mobileNumber, String accountName) {
+        leadsSteps.enterDetailsToCreatelead(leadName,mobileNumber,accountName);
+
+    }
 }
 

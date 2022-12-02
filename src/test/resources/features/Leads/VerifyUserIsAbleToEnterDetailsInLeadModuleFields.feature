@@ -7,9 +7,9 @@ Feature: Verify user is able to enter details in lead module fields
     Given launch browser
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
-    When click on Leads dropdown
-    And  click on create lead
+    And clicks on create lead under leads dropdown
     Then Enter required details
+    Then enter mandatory fields like lead name "Suite"  and mobile number "9956829045"  Account name "SuiteCRM"
     And  Close Browser
     Examples:
       | Username | Password |

@@ -105,5 +105,15 @@ public class LeadsSteps extends CommonSteps {
         leadsPage.createLead.click();
     }
 
+    public void enterDetailsToCreatelead(String leadName, String mobileNumber, String accountName) {
+        Actions actions = new Actions(driver);
+        leadsPage=new LeadsPage(driver);
+        LeadsPage.enterleadName.sendKeys(leadName);
+        logger.info(leadName);
+        LeadsPage.enterAccountName.sendKeys(accountName);
+        logger.info(accountName);
+        LeadsPage.leadnum.sendKeys(mobileNumber);
+        logger.info(mobileNumber);
+    }
 }
 
