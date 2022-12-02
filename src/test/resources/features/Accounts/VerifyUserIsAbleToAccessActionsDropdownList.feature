@@ -14,6 +14,7 @@ Feature:Verify User is able to access "Actions" dropdown list
     And Click on save button
     And Click on "Actions" dropdown list
     Then Action dropdown list should be displayed
+    And Close Browser
 
 
     Examples:

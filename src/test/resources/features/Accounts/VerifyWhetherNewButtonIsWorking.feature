@@ -15,6 +15,7 @@ Feature:Verify whether "New" button is working
     And Click on save button
     And Click on "New" button
     Then create page should be displayed
+    And Close Browser
 
     Examples:
       | Username | Password |

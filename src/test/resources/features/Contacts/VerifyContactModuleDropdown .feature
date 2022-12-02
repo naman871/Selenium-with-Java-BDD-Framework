@@ -10,6 +10,7 @@ Feature:Verify Contact module dropdown
     Then user is on HomePage
     And Navigate to contact module
     And Contact Dropdown should display submodules
+    Then Close Browser
 
     Examples:
       | Username | Password |
