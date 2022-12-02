@@ -61,6 +61,12 @@ public class LeadsPage extends PageFactory{
     @FindBy(xpath = "//input[@placeholder='Search...']")
     public WebElement SearchBoxLeads;
 
+    @FindBy(xpath = "//a[@href='#/leads']")
+    public WebElement leads;
+
+    @FindBy(xpath = "//a[@href=\"#/leads/edit?return_module=Leads&return_action=DetailView\"]")
+    public WebElement createLead;
+
     WebDriver driver;
     public LeadsPage(WebDriver driver){
         this.driver=driver;

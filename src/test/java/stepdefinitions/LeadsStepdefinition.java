@@ -24,6 +24,7 @@ public class LeadsStepdefinition {
     @Then("verify Leads dropdown option")
     public void verifyLeadsDropdownOption() {
         leadsSteps.verifyLeadsDropdownoptions();
+
     }
 
 
@@ -80,6 +81,14 @@ public class LeadsStepdefinition {
     @And("Click on Cancel Button on Ok popup window")
     public void clickOnOkButtonOnPopupWindow() throws InterruptedException {
         leadsSteps.clickOnOkButtonOnPopupWindow();
+    }
+
+    @And("clicks on create lead under leads dropdown")
+    public void clicksOnCreateLeadUnderLeadsDropdown() throws InterruptedException {
+        Thread.sleep(8000);
+        leadsSteps.clickleads();
+        leadsSteps.createlead();
+
     }
 }
 
