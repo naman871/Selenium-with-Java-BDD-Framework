@@ -18,7 +18,9 @@ public class CommonSteps {
 
 
     public void openBrowser() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Suni\\Downloads\\chromedriver_win32\\chromedriver.exe");
+        String path=System.getProperty("user.dir");
+        System.setProperty("webdriver.chrome.driver",""+path+"\\Drivers\\chromedriver_win32\\chromedriver.exe");
+        //        System.setProperty("webdriver.chrome.driver", "C:\\Webdrivers\\chromedriver_win32\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
         driver = new ChromeDriver(options);
@@ -45,4 +47,10 @@ public class CommonSteps {
     }
 
 
+    public void clickonNewButton() {
+        commonPage = new CommonPage(driver);
+        commonPage.NewButton.click();
+
+
+    }
 }

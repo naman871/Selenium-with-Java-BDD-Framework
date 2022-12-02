@@ -12,7 +12,7 @@ Feature:Verify user is able to create an account.
     Then Enter required details
     And  click save
     And  Validate saved account
-    Then Delete the account
+    #Then Delete the account
     And  Close Browser
 
     Examples:

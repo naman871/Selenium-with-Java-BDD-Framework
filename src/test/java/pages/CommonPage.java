@@ -17,6 +17,9 @@ public class CommonPage extends PageFactory {
     @FindBy(xpath = "//button[@id='login-button']")
     public WebElement loginButton;
 
+    @FindBy(xpath = "(//button[contains(text(),' New ')])[2]")
+    public WebElement NewButton;
+
     WebDriver driver;
 
     public CommonPage(WebDriver driver) {
