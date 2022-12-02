@@ -30,7 +30,6 @@ public class OpportunitiesPage extends PageFactory {
     public WebElement viewOpportunities;
     @FindBy(xpath = "//a[@xpath='1']")
     public WebElement recentlyViewedItem;
-
     @FindBy(xpath = "//a[contains(text(),' Import Opportunities')]")
     public WebElement importOpportunities;
 
