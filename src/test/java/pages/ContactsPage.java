@@ -27,10 +27,13 @@ public class ContactsPage extends PageFactory{
 
     @FindBy(xpath = "//a[@href='#/contacts/index?return_module=Contacts&return_action=DetailView']")
     public WebElement viewedContactsOption;
+
     @FindBy(xpath = "//a[@href='#/contacts']")
     public WebElement contactsDropdown;
+
     @FindBy(xpath = "(//a[contains(text(),' Create Contact')])[1]")
     public WebElement createContacts;
+
     @FindBy(xpath = "(//input[@type='text'])[3]")
     public WebElement firstName;
 
@@ -45,6 +48,7 @@ public class ContactsPage extends PageFactory{
 
     @FindBy(xpath = "//span[text()='Create']")
     public WebElement createContactsLabel;
+
     @FindBy(xpath = "//a[contains(text(),' Create Contact')]")
     public WebElement createContact;
 

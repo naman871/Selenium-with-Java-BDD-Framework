@@ -34,4 +34,69 @@ public class OpportunitiesStepdefinition {
     public void userVerifySubmodulesAreDisplayedUnderOpportunies() {
         opportunitiesSteps.verifySubModules();
     }
+
+    @And("click on view opportunities")
+    public void clickOnViewOpportunities() {
+        opportunitiesSteps.clickOpportunities();
+        opportunitiesSteps.clickViewOpporunities();
+    }
+
+    @Then("select opportunities from table")
+    public void selectOpportunitiesFromTable() throws InterruptedException {
+        opportunitiesSteps.verifyOpportunitiesLabel();
+        opportunitiesSteps.selectFirstOpportunityFromOpportunitiesGridUnderViewOpportunities();
+
+    }
+
+    @And("click on Edit button")
+    public void clickOnEditButton() {
+        opportunitiesSteps.clickOnEditButton();
+    }
+
+    @Then("enter a new opportunity name {string} and amount {string}")
+    public void enterANewOpportunityName(String opportunityName,String amount) {
+        opportunitiesSteps.updateOpportunityNameAndOpportunityAmount(opportunityName, amount);
+    }
+
+    @And("select duplicate from action dropdown")
+    public void selectDuplicateFromActionDropdown() {
+        opportunitiesSteps.clickOnActionDropDown();
+        opportunitiesSteps.clickDuplicateButton();
+
+    }
+    @And("click on Save Button")
+    public void clickOnSaveButton(){
+        opportunitiesSteps.clickOnSaveButton();
+    }
+
+    @Then("select first checkbox for opportunity grid")
+    public void selectFirstCheckboxForOpportunityGrid() {
+        opportunitiesSteps.clickOnFirstCheckboxFromOpportunityGrid();
+
+    }
+
+    @And("select delete from action dropdown")
+    public void selectDeleteFromActionDropdown() {
+        opportunitiesSteps.clickOnActionDropDown();
+        opportunitiesSteps.clickOnDeleteButton();
+
+    }
+
+    @And("select find duplicates from action dropdown")
+    public void selectFindDuplicatesFromActionDropdown() {
+        opportunitiesSteps.clickOnActionDropDown();
+        opportunitiesSteps.findDuplicatesButton();
+    }
+
+    @And("click on filter")
+    public void clickOnFilter() {
+        opportunitiesSteps.clickOnFilterButton();
+    }
+
+    @Then("enter filter criteria as opportunity name {string}")
+    public void enterFilterCriteriaAsOpportunityName(String opportunityName) throws InterruptedException {
+        opportunitiesSteps.enterFilterCriteria(opportunityName);
+
+
+    }
 }
