@@ -2,7 +2,7 @@
 @author:Sunitha
 
 Feature:Verify whether "New" button is working.
-@TC022
+
   Scenario Outline:Verify whether "New" button is working
     Given launch browser
     Then user enters "<Username>" and "<Password>"
@@ -11,7 +11,7 @@ Feature:Verify whether "New" button is working.
     And  click on create contacts
     Then Enter required details on create contacts page
     And  click save
-    #Then Delete the account
+    Then Delete the account
     And  Click on New Button
     Then Validate create page
     And  Close Browser

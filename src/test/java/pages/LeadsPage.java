@@ -1,4 +1,5 @@
 package pages;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -53,14 +54,35 @@ public class LeadsPage extends PageFactory{
 
     @FindBy(xpath = "//a[@id='ngb-nav-0']")
     public WebElement OverviewTab;
+
     @FindBy(xpath = "//a[@id='ngb-nav-1']")
     public WebElement MoreInformationTab;
+
     @FindBy(xpath = "//a[@id='ngb-nav-2']")
     public WebElement OtherTab;
 
     @FindBy(xpath = "//input[@placeholder='Search...']")
     public WebElement SearchBoxLeads;
 
+    @FindBy(xpath = "//a[@href='#/leads']")
+    public WebElement leads;
+
+    @FindBy(xpath = "//a[@href=\"#/leads/edit?return_module=Leads&return_action=DetailView\"]")
+    public WebElement createLead;
+
+    @FindBy(xpath = "(//input[@type='text'])[4]")
+    public static WebElement enterleadName;
+
+    @FindBy(xpath = "(//input[@type='text'])[10]")
+    public static WebElement enterAccountName;
+
+    @FindBy(xpath = "(//input[@type='text'])[7]")
+    public static WebElement leadnum;
+
+    @FindBy(xpath = "//a[@href='#/leads/edit?return_module=Leads&return_action=DetailView']")
+    public static WebElement clickLead;
+    @FindBy(xpath = "//span[contains(text(),'Missing required field')]")
+    public static WebElement ErrorMessage;
     WebDriver driver;
     public LeadsPage(WebDriver driver){
         this.driver=driver;

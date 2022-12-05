@@ -13,7 +13,6 @@ import steps.LeadsSteps;
 
 public class LeadsStepdefinition {
     public LeadsSteps leadsSteps = new LeadsSteps();
-    public CommonSteps commonSteps = new CommonSteps();
 
     @When("click on Leads dropdown")
     public void clickOnLeadsDropdown() throws InterruptedException {
@@ -24,6 +23,7 @@ public class LeadsStepdefinition {
     @Then("verify Leads dropdown option")
     public void verifyLeadsDropdownOption() {
         leadsSteps.verifyLeadsDropdownoptions();
+
     }
 
 
@@ -51,12 +51,27 @@ public class LeadsStepdefinition {
     public void enterAllTheMandatoryFields() throws InterruptedException {
         leadsSteps.enterAllTheMandatoryFields();
     }
+    @And("User Navigate to {string} Module")
+    public void userNavigateToModule(String arg0) throws InterruptedException {
+        leadsSteps.Module(arg0);
+    }
+    @And("Click on Create Lead Dropdown")
+    public void clickOnCreateLeadDropdown() throws InterruptedException {
+        leadsSteps.clickOnCreateLead();
+    }
 
+    @Then("Validate Missing Required Fields Error Message")
+    public void validateMissingRequiredFieldsErrorMessage() {
+        leadsSteps.verifyErrorMessage();
+    }
     @And("click on Cancel Button")
     public void clickOnCancelButton() {
         leadsSteps.cancelButtonLeads();
     }
-
+    @Then("User should be able to create new Lead and new Lead page will be displayed")
+    public void userShouldBeAbleToCreateNewLeadAndNewLeadPageWillBeDisplayed() {
+        leadsSteps.validateNewLeadPage();
+    }
     @And("user should able to view the warning message")
     public void userShouldAbleToViewTheWarningMessage() throws InterruptedException {
         leadsSteps.verifyWarningMessage();
@@ -81,5 +96,21 @@ public class LeadsStepdefinition {
     public void clickOnOkButtonOnPopupWindow() throws InterruptedException {
         leadsSteps.clickOnOkButtonOnPopupWindow();
     }
+
+    @And("clicks on create lead under leads dropdown")
+    public void clicksOnCreateLeadUnderLeadsDropdown() throws InterruptedException {
+        Thread.sleep(8000);
+        leadsSteps.clickleads();
+        leadsSteps.createlead();
+
+    }
+
+    @Then("enter mandatory fields like lead name {string}  and mobile number {string}  Account name {string}")
+    public void enterMandatoryFieldsLikeLeadNameAndMobileNumberAccountName(String leadName, String mobileNumber, String accountName) {
+        leadsSteps.enterDetailsToCreatelead(leadName,mobileNumber,accountName);
+
+    }
+
+
 }
 

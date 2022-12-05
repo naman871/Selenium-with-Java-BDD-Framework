@@ -1,4 +1,4 @@
-@issue:TC_001
+@TC_001
 @author:Sunitha
 
 Feature: Verify user is able to view the labels displayed

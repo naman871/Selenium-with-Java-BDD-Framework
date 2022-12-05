@@ -12,10 +12,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import pages.AccountPage;
-import pages.LeadsPage;
-import pages.CommonPage;
-import pages.HomePage;
+import pages.*;
 
 public class LeadsSteps extends CommonSteps {
     private static final Logger logger = LogManager.getLogger(LeadsSteps.class);
@@ -48,7 +45,7 @@ public class LeadsSteps extends CommonSteps {
 
     public void validatecreateLeadPage() {
         leadsPage=new LeadsPage(driver);
-        leadsPage.createleadpage.isDisplayed();
+        Assert.assertTrue(leadsPage.createleadpage.isDisplayed());
     }
 
     public void clickLeadsModule() {
@@ -59,13 +56,11 @@ public class LeadsSteps extends CommonSteps {
         leadsPage= new LeadsPage(this.driver);
         leadsPage.CreateLeads.click();
     }
+    public String Lastname="J";
     public void enterAllTheMandatoryFields() throws InterruptedException {
         leadsPage = new LeadsPage(this.driver);
-        leadsPage.FirstName.click();
         Thread.sleep(5000);
-        leadsPage.FirstName.sendKeys("sukanya");
-        Thread.sleep(5000);
-        leadsPage.LastName.sendKeys("J");
+        leadsPage.LastName.sendKeys(Lastname);
     }
     public void cancelButtonLeads(){
         leadsPage = new LeadsPage(this.driver);
@@ -77,6 +72,11 @@ public class LeadsSteps extends CommonSteps {
         System.out.print(s);
         leadsPage.CancelButtonLeadsPopupwindow.isDisplayed();
         leadsPage.OkButtonLeadsPopupwindow.isDisplayed();
+    }
+    public void validateNewLeadPage() {
+        leadsPage = new LeadsPage(driver);
+        String name1=driver.findElement(By.xpath("//span[@class='dynamic-label ng-star-inserted']")).getText();
+        Assert.assertEquals(Lastname,name1);
     }
     public void verifyTabs(){
         leadsPage = new LeadsPage(this.driver);
@@ -99,5 +99,40 @@ public class LeadsSteps extends CommonSteps {
         leadsPage.OkButtonLeadsPopupwindow.click();
     }
 
+    public void clickleads() {
+        leadsPage = new LeadsPage(driver);
+        leadsPage.leads.click();
+    }
+    public void createlead() {
+        leadsPage = new LeadsPage(driver);
+        leadsPage.createLead.click();
+    }
+
+    public void enterDetailsToCreatelead(String leadName, String mobileNumber, String accountName) {
+        Actions actions = new Actions(driver);
+        leadsPage=new LeadsPage(driver);
+        LeadsPage.enterleadName.sendKeys(leadName);
+        logger.info(leadName);
+        LeadsPage.enterAccountName.sendKeys(accountName);
+        logger.info(accountName);
+        LeadsPage.leadnum.sendKeys(mobileNumber);
+        logger.info(mobileNumber);
+    }
+    public void clickOnCreateLead() throws InterruptedException {
+        leadsPage = new LeadsPage(driver);
+        Thread.sleep(10000);
+        LeadsPage.clickLead.click();
+        Thread.sleep(10000);
+    }
+    public void verifyErrorMessage() {
+        leadsPage = new LeadsPage(driver);
+        Assert.assertTrue(leadsPage.ErrorMessage.isDisplayed());
+    }
+    public void Module(String module) throws InterruptedException {
+        leadsPage = new LeadsPage(driver);
+        Actions action = new Actions(driver);
+        Thread.sleep(5000);
+        action.moveToElement(driver.findElement(By.xpath("//a[normalize-space()='"+module+"']"))).perform();
+    }
 }
 

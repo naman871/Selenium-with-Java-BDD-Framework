@@ -46,13 +46,7 @@ public class HomePageStepdefinition {
         homePageSteps.validateMissingMessage();
     }
 
-    @Then("clicks on Contacts")
-    public void clicksOnContact() throws InterruptedException {
-        homePageSteps = new HomePageSteps();
-        homePageSteps.clickContactsModule();
-        Thread.sleep(1000);
 
-    }
 
 
 }
