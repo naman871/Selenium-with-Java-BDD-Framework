@@ -45,16 +45,16 @@ public class OpportunitiesSteps extends CommonSteps {
         Actions actions = new Actions(driver);
         opportunitiesPage = new OpportunitiesPage(driver);
         opportunitiesPage.opportunitiyName.sendKeys(opportunityName);
-        logger.info(opportunityName);
+        logger.info("Opportunity Name is -->"+opportunityName);
         opportunitiesPage.enterAccountName.sendKeys(accountName);
-        logger.info(accountName);
+        logger.info("Account Name is -->"+accountName);
         opportunitiesPage.salesStage.sendKeys(salesStageName);
-        logger.info(salesStageName);
+        logger.info("Sales Stage Name  is -->"+salesStageName);
         actions.doubleClick().click(opportunitiesPage.prospecting);
         opportunitiesPage.oppportunityAmount.sendKeys(amount);
-        logger.info(amount);
+        logger.info("Amount is -->"+amount);
         opportunitiesPage.expectedClosedDate.sendKeys(date);
-        logger.info(date);
+        logger.info("Expected Closed Date is -->"+date);
         opportunitiesPage.saveButton.click();
     }
 
@@ -96,16 +96,16 @@ public class OpportunitiesSteps extends CommonSteps {
     public void updateOpportunityNameAndOpportunityAmount(String opportunityName,String amount){
         opportunitiesPage = new OpportunitiesPage(driver);
         String preModifiedOpportunityName = opportunitiesPage.opportunitiyName.getText();
-        logger.info(preModifiedOpportunityName);
+        logger.info("Opportunity name pre modified -->"+preModifiedOpportunityName);
         Assert.assertNotEquals(preModifiedOpportunityName,opportunityName);
         opportunitiesPage.opportunitiyName.clear();
         opportunitiesPage.opportunitiyName.sendKeys(opportunityName);
-        logger.info(opportunityName);
+        logger.info("Opportunity name post modified -->"+opportunityName);
         String preModifiedOpportunityamount = opportunitiesPage.oppportunityAmount.getText();
         Assert.assertNotEquals(preModifiedOpportunityamount,amount);
-        logger.info(preModifiedOpportunityamount);
+        logger.info("Opportunity amount pre modified -->"+preModifiedOpportunityamount);
         opportunitiesPage.oppportunityAmount.sendKeys(amount);
-        logger.info(amount);
+        logger.info("Opportunity amount post modified -->"+amount);
 
     }
     public void clickDuplicateButton(){
