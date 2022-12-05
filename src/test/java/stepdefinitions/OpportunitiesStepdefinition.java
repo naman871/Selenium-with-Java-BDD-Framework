@@ -96,7 +96,39 @@ public class OpportunitiesStepdefinition {
     @Then("enter filter criteria as opportunity name {string}")
     public void enterFilterCriteriaAsOpportunityName(String opportunityName) throws InterruptedException {
         opportunitiesSteps.enterFilterCriteria(opportunityName);
-
-
     }
+    @And("Click on  View Opportunities option")
+    public void clickOnViewOpportunitiesOption() throws InterruptedException {
+        opportunitiesSteps.clickOnViewOpportunities();
+    }
+
+    @Then("enter mandatory fields like opportunity name {string} sales stage {string}")
+    public void enterManditoryFieldsUnderOpportunity(String opportunityName , String salesStageName) {
+        opportunitiesSteps.enterDetailsToCreateOpportunity(opportunityName,salesStageName);
+    }
+
+    @Then("Select checkbox beside {string} dropdown")
+    public void selectCheckboxBesideBulkActionDropdown() {
+        opportunitiesSteps.selectAllCheckbox();
+    }
+
+    @And("Click on {string} dropdown")
+    public void clickOnBulkActionDropdown() throws InterruptedException {
+        opportunitiesSteps.clickOnBulkActionDropdown();
+    }
+
+    @Then("User able to view Delete,Export,Merge,Mass updates options")
+    public void userAbleToViewDeleteExportMergeMassUpdatesOptions() {
+        opportunitiesSteps.verifyDropdown();
+    }
+    @Then("Select one Checkbox \\(Record) under Opportunities Grid")
+    public void selectOneCheckboxRecordUnderOpportunitiesGrid() throws InterruptedException {
+        opportunitiesSteps.selectRecord();
+    }
+
+    @Then("Select Mass Update link")
+    public void selectMassUpdateLink() {
+        opportunitiesSteps.SelectMassUpdate();
+    }
+
 }

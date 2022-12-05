@@ -100,6 +100,18 @@ public class OpportunitiesPage extends PageFactory {
     @FindBy(xpath = "//div[@title='Prospecting']")
     public WebElement prospecting;   // only work when sales stage is given prospecting
 
+    @FindBy(xpath = "//a[@href='#/opportunities/index?return_module=Opportunities&return_action=DetailView']")
+    public WebElement ViewOpportunitiy;
+    @FindBy(xpath = "//scrm-list/div/scrm-list-container/div/div/div/scrm-table/div/scrm-table-header/div/div/scrm-bulk-action-menu/div/div/button/label/input[@type='checkbox']")
+    public WebElement SelectAllCheckbox;
+
+    @FindBy(xpath = "//div[@class='d-inline-block dropdown-button dropdown bulk-action-group float-left']/button[text()=' Bulk Action ']")
+    public WebElement bulkActionDropdown;
+    @FindBy(xpath = "//tbody/tr[1]/td[1]/label[1]/span[1]")
+    public  WebElement selectRecord;
+
+    @FindBy(xpath = "//div[@class='dropdown-menu show']//div[@class='flex-grow-1'][normalize-space()='Mass Update']")
+    public WebElement selectMassupdate;
 //    @FindBy(xpath = "//a[@id='ngb-nav-0']")
 //    public WebElement CreateOpportunities;
 //
