@@ -1,4 +1,4 @@
-@issue:TC_019
+@TC_019
 @author-Ramya
 
 Feature: Verify User is able to access save button
@@ -6,6 +6,13 @@ Feature: Verify User is able to access save button
   Scenario Outline:Verify User is able to access save button
     Given launch browser
     Then user enters "<Username>" and "<Password>"
+    And clicks on login button
+    Then user is on HomePage
+    When click on Contacts dropdown
+    And  click on create contacts
+    Then Enter required details on create contacts page
+    And  click save
+    And Close Browser
     And  clicks on login button
     When click on Contacts dropdown
     And  click on create contacts

@@ -1,4 +1,4 @@
-@issue:TC_012
+@TC_012
 @author:MinalTule
 
 Feature:Verify whether "New" button is working
@@ -15,6 +15,7 @@ Feature:Verify whether "New" button is working
     And Click on save button
     And Click on "New" button
     Then create page should be displayed
+    And Close Browser
 
     Examples:
       | Username | Password |

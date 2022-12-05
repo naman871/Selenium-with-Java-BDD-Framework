@@ -1,4 +1,4 @@
-@issue:TC_006
+@TC_006
 @author:Sunitha
 
 Feature:Verify user is able to access create Accounts

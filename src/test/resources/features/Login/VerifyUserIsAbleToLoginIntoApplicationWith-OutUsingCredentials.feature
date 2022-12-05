@@ -1,4 +1,4 @@
-@issue:TC_004
+@TC_004
 @author:Sunitha
 
 Feature:Login to Suite CRM Application without any credentials

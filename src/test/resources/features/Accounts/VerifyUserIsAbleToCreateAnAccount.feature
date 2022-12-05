@@ -1,8 +1,8 @@
-@issue:TC_007
+@TC_007
 @author:Sunitha
 
 Feature:Verify user is able to create an account.
-@TC007
+
   Scenario Outline: Verify user is able to create an account.
     Given launch browser
     Then user enters "<Username>" and "<Password>"

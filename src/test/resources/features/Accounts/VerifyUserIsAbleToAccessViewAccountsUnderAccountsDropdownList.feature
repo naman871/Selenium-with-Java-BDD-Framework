@@ -1,4 +1,4 @@
-@issue:TC_007
+@TC_007
 @author:Sunitha
 
 Feature:Verify user is able to access view Accounts

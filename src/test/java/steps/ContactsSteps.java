@@ -3,6 +3,7 @@ package steps;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import pages.ContactsPage;
 import pages.HomePage;
 
@@ -11,7 +12,6 @@ public class ContactsSteps extends CommonSteps {
     private static final Logger logger = LogManager.getLogger(ContactsSteps.class);
 
     public ContactsPage contactsPage;
-    public HomePage homePage;
 
     public void clickContactsdropdown() {
         contactsPage = new ContactsPage(driver);
@@ -21,13 +21,13 @@ public class ContactsSteps extends CommonSteps {
 
     public void clickOncreatecontacts() {
         contactsPage = new ContactsPage(driver);
-        //driver.findElement(By.xpath("(//a[contains(text(),' Create Contact')])[1]")).click();
-        contactsPage.createContacts.click();
+        driver.findElement(By.xpath("(//a[contains(text(),' Create Contact')])[1]")).click();
+        //contactsPage.createContacts.click();
     }
 
     public void enterdetailsonCreatecontactpage() {
         contactsPage = new ContactsPage(driver);
-        contactsPage.fristName.sendKeys("Mithin");
+        contactsPage.firstName.sendKeys("Mithin");
         contactsPage.lastName.sendKeys("samuel");
 
     }
@@ -52,6 +52,11 @@ public class ContactsSteps extends CommonSteps {
     }
 
 
+//    public void clickOnCreateContact() {
+//        contactsPage = new ContactsPage(this.driver);
+//        contactsPage.createContacts.click();
+//
+//    }
   public void clickOnCreateContact() {
       contactsPage = new ContactsPage(this.driver);
       contactsPage.createContacts.click();
@@ -59,28 +64,30 @@ public class ContactsSteps extends CommonSteps {
    }
 
     public void clickOnViewContact() {
-        contactsPage = new ContactsPage(this.driver);
+        contactsPage = new ContactsPage(driver);
         contactsPage.viewContact.click();
     }
 
-    public void enterDetailsInFields() {
-        contactsPage = new ContactsPage(this.driver);
-        contactsPage.firstName.sendKeys("Mark");
-        contactsPage.lastName1.sendKeys("zucker");
-    }
+//    public void enterDetailsInFields() {
+//        contactsPage = new ContactsPage(this.driver);
+//        contactsPage.firstName.sendKeys("Mark");
+//        contactsPage.lastName1.sendKeys("zucker");
+//    }
 
-    public void clickOnSaveButton() {
-        contactsPage = new ContactsPage(this.driver);
-        contactsPage.saveButton.click();
-
-    }
 
     public void clickOnEditButton() {
-        contactsPage = new ContactsPage(this.driver);
+        contactsPage = new ContactsPage(driver);
         contactsPage.editButton.click();
 
     }
 
+    public void DeleteContact() {
+        contactsPage = new ContactsPage(driver);
+        //contactsPage.delete.click();
+        driver.findElement(By.xpath("//div[text()=' Delete ']")).click();
+        contactsPage.proceed.click();
+
+    }
     public void clickOnCancelButton() {
         contactsPage = new ContactsPage(this.driver);
         contactsPage.cancelButton.click();

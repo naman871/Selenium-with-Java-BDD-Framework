@@ -1,4 +1,4 @@
-@issue:TC_011
+@TC_011
 @author:MinalTule
 
 Feature:Verify whether user is able to cancel/clear the data while creating account
@@ -15,6 +15,7 @@ Feature:Verify whether user is able to cancel/clear the data while creating acco
     And click on cancel button
     And click on ok button on popup message
     Then account page should be displayed
+    And Close Browser
 
     Examples:
       | Username | Password |
