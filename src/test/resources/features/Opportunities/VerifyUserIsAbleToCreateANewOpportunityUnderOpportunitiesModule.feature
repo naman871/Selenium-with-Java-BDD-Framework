@@ -1,6 +1,6 @@
 @issue:TC_043
-@author:Vindhyana
 @author:Naman
+
 Feature: Verify user is able to create a new opportunity under opportunities module
   @log11
   Scenario Outline: Verify user is able to create a new opportunity under opportunities module
