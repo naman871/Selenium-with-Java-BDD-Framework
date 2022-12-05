@@ -9,6 +9,8 @@ import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import pages.OpportunitiesPage;
 
+import java.util.List;
+
 public class OpportunitiesSteps extends CommonSteps {
 
     private static final Logger logger = LogManager.getLogger(OpportunitiesSteps.class);
@@ -149,5 +151,39 @@ public class OpportunitiesSteps extends CommonSteps {
         Thread.sleep(9000);
 
     }
+    public void clickOnViewOpportunities() throws InterruptedException {
+        opportunitiesPage = new OpportunitiesPage(driver);
+        Thread.sleep(5000);
+        opportunitiesPage.ViewOpportunitiy.click();
+        Thread.sleep(10000);
+    }
 
+    public void selectAllCheckbox() {
+        opportunitiesPage = new OpportunitiesPage(driver);
+        opportunitiesPage.SelectAllCheckbox.click();
+    }
+
+    public void clickOnBulkActionDropdown() throws InterruptedException {
+        opportunitiesPage = new OpportunitiesPage(driver);
+        Thread.sleep(5000);
+        opportunitiesPage.bulkActionDropdown.click();
+    }
+
+    public void verifyDropdown() {
+        opportunitiesPage = new OpportunitiesPage(driver);
+        List<WebElement> L1=driver.findElements(By.xpath("//div[@class='dropdown-menu show']/a"));
+        for (int i = 0; i < L1.size(); i++) {
+            Assert.assertTrue(L1.get(i).isDisplayed());
+        }
+    }
+    public void selectRecord() throws InterruptedException {
+        opportunitiesPage = new OpportunitiesPage(driver);
+        Thread.sleep(5000);
+        opportunitiesPage.selectRecord.click();
+    }
+
+    public void SelectMassUpdate() {
+        opportunitiesPage = new OpportunitiesPage(driver);
+        opportunitiesPage.selectMassupdate.click();
+    }
 }
