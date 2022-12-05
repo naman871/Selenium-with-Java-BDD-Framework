@@ -19,7 +19,6 @@ import steps.HomePageSteps;
 
 public class ContactsStepdefinition {
     public ContactsSteps contactsSteps = new ContactsSteps();
-    public CommonSteps commonSteps = new CommonSteps();
 
     @When("Navigate to contact module")
     public void clickOnAccountDropdown() throws InterruptedException {

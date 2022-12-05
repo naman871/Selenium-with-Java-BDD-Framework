@@ -8,7 +8,6 @@ import steps.CommonSteps;
 
 public class AccountStepdefinition {
     public AccountSteps accountSteps = new AccountSteps();
-    public CommonSteps commonSteps = new CommonSteps();
 
     @When("click on Account dropdown")
     public void clickOnAccountDropdown() throws InterruptedException {

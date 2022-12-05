@@ -73,7 +73,7 @@ public class HomePageSteps extends CommonSteps {
 
 
     public void clickContactsModule() {
-        homePage = new HomePage(this.driver);
+        homePage = new HomePage(driver);
         homePage.contactsModule.click();
 
     }

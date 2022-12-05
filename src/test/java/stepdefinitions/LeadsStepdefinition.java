@@ -13,7 +13,6 @@ import steps.LeadsSteps;
 
 public class LeadsStepdefinition {
     public LeadsSteps leadsSteps = new LeadsSteps();
-    public CommonSteps commonSteps = new CommonSteps();
 
     @When("click on Leads dropdown")
     public void clickOnLeadsDropdown() throws InterruptedException {

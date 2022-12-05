@@ -7,18 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends PageFactory {
 
-
     @FindBy(xpath = "//a[@id='tab0']")
     public WebElement suiteCrmDashboardButton;
 
     @FindBy(xpath = "//a[@href='#/opportunities']")
     public WebElement opportunitiesModule;
 
-
     @FindBy(xpath = "//a[@href='#/contacts']")
     public WebElement contactsModule;
-
-
 
     @FindBy(xpath = "//a[@class='home-nav-link']")
     public WebElement homePageButton;
