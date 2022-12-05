@@ -1,4 +1,4 @@
-@issue:TC_003
+@TC_003
 @author:Sunitha
 
 Feature:

@@ -1,6 +1,5 @@
 package pages;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -60,6 +59,7 @@ public class AccountPage extends PageFactory {
 
     @FindBy(xpath = "//scrm-dynamic-field[@class='dynamic-field dynamic-field-mode-detail dynamic-field-name-name dynamic-field-type-name ng-star-inserted']//input[@type='text']")
     public WebElement nameTextBoxEdit;
+
     @FindBy(xpath = "//label[text()='WEBSITE']")
     public WebElement websiteLabel;
 
@@ -68,13 +68,16 @@ public class AccountPage extends PageFactory {
 
     @FindBy(xpath = "//scrm-dynamic-field[@class='dynamic-field dynamic-field-mode-edit dynamic-field-name-website dynamic-field-type-link ng-star-inserted']//input[@type='text']")
     public WebElement websiteTextBox;
+
     @FindBy(xpath = "//button[contains(text(),'Edit')]")
     public WebElement editButton;
+
     @FindBy(xpath = "//button[contains(text(),'Cancel')]")
     public WebElement cancelButton;
 
     @FindBy(xpath = "//scrm-module-title[contains(text(),'ACCOUNTS')]")
     public WebElement accounPage;
+
     @FindBy(xpath = " //scrm-label[contains(text(),'Ok')]")
     public WebElement okButton;
 

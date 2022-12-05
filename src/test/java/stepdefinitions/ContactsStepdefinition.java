@@ -19,7 +19,6 @@ import steps.HomePageSteps;
 
 public class ContactsStepdefinition {
     public ContactsSteps contactsSteps = new ContactsSteps();
-    public CommonSteps commonSteps = new CommonSteps();
 
     @When("Navigate to contact module")
     public void clickOnAccountDropdown() throws InterruptedException {
@@ -60,12 +59,12 @@ public class ContactsStepdefinition {
     }
 
 
-    @And("User is able to select create contact")
-    public void clickOnCreateContact() {
-        contactsSteps = new ContactsSteps();
-        contactsSteps.clickOnCreateContact();
-
-    }
+//    @And("User is able to select create contact")
+//    public void clickOnCreateContact() {
+//        contactsSteps = new ContactsSteps();
+//        contactsSteps.clickOnCreateContact();
+//
+//    }
 
 
     @And("User is able to select view contact")
@@ -74,18 +73,18 @@ public class ContactsStepdefinition {
         contactsSteps.clickOnViewContact();
     }
 
-    @Then("User Enters required details")
-    public void enterDetailsInFileds() {
-        contactsSteps = new ContactsSteps();
-        contactsSteps.enterDetailsInFields();
+//    @Then("User Enters required details")
+//    public void enterDetailsInFileds() {
+//        contactsSteps = new ContactsSteps();
+//        contactsSteps.enterDetailsInFields();
+//
+//    }
 
-    }
-
-    @And("Click on Save button")
-    public void clickOnSaveButton() {
-        contactsSteps = new ContactsSteps();
-        contactsSteps.clickOnSaveButton();
-    }
+//    @And("Click on Save button")
+//    public void clickOnSaveButton() {
+//        contactsSteps = new ContactsSteps();
+//        contactsSteps.clickOnSaveButton();
+//    }
 
     @Then("User Clicks on Edit Button")
     public void clickOnEditButton() {
@@ -94,4 +93,22 @@ public class ContactsStepdefinition {
 
     }
 
+    @Then("Delete the contact")
+    public void deleteTheContact() {
+        contactsSteps = new ContactsSteps();
+        contactsSteps.DeleteContact();
+    }
+    @Then("user clicks on cancel button")
+    public void clickOnCancelButton() {
+        contactsSteps = new ContactsSteps();
+        contactsSteps.clickOnCancelButton();
+    }
+
+    @Then("clicks on Contacts")
+    public void clicksOnContact() throws InterruptedException {
+        contactsSteps = new ContactsSteps();
+        contactsSteps.clickContactsModule();
+        Thread.sleep(1000);
+
+    }
 }

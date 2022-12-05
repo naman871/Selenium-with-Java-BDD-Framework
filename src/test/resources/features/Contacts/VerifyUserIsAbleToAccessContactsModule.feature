@@ -1,4 +1,4 @@
-@issue:TC_016
+@TC_016
 @author-Ramya
 
 Feature: Verify user is able to access Contacts Module
@@ -9,6 +9,8 @@ Feature: Verify user is able to access Contacts Module
     And clicks on login button
     Then user is on HomePage
     Then clicks on Contacts
+    And Close Browser
+
 
 
     Examples:

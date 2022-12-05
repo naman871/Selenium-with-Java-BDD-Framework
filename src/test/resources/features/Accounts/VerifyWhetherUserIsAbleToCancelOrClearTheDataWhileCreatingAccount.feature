@@ -1,4 +1,4 @@
-@issue:TC_011
+@TC_011
 @author:MinalTule
 
 Feature:Verify whether user is able to cancel/clear the data while creating account

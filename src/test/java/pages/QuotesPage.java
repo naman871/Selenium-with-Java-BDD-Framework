@@ -7,15 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 
 public class QuotesPage extends PageFactory {
 
-    @FindBy(xpath = "//a[@href=\"#/quotes\"]")
+    @FindBy(xpath = "//a[@href='#/quotes']")
     public WebElement quotes;
 
-    @FindBy(xpath = "//input[@title=\"Save\"]")
+    @FindBy(xpath = "//input[@title='Save']")
     public WebElement saveQuotes;
 
-    @FindBy(xpath = "//div[text()=\"Missing required field: Title\"]")
+    @FindBy(xpath = "//div[text()='Missing required field: Title']")
     public WebElement errorMessageAfterSave;
-
 
     @FindBy(xpath = "//a[normalize-space()='Quotes']")
     public WebElement quotesDropdown;
@@ -26,7 +25,7 @@ public class QuotesPage extends PageFactory {
     @FindBy(xpath = "//div//input[@id='name']")
     public WebElement titleTextBoxQuotes;
 
-    @FindBy(xpath = "//iframe[@src=\"./legacy/index.php?return_module=AOS_Quotes&return_action=DetailView&module=AOS_Quotes&action=EditView\"]")
+    @FindBy(xpath = "//iframe[@src='./legacy/index.php?return_module=AOS_Quotes&return_action=DetailView&module=AOS_Quotes&action=EditView']")
     public WebElement iframeForQuotesCreatePage;
 
     @FindBy(xpath = "//input[@id='SAVE']")

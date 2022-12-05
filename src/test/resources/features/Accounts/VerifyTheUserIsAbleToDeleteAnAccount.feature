@@ -1,4 +1,4 @@
-@issue:TC_014
+@TC_014
 @author:MinalTule
 
 Feature:Verify User is able to access "Actions" dropdown list

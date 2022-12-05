@@ -1,4 +1,4 @@
-@issue:TC_010
+@TC_010
 @author:MinalTule
 
 Feature:Verify the user is able to edit the created account.

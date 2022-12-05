@@ -1,4 +1,4 @@
-@issue:TC_012
+@TC_012
 @author:MinalTule
 
 Feature:Verify whether "New" button is working

@@ -9,7 +9,7 @@ Feature: Verify missing required field error message should be displayed
     Then user is on HomePage
     And user clicks on quotes module
     And user click on create quotes modules
-    And user clicks on save button
+    And Click on Save
     And user verify "Missing required field: Title" error message after save
 
     Examples:

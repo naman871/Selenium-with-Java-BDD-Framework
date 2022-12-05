@@ -1,4 +1,4 @@
-@issue:TC_009
+@TC_009
 @author:MinalTule
 
 Feature:Verify user is able to create an account without filling required fields.

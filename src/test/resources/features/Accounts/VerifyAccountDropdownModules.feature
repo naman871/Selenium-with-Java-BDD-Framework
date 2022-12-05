@@ -1,4 +1,4 @@
-@issue:TC_005
+@TC_005
 @author:Sunitha
 
 Feature:Account Module
