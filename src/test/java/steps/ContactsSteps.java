@@ -52,11 +52,11 @@ public class ContactsSteps extends CommonSteps {
     }
 
 
-    public void clickOnCreateContact() {
-        contactsPage = new ContactsPage(this.driver);
-        contactsPage.createContact.click();
+  public void clickOnCreateContact() {
+      contactsPage = new ContactsPage(this.driver);
+      contactsPage.createContacts.click();
 
-    }
+   }
 
     public void clickOnViewContact() {
         contactsPage = new ContactsPage(this.driver);
@@ -78,6 +78,18 @@ public class ContactsSteps extends CommonSteps {
     public void clickOnEditButton() {
         contactsPage = new ContactsPage(this.driver);
         contactsPage.editButton.click();
+
+    }
+
+    public void clickOnCancelButton() {
+        contactsPage = new ContactsPage(this.driver);
+        contactsPage.cancelButton.click();
+    }
+
+    public void clickContactsModule() {
+        contactsPage = new ContactsPage(this.driver);
+        contactsPage.contactModule.click();
+
 
     }
 

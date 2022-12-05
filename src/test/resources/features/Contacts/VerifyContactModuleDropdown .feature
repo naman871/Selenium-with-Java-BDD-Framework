@@ -1,6 +1,6 @@
 @issue:
 @author:MinalTule
-@TC_015Minal
+
 Feature:Verify Contact module dropdown
 
   Scenario Outline:Verify Contact module dropdown

@@ -10,6 +10,8 @@ Feature: Verify user is able to access view contact
     Then user is on HomePage
     Then clicks on Contacts
     And  User is able to select view contact
+    And  Close Browser
+
 
 
     Examples:

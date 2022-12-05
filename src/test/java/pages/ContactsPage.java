@@ -13,7 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ContactsPage extends PageFactory{
 
-    @FindBy(xpath = "//a[@href=\"#/contacts\"]")
+    @FindBy(xpath = "//a[@href='#/contacts']")
     public WebElement contactModule;
 
     @FindBy(xpath = "//body/app-root[1]/div[1]/scrm-navbar-ui[1]/scrm-base-navbar[1]/div[1]/nav[1]/div[1]/ul[1]/li[2]/scrm-menu-item[1]/scrm-base-menu-item[1]/div[1]\n")
@@ -41,11 +41,7 @@ public class ContactsPage extends PageFactory{
 
 
 
-
-    @FindBy(xpath = "/html/body/app-root/div/scrm-navbar-ui/scrm-base-navbar/div/nav/div[1]/ul/li[1]/scrm-menu-item/scrm-base-menu-item/div/div[1]/scrm-menu-item-link/scrm-base-menu-item-link/a")
-    public WebElement createContact;
-
-    @FindBy(xpath = "/html/body/app-root/div/scrm-navbar-ui/scrm-base-navbar/div/nav/div[1]/ul/li[1]/scrm-menu-item/scrm-base-menu-item/div/div[3]/scrm-menu-item-link/scrm-base-menu-item-link/a")
+    @FindBy(xpath = "(//a[contains(text(),' View Contacts')])")
     public WebElement viewContact;
 
     @FindBy(xpath = "//input[@class='form-control form-control-sm ng-pristine ng-valid ng-touched']")
@@ -54,11 +50,14 @@ public class ContactsPage extends PageFactory{
     @FindBy(xpath = "//input[@class='form-control form-control-sm ng-pristine ng-invalid is-invalid ng-touched']")
     public WebElement lastName1;
 
-    @FindBy(xpath = "/html/body/app-root/div/scrm-create-record/div/scrm-record-header/div/div/div[2]/div/div[2]/scrm-action-group-menu/div/scrm-button-group/div/scrm-button[1]/button")
+    @FindBy(xpath = "//button[normalize-space()='Save']")
     public WebElement saveButton;
 
-    @FindBy(xpath = "/html/body/app-root/div/scrm-record/div/scrm-record-header/div/div/div[2]/div/div[2]/scrm-action-group-menu/div/scrm-button-group/div/scrm-button[2]/button")
+    @FindBy(xpath = "//button[normalize-space()='Edit']")
     public WebElement editButton;
+
+    @FindBy(xpath = "//button[normalize-space()='Cancel']")
+    public WebElement cancelButton;
 
     WebDriver driver;
 

@@ -14,12 +14,6 @@ public class HomePage extends PageFactory {
     @FindBy(xpath = "//a[@href='#/opportunities']")
     public WebElement opportunitiesModule;
 
-
-    @FindBy(xpath = "//a[@href='#/contacts']")
-    public WebElement contactsModule;
-
-
-
     @FindBy(xpath = "//a[@class='home-nav-link']")
     public WebElement homePageButton;
 
