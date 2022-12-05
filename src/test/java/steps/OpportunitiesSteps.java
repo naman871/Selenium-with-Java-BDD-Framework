@@ -153,7 +153,6 @@ public class OpportunitiesSteps extends CommonSteps {
     }
     public void clickOnViewOpportunities() throws InterruptedException {
         opportunitiesPage = new OpportunitiesPage(driver);
-        Thread.sleep(5000);
         opportunitiesPage.ViewOpportunitiy.click();
         Thread.sleep(10000);
     }

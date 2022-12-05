@@ -73,7 +73,7 @@ public class AccountStepdefinition {
     }
 
     @Then("required fields are empty and click on Save Button")
-    public void requiredFieldsAreEmptyAndClickOnSaveButton() {
+    public void requiredFieldsAreEmptyAndClickOnSaveButton() throws InterruptedException {
         accountSteps.clickOnSaveButton();
     }
 
@@ -88,7 +88,7 @@ public class AccountStepdefinition {
     }
 
     @And("Click on save button")
-    public void clickOnSaveButton() {
+    public void clickOnSaveButton() throws InterruptedException {
         accountSteps.clickOnSaveButton();
     }
 

@@ -102,7 +102,7 @@ public class OpportunitiesPage extends PageFactory {
 
     @FindBy(xpath = "//a[@href='#/opportunities/index?return_module=Opportunities&return_action=DetailView']")
     public WebElement ViewOpportunitiy;
-    @FindBy(xpath = "//scrm-list/div/scrm-list-container/div/div/div/scrm-table/div/scrm-table-header/div/div/scrm-bulk-action-menu/div/div/button/label/input[@type='checkbox']")
+    @FindBy(xpath = "//scrm-list/div/scrm-list-container/div/div/div/scrm-table/div/scrm-table-header/div/div/scrm-bulk-action-menu/div/div/button/label/span")
     public WebElement SelectAllCheckbox;
 
     @FindBy(xpath = "//div[@class='d-inline-block dropdown-button dropdown bulk-action-group float-left']/button[text()=' Bulk Action ']")

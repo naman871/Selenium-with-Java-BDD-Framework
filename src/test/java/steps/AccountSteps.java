@@ -109,9 +109,10 @@ public class AccountSteps extends CommonSteps{
         //accountPage.officePhoneTextbox.sendKeys("76548934");
     }
 
-    public void clickOnSaveButton() {
+    public void clickOnSaveButton() throws InterruptedException {
         accountPage = new AccountPage(driver);
         accountPage.saveButton.click();
+        Thread.sleep(5000);
     }
 
     public void clickOnEditButton() throws InterruptedException {

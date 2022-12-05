@@ -59,11 +59,8 @@ public class LeadsSteps extends CommonSteps {
     public String Lastname="J";
     public void enterAllTheMandatoryFields() throws InterruptedException {
         leadsPage = new LeadsPage(this.driver);
-        leadsPage.FirstName.click();
         Thread.sleep(5000);
-        leadsPage.FirstName.sendKeys("sukanya");
-        Thread.sleep(5000);
-        leadsPage.LastName.sendKeys();
+        leadsPage.LastName.sendKeys(Lastname);
     }
     public void cancelButtonLeads(){
         leadsPage = new LeadsPage(this.driver);
@@ -123,8 +120,9 @@ public class LeadsSteps extends CommonSteps {
     }
     public void clickOnCreateLead() throws InterruptedException {
         leadsPage = new LeadsPage(driver);
-        Thread.sleep(5000);
+        Thread.sleep(10000);
         LeadsPage.clickLead.click();
+        Thread.sleep(10000);
     }
     public void verifyErrorMessage() {
         leadsPage = new LeadsPage(driver);

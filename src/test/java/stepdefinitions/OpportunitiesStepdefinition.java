@@ -102,10 +102,10 @@ public class OpportunitiesStepdefinition {
         opportunitiesSteps.clickOnViewOpportunities();
     }
 
-    @Then("enter mandatory fields like opportunity name {string} sales stage {string}")
-    public void enterManditoryFieldsUnderOpportunity(String opportunityName , String salesStageName) {
-        opportunitiesSteps.enterDetailsToCreateOpportunity(opportunityName,salesStageName);
-    }
+//    @Then("enter mandatory fields like opportunity name {string} sales stage {string}")
+//    public void enterManditoryFieldsUnderOpportunity(String opportunityName , String salesStageName) {
+//        opportunitiesSteps.enterDetailsToCreateOpportunity(opportunityName,salesStageName);
+//    }
 
     @Then("Select checkbox beside {string} dropdown")
     public void selectCheckboxBesideBulkActionDropdown() {
