@@ -46,7 +46,6 @@ public class ContactsPage extends PageFactory{
     @FindBy(xpath = "//a[contains(text(),' Create Contact')]")
     public WebElement createContact;
 
-    @FindBy(xpath = "/html/body/app-root/div/scrm-navbar-ui/scrm-base-navbar/div/nav/div[1]/ul/li[1]/scrm-menu-item/scrm-base-menu-item/div/div[3]/scrm-menu-item-link/scrm-base-menu-item-link/a")
 
 
     @FindBy(xpath = "(//a[contains(text(),' View Contacts')])")

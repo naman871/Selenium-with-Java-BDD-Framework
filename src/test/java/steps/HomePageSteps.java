@@ -77,5 +77,5 @@ public class HomePageSteps extends CommonSteps {
         homePage.contactsModule.click();
 
 
-
+    }
 }
