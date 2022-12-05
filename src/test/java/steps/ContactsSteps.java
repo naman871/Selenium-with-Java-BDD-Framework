@@ -12,7 +12,6 @@ public class ContactsSteps extends CommonSteps {
     private static final Logger logger = LogManager.getLogger(ContactsSteps.class);
 
     public ContactsPage contactsPage;
-    public HomePage homePage;
 
     public void clickContactsdropdown() {
         contactsPage = new ContactsPage(driver);
@@ -60,7 +59,7 @@ public class ContactsSteps extends CommonSteps {
 //    }
 
     public void clickOnViewContact() {
-        contactsPage = new ContactsPage(this.driver);
+        contactsPage = new ContactsPage(driver);
         contactsPage.viewContact.click();
     }
 
@@ -72,13 +71,13 @@ public class ContactsSteps extends CommonSteps {
 
 
     public void clickOnEditButton() {
-        contactsPage = new ContactsPage(this.driver);
+        contactsPage = new ContactsPage(driver);
         contactsPage.editButton.click();
 
     }
 
     public void DeleteContact() {
-        contactsPage = new ContactsPage(this.driver);
+        contactsPage = new ContactsPage(driver);
         //contactsPage.delete.click();
         driver.findElement(By.xpath("//div[text()=' Delete ']")).click();
         contactsPage.proceed.click();

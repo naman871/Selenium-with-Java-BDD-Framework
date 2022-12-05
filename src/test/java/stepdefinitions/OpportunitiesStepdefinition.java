@@ -9,14 +9,14 @@ public class OpportunitiesStepdefinition {
     OpportunitiesSteps opportunitiesSteps = new OpportunitiesSteps();
 
     @And("clicks on create opportunity under opportunities dropdown")
-    public void clickOnCreateOpportunity(){
+    public void clickOnCreateOpportunity() {
         opportunitiesSteps.clickOpportunities();
         opportunitiesSteps.createOpportunity();
     }
 
     @Then("enter mandatory fields like opportunity name {string} sales stage {string} and amount {string} date {string} Account name {string}")
-    public void enterManditoryFieldsUnderOpportunity(String opportunityName,String salesStageName,String amount,String date,String accountName) {
-        opportunitiesSteps.enterDetailsToCreateOpportunity(opportunityName,salesStageName,amount,date,accountName);
+    public void enterManditoryFieldsUnderOpportunity(String opportunityName, String salesStageName, String amount, String date, String accountName) {
+        opportunitiesSteps.enterDetailsToCreateOpportunity(opportunityName, salesStageName, amount, date, accountName);
     }
 
     @And("clicks on recently viewed items under opportunities dropdown")
@@ -54,7 +54,7 @@ public class OpportunitiesStepdefinition {
     }
 
     @Then("enter a new opportunity name {string} and amount {string}")
-    public void enterANewOpportunityName(String opportunityName,String amount) {
+    public void enterANewOpportunityName(String opportunityName, String amount) {
         opportunitiesSteps.updateOpportunityNameAndOpportunityAmount(opportunityName, amount);
     }
 
@@ -64,8 +64,9 @@ public class OpportunitiesStepdefinition {
         opportunitiesSteps.clickDuplicateButton();
 
     }
+
     @And("click on Save Button")
-    public void clickOnSaveButton(){
+    public void clickOnSaveButton() {
         opportunitiesSteps.clickOnSaveButton();
     }
 
@@ -96,7 +97,6 @@ public class OpportunitiesStepdefinition {
     @Then("enter filter criteria as opportunity name {string}")
     public void enterFilterCriteriaAsOpportunityName(String opportunityName) throws InterruptedException {
         opportunitiesSteps.enterFilterCriteria(opportunityName);
-
 
     }
 }
