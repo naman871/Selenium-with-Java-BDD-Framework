@@ -9,7 +9,8 @@ Feature: Verify user is able to select create contact
     And clicks on login button
     Then user is on HomePage
     Then clicks on Contacts
-    And  User is able to select create contact
+    And  click on create contacts
+    #And  User is able to select create contact
 
 
     Examples:
