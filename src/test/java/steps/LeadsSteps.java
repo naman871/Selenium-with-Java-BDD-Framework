@@ -58,7 +58,7 @@ public class LeadsSteps extends CommonSteps {
     }
     public String Lastname="J";
     public void enterAllTheMandatoryFields() throws InterruptedException {
-        leadsPage = new LeadsPage(this.driver);
+        leadsPage = new LeadsPage(driver);
         Thread.sleep(5000);
         leadsPage.LastName.sendKeys(Lastname);
     }
