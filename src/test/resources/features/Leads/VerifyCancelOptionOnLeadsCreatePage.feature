@@ -13,6 +13,7 @@ Feature: Verify Cancel option on LEADS Create Page
     Then Enter all the mandatory Fields
     And click on Cancel Button
     And user should able to view the warning message
+    And Close Browser
 
     Examples:
       | Username | Password |

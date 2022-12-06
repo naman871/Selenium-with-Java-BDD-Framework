@@ -47,5 +47,8 @@ public class QuotesStepdefinition {
     public void saveButtonQuotes() {
         quotesSteps.saveButtonQuotes();
     }
-
+    @And("Quote with the given title name should be created and displayed in new page")
+    public void quoteWithTheGivenTitleNameShouldBeCreatedAndDisplayedInNewPage() {
+        quotesSteps.verifyTitleNameInNewPage();
+    }
 }
