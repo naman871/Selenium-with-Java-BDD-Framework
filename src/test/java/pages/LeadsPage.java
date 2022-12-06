@@ -51,7 +51,8 @@ public class LeadsPage extends PageFactory{
 
     @FindBy(xpath = "//scrm-label[@class='ng-tns-c337-8']")
     public WebElement VerifyWarningMessage;
-
+    @FindBy(xpath = "//span[@class='dynamic-label ng-star-inserted']")
+    public WebElement NewLeadPage;
     @FindBy(xpath = "//a[@id='ngb-nav-0']")
     public WebElement OverviewTab;
 
