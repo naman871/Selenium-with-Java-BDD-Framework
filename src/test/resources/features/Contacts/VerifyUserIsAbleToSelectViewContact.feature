@@ -11,6 +11,8 @@ Feature: Verify user is able to access view contact
     Then clicks on Contacts
     And  User is able to select view contact
     And Close Browser
+    And  Close Browser
+
 
 
     Examples:

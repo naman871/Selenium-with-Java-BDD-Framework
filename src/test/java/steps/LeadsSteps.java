@@ -49,49 +49,56 @@ public class LeadsSteps extends CommonSteps {
     }
 
     public void clickLeadsModule() {
-        leadsPage= new LeadsPage(this.driver);
+        leadsPage= new LeadsPage(driver);
         leadsPage.leadsModule.click();
     }
     public void clicksOnCreateLeads() {
-        leadsPage= new LeadsPage(this.driver);
+        leadsPage= new LeadsPage(driver);
         leadsPage.CreateLeads.click();
     }
+    public String Lastname="J";
     public void enterAllTheMandatoryFields() throws InterruptedException {
         leadsPage = new LeadsPage(this.driver);
-        leadsPage.FirstName.click();
         Thread.sleep(5000);
-        leadsPage.FirstName.sendKeys("sukanya");
-        Thread.sleep(5000);
-        leadsPage.LastName.sendKeys("J");
+        leadsPage.LastName.sendKeys(Lastname);
     }
     public void cancelButtonLeads(){
-        leadsPage = new LeadsPage(this.driver);
+        leadsPage = new LeadsPage(driver);
         leadsPage.CancelButtonLeads.click();
     }
-    public void verifyWarningMessage() throws InterruptedException {
-        leadsPage = new LeadsPage(this.driver);
-        String s=leadsPage.VerifyWarningMessage.getText();
-        System.out.print(s);
-        leadsPage.CancelButtonLeadsPopupwindow.isDisplayed();
-        leadsPage.OkButtonLeadsPopupwindow.isDisplayed();
+    public void verifyWarningMessage() {
+        leadsPage = new LeadsPage(driver);
+        Assert.assertTrue("Warning message is not displayed",leadsPage.VerifyWarningMessage.isDisplayed());
+        String warningMessage=leadsPage.VerifyWarningMessage.getText();
+        Assert.assertEquals("You are about to leave this record without saving any changes you may have made to the record. Are you sure you want to navigate away from this record?",warningMessage);
+        Assert.assertTrue("Cancel button is not displayed",leadsPage.CancelButtonLeadsPopupwindow.isDisplayed());
+        Assert.assertTrue("Ok button is not displayed",leadsPage.OkButtonLeadsPopupwindow.isDisplayed());
+    }
+    public void validateNewLeadPage() {
+        leadsPage = new LeadsPage(driver);
+        String name1=driver.findElement(By.xpath("//span[@class='dynamic-label ng-star-inserted']")).getText();
+        Assert.assertEquals(Lastname,name1);
     }
     public void verifyTabs(){
-        leadsPage = new LeadsPage(this.driver);
+        leadsPage = new LeadsPage(driver);
         Assert.assertTrue("Overview tab is not displayed",leadsPage.OverviewTab.isDisplayed());
         Assert.assertTrue("Other tab is not displayed",leadsPage.OtherTab.isDisplayed());
         Assert.assertTrue("MoreInformation tab is not displayed",leadsPage.MoreInformationTab.isDisplayed());
     }
     public void searchBoxLeadsModule(){
-        leadsPage = new LeadsPage(this.driver);
+        leadsPage = new LeadsPage(driver);
         Assert.assertTrue("search box is not displayed",leadsPage.SearchBoxLeads.isDisplayed());
     }
     public void clickOnCancelButtonOnPopupWindow() throws InterruptedException {
-        leadsPage = new LeadsPage(this.driver);
+        leadsPage = new LeadsPage(driver);
         Thread.sleep(5000);
         leadsPage.CancelButtonLeadsPopupwindow.click();
     }
+    public void userShouldBeNavigatedToLEADSCreatePage(){
+        Assert.assertTrue("Leads create page is not displayed",leadsPage.createleadpage.isDisplayed());
+    }
     public void clickOnOkButtonOnPopupWindow() throws InterruptedException {
-        leadsPage = new LeadsPage(this.driver);
+        leadsPage = new LeadsPage(driver);
         Thread.sleep(5000);
         leadsPage.OkButtonLeadsPopupwindow.click();
     }
@@ -114,6 +121,22 @@ public class LeadsSteps extends CommonSteps {
         logger.info(accountName);
         LeadsPage.leadnum.sendKeys(mobileNumber);
         logger.info(mobileNumber);
+    }
+    public void clickOnCreateLead() throws InterruptedException {
+        leadsPage = new LeadsPage(driver);
+        Thread.sleep(10000);
+        LeadsPage.clickLead.click();
+        Thread.sleep(10000);
+    }
+    public void verifyErrorMessage() {
+        leadsPage = new LeadsPage(driver);
+        Assert.assertTrue(leadsPage.ErrorMessage.isDisplayed());
+    }
+    public void Module(String module) throws InterruptedException {
+        leadsPage = new LeadsPage(driver);
+        Actions action = new Actions(driver);
+        Thread.sleep(5000);
+        action.moveToElement(driver.findElement(By.xpath("//a[normalize-space()='"+module+"']"))).perform();
     }
 }
 

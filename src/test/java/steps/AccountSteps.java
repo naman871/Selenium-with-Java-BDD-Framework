@@ -10,12 +10,12 @@ import pages.AccountPage;
 import pages.CommonPage;
 import pages.HomePage;
 
-public class AccountSteps extends CommonSteps{
+public class AccountSteps extends CommonSteps {
     private static final Logger logger = LogManager.getLogger(AccountSteps.class);
 
-    public     AccountPage accountPage;
-     public CommonPage commonPage;
-     public HomePage homePage;
+    public AccountPage accountPage;
+    public CommonPage commonPage;
+    public HomePage homePage;
 
 
     public void clickAccountDropdown() {
@@ -31,6 +31,7 @@ public class AccountSteps extends CommonSteps{
         Assert.assertTrue(accountPage.importAccount.isDisplayed());
 
     }
+
     public void validatecreateaccountPage() {
         accountPage = new AccountPage(driver);
         accountPage.createAccountPage.isDisplayed();
@@ -56,7 +57,7 @@ public class AccountSteps extends CommonSteps{
 
     public void enterrequireddetails() throws InterruptedException {
         accountPage = new AccountPage(driver);
-       // driver.switchTo().frame(homePage.iframeForHomepage);
+        // driver.switchTo().frame(homePage.iframeForHomepage);
         Thread.sleep(5000);
         accountPage.name.sendKeys("Ganga");
     }
@@ -66,6 +67,7 @@ public class AccountSteps extends CommonSteps{
         Assert.assertTrue(accountPage.save.isEnabled());
         accountPage.save.click();
     }
+
     public void validateSavedAccount() {
         accountPage = new AccountPage(driver);
         Assert.assertTrue(accountPage.savedAccount.isDisplayed());
@@ -77,6 +79,7 @@ public class AccountSteps extends CommonSteps{
         accountPage.delete.click();
         driver.findElement(By.xpath("(//button[@type='button'])[20]")).click();
     }
+
     public void navigateToAccountModule() {
         accountPage = new AccountPage(driver);
         accountPage.accountModule.click();
@@ -109,9 +112,10 @@ public class AccountSteps extends CommonSteps{
         //accountPage.officePhoneTextbox.sendKeys("76548934");
     }
 
-    public void clickOnSaveButton() {
+    public void clickOnSaveButton() throws InterruptedException {
         accountPage = new AccountPage(driver);
         accountPage.saveButton.click();
+        Thread.sleep(5000);
     }
 
     public void clickOnEditButton() throws InterruptedException {
@@ -163,15 +167,16 @@ public class AccountSteps extends CommonSteps{
         accountPage.actionDropdowndisplay.isDisplayed();
 
     }
+
     public void clickOnDeleteButtonFromActionDropdown() {
         accountPage = new AccountPage(driver);
         accountPage.deleteOptionDropdown.click();
     }
+
     public void clickOnProceedButtonAndRecordDeleted() {
         accountPage = new AccountPage(driver);
         accountPage.proceedButton.click();
     }
-
 
 
 }

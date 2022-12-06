@@ -12,6 +12,10 @@ Feature: Verify user is able to select create contact
     And  click on create contacts
     #And  User is able to select create contact
 
+    And  clicks on login button
+    When click on Contacts dropdown
+    And  click on create contacts
+    And  Close Browser
 
     Examples:
       | Username | Password |

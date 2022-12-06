@@ -1,6 +1,6 @@
-@issue:
+@issue:035
 @author-Sukanya
-Feature: Quotes Module
+Feature: Verify user is able to create quote under Quotes module
 
   Scenario Outline:Verify user is able to create quote under Quotes module
     Given launch browser
@@ -11,8 +11,10 @@ Feature: Quotes Module
     Then Click on Create Quotes option
     And Enter all the required fields
     And Click on Save
-    And Close Browser
+    And Quote with the given title name should be created and displayed in new page
 
     Examples:
       | Username | Password |
       | will     | will     |
+
+#   Not working Iframe is constantly changing
