@@ -2,7 +2,7 @@
 @author:Sunitha
 
 Feature:Verify whether "New" button is working.
-@TC022
+
   Scenario Outline:Verify whether "New" button is working
     Given launch browser
     Then user enters "<Username>" and "<Password>"

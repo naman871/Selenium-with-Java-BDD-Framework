@@ -45,16 +45,16 @@ public class OpportunitiesSteps extends CommonSteps {
         Actions actions = new Actions(driver);
         opportunitiesPage = new OpportunitiesPage(driver);
         opportunitiesPage.opportunitiyName.sendKeys(opportunityName);
-        logger.info(opportunityName);
+        logger.info("Opportunity Name is -->"+opportunityName);
         opportunitiesPage.enterAccountName.sendKeys(accountName);
-        logger.info(accountName);
+        logger.info("Account Name is -->"+accountName);
         opportunitiesPage.salesStage.sendKeys(salesStageName);
-        logger.info(salesStageName);
+        logger.info("Sales Stage Name  is -->"+salesStageName);
         actions.doubleClick().click(opportunitiesPage.prospecting);
         opportunitiesPage.oppportunityAmount.sendKeys(amount);
-        logger.info(amount);
+        logger.info("Amount is -->"+amount);
         opportunitiesPage.expectedClosedDate.sendKeys(date);
-        logger.info(date);
+        logger.info("Expected Closed Date is -->"+date);
         opportunitiesPage.saveButton.click();
     }
 
@@ -93,27 +93,31 @@ public class OpportunitiesSteps extends CommonSteps {
      * @param opportunityName
      * @param amount
      */
-    public void updateOpportunityNameAndOpportunityAmount(String opportunityName,String amount){
+    public void updateOpportunityNameAndOpportunityAmount(String opportunityName,String amount) throws InterruptedException {
         opportunitiesPage = new OpportunitiesPage(driver);
         String preModifiedOpportunityName = opportunitiesPage.opportunitiyName.getText();
-        logger.info(preModifiedOpportunityName);
+        logger.info("Opportunity name pre modified -->"+preModifiedOpportunityName);
         Assert.assertNotEquals(preModifiedOpportunityName,opportunityName);
+        Thread.sleep(5000);
         opportunitiesPage.opportunitiyName.clear();
         opportunitiesPage.opportunitiyName.sendKeys(opportunityName);
-        logger.info(opportunityName);
+        logger.info("Opportunity name post modified -->"+opportunityName);
         String preModifiedOpportunityamount = opportunitiesPage.oppportunityAmount.getText();
         Assert.assertNotEquals(preModifiedOpportunityamount,amount);
-        logger.info(preModifiedOpportunityamount);
+        logger.info("Opportunity amount pre modified -->"+preModifiedOpportunityamount);
+        Thread.sleep(5000);
+        opportunitiesPage.oppportunityAmount.clear();
         opportunitiesPage.oppportunityAmount.sendKeys(amount);
-        logger.info(amount);
+        logger.info("Opportunity amount post modified -->"+amount);
 
     }
     public void clickDuplicateButton(){
         opportunitiesPage = new OpportunitiesPage(driver);
         opportunitiesPage.duplicateButton.click();
     }
-    public void clickOnSaveButton(){
+    public void clickOnSaveButton() throws InterruptedException {
         opportunitiesPage = new OpportunitiesPage(driver);
+        Thread.sleep(8000);
         opportunitiesPage.saveButton.click();
     }
     public void clickOnActionDropDown(){

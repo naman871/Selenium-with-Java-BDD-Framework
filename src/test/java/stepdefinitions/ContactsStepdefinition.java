@@ -98,4 +98,17 @@ public class ContactsStepdefinition {
         contactsSteps = new ContactsSteps();
         contactsSteps.DeleteContact();
     }
+    @Then("user clicks on cancel button")
+    public void clickOnCancelButton() {
+        contactsSteps = new ContactsSteps();
+        contactsSteps.clickOnCancelButton();
+    }
+
+    @Then("clicks on Contacts")
+    public void clicksOnContact() throws InterruptedException {
+        contactsSteps = new ContactsSteps();
+        contactsSteps.clickContactsModule();
+        Thread.sleep(1000);
+
+    }
 }
