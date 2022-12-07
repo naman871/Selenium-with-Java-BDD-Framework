@@ -1,5 +1,5 @@
-@TC_018
-@author-Ramya
+@issue:TC_018
+@author-Ramyasri
 
 Feature: Verify user is able to access view contact
 

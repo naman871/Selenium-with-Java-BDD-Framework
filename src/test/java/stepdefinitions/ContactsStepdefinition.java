@@ -43,7 +43,6 @@ public class ContactsStepdefinition {
 
     @And("click on create contacts")
     public void clickOnCreateContacts() {
-        //Thread.sleep(8000);
         contactsSteps.clickOncreatecontacts();
     }
 

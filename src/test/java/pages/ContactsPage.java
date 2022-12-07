@@ -51,8 +51,7 @@ public class ContactsPage extends PageFactory{
     @FindBy(xpath = "(//a[contains(text(),' View Contacts')])")
     public WebElement viewContact;
 
-//    @FindBy(xpath = "//input[@class='form-control form-control-sm ng-pristine ng-valid ng-touched']")
-//    public WebElement firstName;
+
 
     @FindBy(xpath = "//input[@class='form-control form-control-sm ng-pristine ng-invalid is-invalid ng-touched']")
     public WebElement lastName1;

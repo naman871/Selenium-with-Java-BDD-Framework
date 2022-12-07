@@ -1,5 +1,5 @@
-@TC_019
-@author-Ramya
+@issue:TC_019
+@author-Ramyasri
 
 Feature: Verify User is able to access save button
 
@@ -13,12 +13,7 @@ Feature: Verify User is able to access save button
     Then Enter required details on create contacts page
     And  click save
     And Close Browser
-    And  clicks on login button
-    When click on Contacts dropdown
-    And  click on create contacts
-    Then Enter required details on create contacts page
-    And  click save
-    And  Close Browser
+
 
     Examples:
       | Username | Password |
