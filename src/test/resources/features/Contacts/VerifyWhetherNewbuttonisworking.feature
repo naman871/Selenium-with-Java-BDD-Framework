@@ -9,12 +9,12 @@ Feature:Verify whether "New" button is working.
     And  clicks on login button
     When click on Contacts dropdown
     And  click on create contacts
-    Then Enter required details on create contacts page
+    Then enter required details on create contacts page
     And  click save
     Then Delete the account
     And  Click on New Button
     Then Validate create page
-    And  Close Browser
+    And  close Browser
 
     Examples:
       | Username | Password |
