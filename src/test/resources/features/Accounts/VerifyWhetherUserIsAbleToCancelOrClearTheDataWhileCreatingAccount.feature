@@ -9,13 +9,13 @@ Feature:Verify whether user is able to cancel/clear the data while creating acco
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
     Then user is on HomePage
-    And Navigate to Account module
+    And navigate to Account module
     And click on Create Account option from the dropdown list
-    And Fill all the required data
+    And enter mandatory field like name "Internet" and website "www.facebook.com" and billingAddress "Pune" and billingPostalCode "225678"
     And click on cancel button
     And click on ok button on popup message
     Then account page should be displayed
-    And Close Browser
+    And close Browser
 
     Examples:
       | Username | Password |

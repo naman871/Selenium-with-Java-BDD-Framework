@@ -20,13 +20,13 @@ import steps.HomePageSteps;
 public class ContactsStepdefinition {
     public ContactsSteps contactsSteps = new ContactsSteps();
 
-    @When("Navigate to contact module")
+    @When("navigate to contact module")
     public void clickOnAccountDropdown() throws InterruptedException {
         Thread.sleep(8000);
         contactsSteps.navigateToContactModule();
     }
 
-    @When("Contact Dropdown should display submodules")
+    @When("contact Dropdown should display submodules")
     public void contactModuleDisplaySubmodules() throws InterruptedException {
         Thread.sleep(8000);
         contactsSteps.contactModuleDisplaySubmodules();
@@ -43,18 +43,13 @@ public class ContactsStepdefinition {
 
     @And("click on create contacts")
     public void clickOnCreateContacts() {
-        //Thread.sleep(8000);
         contactsSteps.clickOncreatecontacts();
     }
 
-    @Then("Enter required details on create contacts page")
-    public void enterRequiredDetailsOnCreateContactsPage() {
-        contactsSteps.enterdetailsonCreatecontactpage();
-
-    }
 
     @Then("Validate create page")
-    public void validateCreatePage() {
+    public void validateCreatePage() throws InterruptedException {
+        Thread.sleep(5000);
         contactsSteps.validateCreatePage();
     }
 
@@ -67,7 +62,7 @@ public class ContactsStepdefinition {
 //    }
 
 
-    @And("User is able to select view contact")
+    @And("user is able to select view contact")
     public void clickOnViewContact() {
         contactsSteps = new ContactsSteps();
         contactsSteps.clickOnViewContact();
@@ -86,14 +81,14 @@ public class ContactsStepdefinition {
 //        contactsSteps.clickOnSaveButton();
 //    }
 
-    @Then("User Clicks on Edit Button")
+    @Then("user Clicks on Edit Button")
     public void clickOnEditButton() {
         contactsSteps = new ContactsSteps();
         contactsSteps.clickOnEditButton();
 
     }
 
-    @Then("Delete the contact")
+    @Then("delete the contact")
     public void deleteTheContact() {
         contactsSteps = new ContactsSteps();
         contactsSteps.DeleteContact();
@@ -110,5 +105,10 @@ public class ContactsStepdefinition {
         contactsSteps.clickContactsModule();
         Thread.sleep(1000);
 
+    }
+
+    @Then("enter required details:Firstname as {string} and Lastname as {string} on create contacts page")
+    public void enterRequiredDetailsFirstnameAsAndLastnameAsOnCreateContactsPage(String firstname, String lastname) {
+        contactsSteps.enterdetailsonCreatecontactpage(firstname,lastname);
     }
 }

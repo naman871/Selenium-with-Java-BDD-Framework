@@ -9,11 +9,11 @@ Feature: Verify user is able to access "actions" dropdown list in created contac
     And clicks on login button
     When click on Contacts dropdown
     And  click on create contacts
-    Then Enter required details on create contacts page
+    Then enter required details on create contacts page
     And  click save
-    And Click on "Actions" dropdown list
-    Then Action dropdown list should be displayed
-    And  Close Browser
+    And click on "Actions" dropdown list
+    Then action dropdown list should be displayed
+    And  close Browser
     Examples:
       | Username | Password |
       | will     | will     |

@@ -38,10 +38,9 @@ public class QuotesStepdefinition {
         quotesSteps.clickOnCreateQuote();
 
     }
-    @And("Enter all the required fields")
-    public void titleTextBoxQuotes() {
-        quotesSteps.titleTextBoxQuotes();
-
+    @And("In Address Information section click on cursor beside account field")
+    public void inAddressInformationSectionClickOnCursorBesideAccountField() throws InterruptedException {
+        quotesSteps.accountFieldCursorQuotes();
     }
     @Then("Click on Save")
     public void saveButtonQuotes() {
@@ -50,5 +49,25 @@ public class QuotesStepdefinition {
     @And("Quote with the given title name should be created and displayed in new page")
     public void quoteWithTheGivenTitleNameShouldBeCreatedAndDisplayedInNewPage() {
         quotesSteps.verifyTitleNameInNewPage();
+    }
+
+    @And("Get the account list in the Account search window")
+    public void getTheAccountListInTheAccountSearchWindow() {
+        quotesSteps.getTheAccountListInTheAccountSearchWindow();
+    }
+
+    @And("Click on the account name")
+    public void clickOnTheAccountName() {
+        quotesSteps.clickOnTheAccountName();
+    }
+
+    @And("The existing account should be selected for the quote")
+    public void theExistingAccountShouldBeSelectedForTheQuote() {
+        quotesSteps.theExistingAccountShouldBeSelectedForTheQuote();
+    }
+
+    @And("Enter the required Fields title as {string}")
+    public void enterTheRequiredFieldsTitleAs(String titleName) {
+        quotesSteps.enterTheRequiredFieldsTitleAs(titleName);
     }
 }

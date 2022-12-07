@@ -1,4 +1,4 @@
-@issue:TC_043
+@TC_043
 @author:Naman
 
 Feature: Verify user is able to create a new opportunity under opportunities module

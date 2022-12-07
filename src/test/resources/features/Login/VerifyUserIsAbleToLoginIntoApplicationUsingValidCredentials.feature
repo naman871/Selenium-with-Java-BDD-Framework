@@ -7,8 +7,8 @@ Feature:Verify user is able to login with valid data
     Given launch browser
     Then user enters "<Username>" and "<Password>"
     And  clicks on login button
-    Then Validate SuiteCRM DashBoard
-    And  Close Browser
+    Then validate SuiteCRM DashBoard
+    And  close Browser
 
     Examples:
       | Username | Password |

@@ -9,11 +9,11 @@ Feature:Delete Contact
     And  clicks on login button
     When click on Contacts dropdown
     And  click on create contacts
-    Then Enter required details on create contacts page
+    Then enter required details:Firstname as "Mithin" and Lastname as "Sam" on create contacts page
     And  click save
-    And  Click on "Actions" dropdown list
-    Then Delete the contact
-    And  Close Browser
+    And  click on "Actions" dropdown list
+    Then delete the contact
+    And  close Browser
 
 
     Examples:

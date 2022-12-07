@@ -1,4 +1,4 @@
-@issue:TC_047
+@TC_047
 @author:Naman
 
 Feature:Verify user is able to find duplicate opportunity

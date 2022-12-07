@@ -7,8 +7,8 @@ Feature: Verify user is able to view the labels displayed
     Given launch browser
     Then user enters "<Username>" and "<Password>"
     And  clicks on login button
-    Then Validate Homepage DashBoard
-    And  Close Browser
+    Then validate Homepage DashBoard
+    And  close Browser
     Examples:
       | Username | Password |
       | will     | will     |

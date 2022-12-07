@@ -8,13 +8,13 @@ Feature:Verify the user is able to edit the created account.
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
     Then user is on HomePage
-    And Navigate to Account module
+    And navigate to Account module
     And click on Create Account option from the dropdown list
-    Then Fill all the required data
-    And Click on save button
-    And Click on Edit button
-    Then After completion of editing click on save button and data edited successfully
-    Then Close Browser
+    And enter mandatory field like name "Internet" and website "www.facebook.com" and billingAddress "Pune" and billingPostalCode "225678"
+    And click on save button
+    And click on Edit button
+    Then after completion of editing click on save button and data edited successfully
+
 
     Examples:
       | Username | Password |

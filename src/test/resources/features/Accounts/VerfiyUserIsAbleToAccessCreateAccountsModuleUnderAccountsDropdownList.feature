@@ -10,7 +10,7 @@ Feature:Verify user is able to access create Accounts
     When click on Account dropdown
     And  click on create account
     Then validate create account page
-    And  Close Browser
+    And  close Browser
 
     Examples:
       | Username | Password |

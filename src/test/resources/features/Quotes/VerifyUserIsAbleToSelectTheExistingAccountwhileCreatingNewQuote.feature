@@ -9,9 +9,11 @@ Feature: Verify user is able to select the existing account while creating new q
     Then user is on HomePage
     And click on Quotes module
     Then Click on Create Quotes option
-    And Enter all the required fields
+    And Enter the required Fields title as "Quotes"
     And In Address Information section click on cursor beside account field
-
+    And Get the account list in the Account search window
+    And Click on the account name
+    And The existing account should be selected for the quote
     Examples:
       | Username | Password |
       | will     | will     |

@@ -9,7 +9,7 @@ Feature:Account Module
     And clicks on login button
     When click on Account dropdown
     Then verify Account dropdown option
-    And  Close Browser
+    And  close Browser
 
     Examples:
       | Username | Password |

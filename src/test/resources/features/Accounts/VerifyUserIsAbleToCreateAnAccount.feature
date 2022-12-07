@@ -1,4 +1,4 @@
-@TC_007
+@TC_008
 @author:Sunitha
 
 Feature:Verify user is able to create an account.
@@ -9,11 +9,11 @@ Feature:Verify user is able to create an account.
     And  clicks on login button
     When click on Account dropdown
     And  click on create account
-    Then Enter required details
+    Then Enter required details name as "Ganga"
     And  click save
     And  Validate saved account
     #Then Delete the account
-    And  Close Browser
+    And  close Browser
 
     Examples:
       | Username | Password |
