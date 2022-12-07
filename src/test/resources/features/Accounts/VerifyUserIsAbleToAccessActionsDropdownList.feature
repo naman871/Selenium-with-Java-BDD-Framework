@@ -8,13 +8,13 @@ Feature:Verify User is able to access "Actions" dropdown list
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
     Then user is on HomePage
-    And Navigate to Account module
+    And navigate to Account module
     And click on Create Account option from the dropdown list
-    And Fill all the required data
-    And Click on save button
-    And Click on "Actions" dropdown list
-    Then Action dropdown list should be displayed
-    And Close Browser
+    And enter mandatory field like name "Internet" and website "www.facebook.com" and billingAddress "Pune" and billingPostalCode "225678"
+    And click on save button
+    And click on "Actions" dropdown list
+    Then action dropdown list should be displayed
+
 
 
     Examples:

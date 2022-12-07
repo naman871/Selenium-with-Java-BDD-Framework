@@ -60,7 +60,7 @@ public class AccountStepdefinition {
         accountSteps.deleteAccount();
     }
 
-    @And("Navigate to Account module")
+    @And("navigate to Account module")
     public void navigateToAccountModule() {
         accountSteps.navigateToAccountModule();
 
@@ -76,14 +76,9 @@ public class AccountStepdefinition {
         accountSteps.clickOnSaveButton();
     }
 
-    @And("Error message {string} should be displayed.")
-    public void errorMessageShouldBeDisplayed(String arg0) {
-        accountSteps.errorMessageShouldBeDisplayed();
-    }
-
-    @Then("Fill all the required data")
-    public void fillAllTheRequiredData() {
-        accountSteps.fillAllTheRequiredField();
+    @And("error message {string} should be displayed.")
+    public void errorMessageShouldBeDisplayed(String errorMessageText) {
+        accountSteps.errorMessageShouldBeDisplayed(errorMessageText);
     }
 
     @And("click on save button")
@@ -91,12 +86,12 @@ public class AccountStepdefinition {
         accountSteps.clickOnSaveButton();
     }
 
-    @And("Click on Edit button")
-    public void clickOnEditButton() throws InterruptedException {
-        accountSteps.clickOnEditButton();
-    }
+//    @And("click on Edit button")
+//    public void clickOnEditButton() throws InterruptedException {
+//        accountSteps.clickOnEditButton();
+//    }
 
-    @Then("After completion of editing click on save button and data edited successfully")
+    @Then("after completion of editing click on save button and data edited successfully")
     public void afterCompletionOfEditingClickOnSaveButton() {
         accountSteps.afterCompletionOfEditingClickOnSave();
     }
@@ -116,9 +111,9 @@ public class AccountStepdefinition {
         accountSteps.clickOnOkButtonOnPopUpMessage();
     }
 
-    @And("Click on {string} button")
-    public void clickOnButton(String arg0) {
-        accountSteps.clickOnNewButton();
+    @And("click on {string} button")
+    public void clickOnButton(String New) {
+        accountSteps.clickOnNewButton(New);
 
     }
 
@@ -127,13 +122,13 @@ public class AccountStepdefinition {
         accountSteps.createPageDisplayed();
     }
 
-    @And("Click on {string} dropdown list")
+    @And("click on {string} dropdown list")
     public void clickOnDropdownList(String arg0) {
         accountSteps.clickOnActionDropdown();
 
     }
 
-    @Then("Action dropdown list should be displayed")
+    @Then("action dropdown list should be displayed")
     public void actionDropdownListShouldBeDisplayed() throws InterruptedException {
         accountSteps.actionDropdwonListDisplayed();
     }
@@ -147,8 +142,13 @@ public class AccountStepdefinition {
     public void clickOnProceedButtonWhenPopupMessageDisplayed() {
         accountSteps.clickOnProceedButtonAndRecordDeleted();
     }
-}
 
+
+    @And("enter mandatory field like name {string} and website {string} and billingAddress {string} and billingPostalCode {string}")
+    public void enterMandatoryFieldLikeNameAndWebsiteAndBillingAddressAndBillingPostalCode(String name, String website, String billingAddress, String billingPostalCode) {
+    accountSteps.fillAllTheRequiredField(name,website,billingAddress,billingPostalCode);
+    }
+}
 
 
 
