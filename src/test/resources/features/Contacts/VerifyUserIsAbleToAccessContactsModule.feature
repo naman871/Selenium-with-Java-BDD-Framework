@@ -1,5 +1,5 @@
-@TC_016
-@author-Ramya
+@issue:TC_016
+@author-Ramyasri
 
 Feature: Verify user is able to access Contacts Module
 
@@ -9,7 +9,8 @@ Feature: Verify user is able to access Contacts Module
     And clicks on login button
     Then user is on HomePage
     Then clicks on Contacts
-    And Close Browser
+    And contact Dropdown should display submodules
+    And close Browser
 
 
 

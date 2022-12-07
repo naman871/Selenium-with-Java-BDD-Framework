@@ -2,11 +2,6 @@
 @author:MinalTule
 
 Feature:Verify Contact module dropdown
-@issue:TC_016
-@author-Ramya
-
-  Scenario Outline:Verify Contact module dropdown
-Feature: Verify User Is Able To Access Contact module
 
   Scenario Outline:Verify User Is Able To Access Contact module
     Given launch browser

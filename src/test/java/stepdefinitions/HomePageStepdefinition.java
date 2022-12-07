@@ -19,7 +19,7 @@ public class HomePageStepdefinition {
 
     }
 
-    @Then("Validate SuiteCRM DashBoard")
+    @Then("validate SuiteCRM DashBoard")
     public void validateSuiteCRMDashBoard() {
         homePageSteps.validateSuiteCRM();
     }
@@ -31,7 +31,7 @@ public class HomePageStepdefinition {
         commonSteps.closeBrowser();
     }
 
-    @Then("Validate Homepage DashBoard")
+    @Then("validate Homepage DashBoard")
     public void validateHomepageDashBoard() {
         homePageSteps.validateHomepageDashboard();
     }
@@ -41,7 +41,7 @@ public class HomePageStepdefinition {
         homePageSteps.validateErrorMessage();
     }
 
-    @Then("Validate Missing Message")
+    @Then("validate Missing Message")
     public void validateMissingMessage() {
         homePageSteps.validateMissingMessage();
     }

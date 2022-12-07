@@ -27,14 +27,15 @@ public class CommonStepdefinition {
 
     }
 
-    @And("Close Browser")
+    @And("close Browser")
     public void closeBrowser() {
         commonSteps.closeBrowser();
     }
 
 
-    @And("Click on New Button")
-    public void clickOnNewButton() {
+    @And("click on New Button")
+    public void clickOnNewButton() throws InterruptedException {
+        Thread.sleep(2000);
         commonSteps.clickonNewButton();
     }
 }

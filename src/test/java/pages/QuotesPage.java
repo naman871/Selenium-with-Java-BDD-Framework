@@ -31,7 +31,7 @@ public class QuotesPage extends PageFactory {
     public WebElement iframeForQuotesViewPage; //    Iframe is constantly changing
     @FindBy(xpath = "//input[@id='SAVE']")
     public WebElement saveButtonQuotesModule;
-    @FindBy(xpath = "//input[@id='billing_account']")
+    @FindBy(xpath = "//button[@id='btn_billing_account']//*[name()='svg']")
     public WebElement accountSearchCursorQuotes;
 
     @FindBy(xpath = "//input[@id='name_advanced']")
@@ -54,6 +54,18 @@ public class QuotesPage extends PageFactory {
 
     @FindBy(xpath = "//span[@id='name']")
     public WebElement verifyTitleNameInNewPageWindow;
+
+    @FindBy(xpath = "//a[normalize-space()='Sea Region Inc']")
+    public WebElement quoteAccountName;
+
+    @FindBy(xpath = "//input[@name='billing_account']")
+    public WebElement  quoteAccountNameTextBox;
+
+    @FindBy(xpath = "//input[@id='name_advanced']")
+    public WebElement accountSearchBoxQuotesWindow;
+
+    @FindBy(xpath = "//input[@id='search_form_submit']")
+    public WebElement searchButtonQuotesWindow;
     WebDriver driver;
     public QuotesPage(WebDriver driver){
         this.driver=driver;

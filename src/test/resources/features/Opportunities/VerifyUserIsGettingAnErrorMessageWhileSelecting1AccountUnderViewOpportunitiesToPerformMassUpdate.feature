@@ -1,4 +1,4 @@
-@issue:TC_050
+@TC_050
 @author:Ramya
 Feature:opportunities Module
 @TC_50
@@ -11,6 +11,7 @@ And Click on  View Opportunities option
 Then Select one Checkbox (Record) under Opportunities Grid
 And Click on 'bulk Action' dropdown
 Then Select Mass Update link
+ And Close Browser
 
 Examples:
 | Username | Password |

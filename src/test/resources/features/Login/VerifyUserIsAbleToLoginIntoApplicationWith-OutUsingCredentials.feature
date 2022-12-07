@@ -7,8 +7,8 @@ Feature:Login to Suite CRM Application without any credentials
     Given launch browser
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
-    Then Validate Missing Message
-    And  Close Browser
+    Then validate Missing Message
+    And  close Browser
 
     Examples:
       | Username | Password |

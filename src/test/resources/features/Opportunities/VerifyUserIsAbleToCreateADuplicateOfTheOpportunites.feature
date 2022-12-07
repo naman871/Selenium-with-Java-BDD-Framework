@@ -1,4 +1,4 @@
-@issue:TC_045
+@TC_045
 @author:Naman
 
 Feature:Verify user is  able to create a duplicate of  the Opportunites

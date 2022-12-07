@@ -22,6 +22,8 @@ public class ContactsPage extends PageFactory{
     @FindBy(xpath = "//a[@href='#/contacts/index?return_module=Contacts&return_action=DetailView']")
     public WebElement viewedContactsOption;
 
+    @FindBy(xpath = "//li[@class='top-nav nav-item dropdown non-grouped active ng-tns-c303-1 ng-star-inserted']//div[4]//scrm-menu-item-link[1]//scrm-base-menu-item-link[1]//a[1]")
+    public WebElement importOption;
     @FindBy(xpath = "//a[@href='#/contacts']")
     public WebElement contactsDropdown;
 
@@ -51,8 +53,7 @@ public class ContactsPage extends PageFactory{
     @FindBy(xpath = "(//a[contains(text(),' View Contacts')])")
     public WebElement viewContact;
 
-//    @FindBy(xpath = "//input[@class='form-control form-control-sm ng-pristine ng-valid ng-touched']")
-//    public WebElement firstName;
+
 
     @FindBy(xpath = "//input[@class='form-control form-control-sm ng-pristine ng-invalid is-invalid ng-touched']")
     public WebElement lastName1;

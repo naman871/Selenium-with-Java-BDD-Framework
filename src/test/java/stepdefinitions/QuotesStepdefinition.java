@@ -41,6 +41,9 @@ public class QuotesStepdefinition {
     @And("Enter the required Fields title as {string}")
     public void enterTheRequiredFieldsTitleAs(String titleName) {
         quotesSteps.enterTheRequiredFieldsTitleAs(titleName);
+    @And("In Address Information section click on cursor beside account field")
+    public void inAddressInformationSectionClickOnCursorBesideAccountField() throws InterruptedException {
+        quotesSteps.accountFieldCursorQuotes();
     }
 
     @Then("Click on Save")
@@ -51,32 +54,24 @@ public class QuotesStepdefinition {
     public void quoteWithTheGivenTitleNameShouldBeCreatedAndDisplayedInNewPage() {
         quotesSteps.verifyTitleNameInNewPage();
     }
-    @And("In Address Information section click on cursor beside account field")
-    public void inAddressInformationSectionClickOnCursorBesideAccountField() throws InterruptedException {
-        quotesSteps.accountFieldCursorQuotes();
-    }
 
-    @And("Account with the entered name should be displayed in the list")
-    public void accountWithTheEnteredNameShouldBeDisplayedInTheList() {
+    @And("Get the account list in the Account search window")
+    public void getTheAccountListInTheAccountSearchWindow() {
         quotesSteps.getTheAccountListInTheAccountSearchWindow();
     }
+
     @And("Click on the account name")
     public void clickOnTheAccountName() {
         quotesSteps.clickOnTheAccountName();
     }
 
-    @And("Click on cross button beside account field")
-    public void clickOnCrossButtonBesideAccountField() {
-        quotesSteps.clickCrossButtonBesideAccountName();
+    @And("The existing account should be selected for the quote")
+    public void theExistingAccountShouldBeSelectedForTheQuote() {
+        quotesSteps.theExistingAccountShouldBeSelectedForTheQuote();
     }
 
-    @And("Click on  Copy address from left checkbox in Address Information section is enabled")
-    public void clickOnCopyAddressFromLeftCheckboxInAddressInformationSectionIsEnabled() {
-        quotesSteps.verifyCopyAddressCheckboxEnabled();
-    }
-
-    @And("Account field should get cleared")
-    public void accountFieldShouldGetCleared() {
-        quotesSteps.accountFieldCleared();
+    @And("Enter the required Fields title as {string}")
+    public void enterTheRequiredFieldsTitleAs(String titleName) {
+        quotesSteps.enterTheRequiredFieldsTitleAs(titleName);
     }
 }
