@@ -20,13 +20,13 @@ import steps.HomePageSteps;
 public class ContactsStepdefinition {
     public ContactsSteps contactsSteps = new ContactsSteps();
 
-    @When("Navigate to contact module")
+    @When("navigate to contact module")
     public void clickOnAccountDropdown() throws InterruptedException {
         Thread.sleep(8000);
         contactsSteps.navigateToContactModule();
     }
 
-    @When("Contact Dropdown should display submodules")
+    @When("contact Dropdown should display submodules")
     public void contactModuleDisplaySubmodules() throws InterruptedException {
         Thread.sleep(8000);
         contactsSteps.contactModuleDisplaySubmodules();
@@ -43,8 +43,13 @@ public class ContactsStepdefinition {
 
     @And("click on create contacts")
     public void clickOnCreateContacts() {
-        //Thread.sleep(8000);
         contactsSteps.clickOncreatecontacts();
+    }
+
+    @Then("enter required details on create contacts page")
+    public void enterRequiredDetailsOnCreateContactsPage() {
+        contactsSteps.enterdetailsonCreatecontactpage();
+
     }
 
     @Then("Validate create page")
@@ -62,7 +67,7 @@ public class ContactsStepdefinition {
 //    }
 
 
-    @And("User is able to select view contact")
+    @And("user is able to select view contact")
     public void clickOnViewContact() {
         contactsSteps = new ContactsSteps();
         contactsSteps.clickOnViewContact();
@@ -81,7 +86,7 @@ public class ContactsStepdefinition {
 //        contactsSteps.clickOnSaveButton();
 //    }
 
-    @Then("User Clicks on Edit Button")
+    @Then("user Clicks on Edit Button")
     public void clickOnEditButton() {
         contactsSteps = new ContactsSteps();
         contactsSteps.clickOnEditButton();

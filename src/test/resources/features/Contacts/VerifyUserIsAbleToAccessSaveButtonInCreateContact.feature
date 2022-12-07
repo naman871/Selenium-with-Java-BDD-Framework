@@ -1,5 +1,5 @@
-@TC_019
-@author-Ramya
+@issue:TC_019
+@author-Ramyasri
 
 Feature: Verify User is able to access save button
 
@@ -10,7 +10,7 @@ Feature: Verify User is able to access save button
     Then user is on HomePage
     When click on Contacts dropdown
     And  click on create contacts
-    Then enter required details:Firstname as "Reetu" and Lastname as "Samuel" on create contacts page
+    Then enter required details on create contacts page
     And  click save
     And close Browser
 

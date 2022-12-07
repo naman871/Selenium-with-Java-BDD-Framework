@@ -1,5 +1,5 @@
 @issue:TC_017
-@author-Ramya
+@author-Ramyasri
 
 Feature: Verify user is able to select create contact
 
@@ -10,10 +10,6 @@ Feature: Verify user is able to select create contact
     Then user is on HomePage
     Then clicks on Contacts
     And  click on create contacts
-    #And  User is able to select create contact
-    #And  clicks on login button
-    #When click on Contacts dropdown
-    #And  click on create contacts
     And  close Browser
 
     Examples:

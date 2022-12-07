@@ -15,6 +15,8 @@ Feature:Verify user is  able to create a duplicate of  the Opportunites
     And click on Save Button
     And Close Browser
 
+    #Todo add validation point
+
 
 
 

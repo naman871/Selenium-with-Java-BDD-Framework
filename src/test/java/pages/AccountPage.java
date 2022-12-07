@@ -50,6 +50,7 @@ public class AccountPage extends PageFactory {
     public WebElement saveButton;
     @FindBy(xpath = "//div[@class='ng-tns-c336-0 alert alert-dismissible alert-warning fade message shadow show ng-trigger ng-trigger-fade ng-star-inserted']\n")
     public WebElement errorMessage;
+    //div[@role='alert']
 
     @FindBy(xpath = "//input[@class='form-control form-control-sm ng-untouched ng-pristine ng-invalid']")
     public WebElement nameTextBox;
@@ -69,9 +70,14 @@ public class AccountPage extends PageFactory {
     @FindBy(xpath = "//scrm-dynamic-field[@class='dynamic-field dynamic-field-mode-edit dynamic-field-name-website dynamic-field-type-link ng-star-inserted']//input[@type='text']")
     public WebElement websiteTextBox;
 
+    @FindBy(xpath = "//scrm-dynamic-field[@class='dynamic-field dynamic-field-mode-edit dynamic-field-name-billing_address_street dynamic-field-type-varchar']//input[@type='text']")
+    public WebElement billingStreetTextBox;
+
     @FindBy(xpath = "//button[contains(text(),'Edit')]")
     public WebElement editButton;
 
+    @FindBy(xpath = "//scrm-dynamic-field[@class='dynamic-field dynamic-field-mode-edit dynamic-field-name-billing_address_postalcode dynamic-field-type-varchar']//input[@type='text']")
+    public WebElement billingCoastleTextbox;
     @FindBy(xpath = "//button[contains(text(),'Cancel')]")
     public WebElement cancelButton;
 
@@ -93,7 +99,6 @@ public class AccountPage extends PageFactory {
     @FindBy(xpath = "//div[@class='dropdown-menu show']")
     public WebElement actionDropdowndisplay;
 
-    //div[contains(text(),'Delete')]
     @FindBy(xpath = "  //div[contains(text(),'Delete')]")
     public WebElement deleteOptionDropdown;
 

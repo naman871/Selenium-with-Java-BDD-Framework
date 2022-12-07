@@ -25,7 +25,7 @@ public class CommonSteps {
         driver = new ChromeDriver(options);
         driver.get("https://suite8demo.suiteondemand.com/#/Login");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         logger.info("Driver is Chrome");
     }
 
@@ -49,7 +49,5 @@ public class CommonSteps {
     public void clickonNewButton() {
         commonPage = new CommonPage(driver);
         commonPage.NewButton.click();
-
-
     }
 }

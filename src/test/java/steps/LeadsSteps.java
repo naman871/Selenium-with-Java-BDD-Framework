@@ -58,7 +58,7 @@ public class LeadsSteps extends CommonSteps {
     }
     public String Lastname="J";
     public void enterAllTheMandatoryFields() throws InterruptedException {
-        leadsPage = new LeadsPage(this.driver);
+        leadsPage = new LeadsPage(driver);
         Thread.sleep(5000);
         leadsPage.LastName.sendKeys(Lastname);
     }
@@ -76,7 +76,7 @@ public class LeadsSteps extends CommonSteps {
     }
     public void validateNewLeadPage() {
         leadsPage = new LeadsPage(driver);
-        String name1=driver.findElement(By.xpath("//span[@class='dynamic-label ng-star-inserted']")).getText();
+        String name1=leadsPage.NewLeadPage.getText();
         Assert.assertEquals(Lastname,name1);
     }
     public void verifyTabs(){

@@ -97,20 +97,25 @@ public class AccountSteps extends CommonSteps {
         accountPage.saveButton.click();
     }
 
-    public void errorMessageShouldBeDisplayed() {
+    public void errorMessageShouldBeDisplayed(String errorMessage) {
         accountPage = new AccountPage(driver);
-        accountPage.errorMessage.isDisplayed();
+        String errorMessageText = accountPage.errorMessage.getText();
+        System.out.println(errorMessageText);
+        Assert.assertEquals("There are validations error, unable to perform actions", errorMessageText, errorMessage);
+        Assert.assertTrue(accountPage.errorMessage.isDisplayed());
     }
 
-    public void fillAllTheRequiredField() {
+    public void fillAllTheRequiredField(String name, String website, String billingAddress, String billingPostalCode) {
         accountPage = new AccountPage(driver);
         accountPage.nameLabel.isDisplayed();
-        accountPage.nameTextBox.sendKeys("Internet");
-        accountPage.websiteLabel.isDisplayed();
-        accountPage.websiteTextBox.sendKeys("www.facebook.com");
-
-        //accountPage.officeLabel.isDisplayed();
-        //accountPage.officePhoneTextbox.sendKeys("76548934");
+        accountPage.nameTextBox.sendKeys(name);
+        logger.info("Account Name is -->"+name);
+        accountPage.websiteTextBox.sendKeys(website);
+        logger.info("Website Name is -->"+website);
+        accountPage.billingStreetTextBox.sendKeys(billingAddress);
+        logger.info("BillingAddress is -->"+billingAddress);
+        accountPage.billingCoastleTextbox.sendKeys(billingPostalCode);
+        logger.info("BillingPostalCode is -->"+billingPostalCode);
     }
 
     public void clickOnSaveButton() throws InterruptedException {
@@ -147,14 +152,14 @@ public class AccountSteps extends CommonSteps {
         accountPage.okButton.click();
     }
 
-    public void clickOnNewButton() {
+    public void clickOnNewButton(String New) {
         accountPage = new AccountPage(driver);
         accountPage.newButton.click();
     }
 
     public void createPageDisplayed() {
         accountPage = new AccountPage(driver);
-        accountPage.createPage.isDisplayed();
+        Assert.assertTrue(accountPage.createPage.isDisplayed());
     }
 
     public void clickOnActionDropdown() {

@@ -11,7 +11,7 @@ Feature:Verify user is able to apply filter under Opportunities module
     And click on view opportunities
     And click on filter
     Then enter filter criteria as opportunity name "AB drivers limited"
-    And  Close Browser
+    And  close Browser
 
 
     Examples:

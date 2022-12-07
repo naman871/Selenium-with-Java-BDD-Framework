@@ -21,8 +21,7 @@ public class ContactsSteps extends CommonSteps {
 
     public void clickOncreatecontacts() {
         contactsPage = new ContactsPage(driver);
-        driver.findElement(By.xpath("(//a[contains(text(),' Create Contact')])[1]")).click();
-        //contactsPage.createContacts.click();
+        contactsPage.createContacts.click();
     }
 
     public void enterdetailsonCreatecontactpage(String firstname,String lastname) {
@@ -47,18 +46,15 @@ public class ContactsSteps extends CommonSteps {
 
     public void contactModuleDisplaySubmodules() throws InterruptedException {
         contactsPage = new ContactsPage(driver);
-        contactsPage.createAccountOption.isDisplayed();
-        contactsPage.createContactsForVcartOption.isDisplayed();
-        contactsPage.viewedContactsOption.isDisplayed();
-        //contactsPage.contactModuleDropdown.isDisplayed();
+        Assert.assertTrue(contactsPage.createAccountOption.isDisplayed());
+        Assert.assertTrue(contactsPage.createContactsForVcartOption.isDisplayed());
+        Assert.assertTrue(contactsPage.viewedContactsOption.isDisplayed());
+        Assert.assertTrue(contactsPage.importOption.isDisplayed());
+
     }
 
 
-//    public void clickOnCreateContact() {
-//        contactsPage = new ContactsPage(this.driver);
-//        contactsPage.createContacts.click();
-//
-//    }
+
   public void clickOnCreateContact() {
       contactsPage = new ContactsPage(this.driver);
       contactsPage.createContacts.click();
@@ -70,11 +66,7 @@ public class ContactsSteps extends CommonSteps {
         contactsPage.viewContact.click();
     }
 
-//    public void enterDetailsInFields() {
-//        contactsPage = new ContactsPage(this.driver);
-//        contactsPage.firstName.sendKeys("Mark");
-//        contactsPage.lastName1.sendKeys("zucker");
-//    }
+
 
 
     public void clickOnEditButton() {

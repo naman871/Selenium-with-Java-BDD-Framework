@@ -86,6 +86,19 @@
       <artifactId>log4j-core</artifactId>
       <version>2.19.0</version>
     </dependency>
+
+<!--    Thought of using this depedency for report generation but they are not working at all-->
+<!--    <dependency>-->
+<!--      <groupId>tech.grasshopper</groupId>-->
+<!--      <artifactId>extentreports-cucumber7-adapter</artifactId>-->
+<!--      <version>1.9.2</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>tech.grasshopper</groupId>-->
+<!--      <artifactId>extent-pdf-report</artifactId>-->
+<!--      <version>2.9.1</version>-->
+<!--    </dependency>-->
+
   </dependencies>
 
   <build>
