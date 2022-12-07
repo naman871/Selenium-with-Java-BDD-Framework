@@ -47,7 +47,7 @@ public class ContactsSteps extends CommonSteps {
         contactsPage.createAccountOption.isDisplayed();
         contactsPage.createContactsForVcartOption.isDisplayed();
         contactsPage.viewedContactsOption.isDisplayed();
-        //contactsPage.contactModuleDropdown.isDisplayed();
+        contactsPage.contactModuleDropdown.isDisplayed();
     }
 
 
