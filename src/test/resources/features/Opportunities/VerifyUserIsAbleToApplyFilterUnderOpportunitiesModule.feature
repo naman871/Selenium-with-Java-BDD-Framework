@@ -1,4 +1,4 @@
-@issue:TC_048
+@TC_048
 @author:Naman
 
 Feature:Verify user is able to apply filter under Opportunities module

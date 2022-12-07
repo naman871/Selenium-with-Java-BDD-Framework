@@ -40,10 +40,6 @@ public class AccountStepdefinition {
         accountSteps.validateAccountspage();
     }
 
-    @Then("Enter required details")
-    public void enterRequiredDetails() throws InterruptedException {
-        accountSteps.enterrequireddetails();
-    }
 
     @And("click save")
     public void clickSave() {
@@ -55,7 +51,7 @@ public class AccountStepdefinition {
         accountSteps.validateSavedAccount();
     }
 
-    @Then("Delete the account")
+    @Then("delete the account")
     public void deleteTheAccount() {
         accountSteps.deleteAccount();
     }
@@ -127,7 +123,7 @@ public class AccountStepdefinition {
         accountSteps.createPageDisplayed();
     }
 
-    @And("Click on {string} dropdown list")
+    @And("click on {string} dropdown list")
     public void clickOnDropdownList(String arg0) {
         accountSteps.clickOnActionDropdown();
 
@@ -146,6 +142,11 @@ public class AccountStepdefinition {
     @And("click on proceed button when popup message displayed and record deleted successfully")
     public void clickOnProceedButtonWhenPopupMessageDisplayed() {
         accountSteps.clickOnProceedButtonAndRecordDeleted();
+    }
+
+    @Then("Enter required details name as {string}")
+    public void enterRequiredDetailsNameAs(String name) throws InterruptedException {
+        accountSteps.enterrequireddetails(name);
     }
 }
 

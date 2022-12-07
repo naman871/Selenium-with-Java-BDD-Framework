@@ -55,11 +55,12 @@ public class AccountSteps extends CommonSteps {
         Assert.assertTrue(accountPage.viewAccountList.isDisplayed());
     }
 
-    public void enterrequireddetails() throws InterruptedException {
+    public void enterrequireddetails(String name) throws InterruptedException {
         accountPage = new AccountPage(driver);
         // driver.switchTo().frame(homePage.iframeForHomepage);
         Thread.sleep(5000);
-        accountPage.name.sendKeys("Ganga");
+        accountPage.name.sendKeys(name);
+        logger.info("Required details in entering -->"+name);
     }
 
     public void clickSave() {

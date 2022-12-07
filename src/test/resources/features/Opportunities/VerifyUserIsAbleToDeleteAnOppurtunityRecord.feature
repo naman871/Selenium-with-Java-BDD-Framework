@@ -1,4 +1,4 @@
-@issue:TC_046
+@TC_046
 @author:Naman
 
 Feature:Verify user is able to delete the opportunity record

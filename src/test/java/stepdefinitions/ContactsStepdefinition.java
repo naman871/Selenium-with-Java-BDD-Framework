@@ -47,14 +47,9 @@ public class ContactsStepdefinition {
         contactsSteps.clickOncreatecontacts();
     }
 
-    @Then("Enter required details on create contacts page")
-    public void enterRequiredDetailsOnCreateContactsPage() {
-        contactsSteps.enterdetailsonCreatecontactpage();
-
-    }
-
     @Then("Validate create page")
-    public void validateCreatePage() {
+    public void validateCreatePage() throws InterruptedException {
+        Thread.sleep(5000);
         contactsSteps.validateCreatePage();
     }
 
@@ -93,7 +88,7 @@ public class ContactsStepdefinition {
 
     }
 
-    @Then("Delete the contact")
+    @Then("delete the contact")
     public void deleteTheContact() {
         contactsSteps = new ContactsSteps();
         contactsSteps.DeleteContact();
@@ -110,5 +105,10 @@ public class ContactsStepdefinition {
         contactsSteps.clickContactsModule();
         Thread.sleep(1000);
 
+    }
+
+    @Then("enter required details:Firstname as {string} and Lastname as {string} on create contacts page")
+    public void enterRequiredDetailsFirstnameAsAndLastnameAsOnCreateContactsPage(String firstname, String lastname) {
+        contactsSteps.enterdetailsonCreatecontactpage(firstname,lastname);
     }
 }

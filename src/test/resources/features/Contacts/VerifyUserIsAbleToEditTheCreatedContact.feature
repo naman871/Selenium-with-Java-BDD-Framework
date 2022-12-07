@@ -11,16 +11,9 @@ Feature: Verify User is able to access edit button
     #Then clicks on Contacts
     When click on Contacts dropdown
     And  click on create contacts
-    Then Enter required details on create contacts page
+    Then enter required details:Firstname as "Meenu" and Lastname as "Rao" on create contacts page
     And  click save
-    And  clicks on login button
-    When click on Contacts dropdown
-    And  click on create contacts
-    Then Enter required details on create contacts page
-    And  click save
-    Then User Clicks on Edit Button
-    And Close Browser
-    And  Close Browser
+    And  close Browser
 
     Examples:
       | Username | Password |

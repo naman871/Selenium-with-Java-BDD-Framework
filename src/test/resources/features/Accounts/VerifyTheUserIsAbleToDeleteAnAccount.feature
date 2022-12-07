@@ -12,10 +12,10 @@ Feature:Verify User is able to access "Actions" dropdown list
     And click on Create Account option from the dropdown list
     And Fill all the required data
     And Click on save button
-    And Click on "Actions" dropdown list
+    And click on "Actions" dropdown list
     Then click on delete button from action dropdown
     And click on proceed button when popup message displayed and record deleted successfully
-    Then Close Browser
+    Then close Browser
 
     Examples:
       | Username | Password |

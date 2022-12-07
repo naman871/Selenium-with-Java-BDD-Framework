@@ -25,10 +25,12 @@ public class ContactsSteps extends CommonSteps {
         //contactsPage.createContacts.click();
     }
 
-    public void enterdetailsonCreatecontactpage() {
+    public void enterdetailsonCreatecontactpage(String firstname,String lastname) {
         contactsPage = new ContactsPage(driver);
-        contactsPage.firstName.sendKeys("Mithin");
-        contactsPage.lastName.sendKeys("samuel");
+        contactsPage.firstName.sendKeys(firstname);
+        logger.info("First name is entered"+firstname);
+        contactsPage.lastName.sendKeys(lastname);
+        logger.info("Last name is entered"+lastname);
 
     }
 

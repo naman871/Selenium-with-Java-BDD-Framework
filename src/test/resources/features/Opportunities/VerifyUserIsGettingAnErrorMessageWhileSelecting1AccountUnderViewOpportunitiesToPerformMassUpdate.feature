@@ -1,4 +1,4 @@
-@issue:TC_050
+@TC_050
 @author:Ramya
 Feature:opportunities Module
 @TC_50

@@ -12,9 +12,9 @@ Feature:Verify User is able to access "Actions" dropdown list
     And click on Create Account option from the dropdown list
     And Fill all the required data
     And Click on save button
-    And Click on "Actions" dropdown list
+    And click on "Actions" dropdown list
     Then Action dropdown list should be displayed
-    And Close Browser
+    And close Browser
 
 
     Examples:
