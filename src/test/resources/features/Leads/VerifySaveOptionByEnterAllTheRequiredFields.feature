@@ -12,7 +12,7 @@ Feature:Lead Module
     Then Enter all the mandatory Fields
     And Click on save button
     Then User should be able to create new Lead and new Lead page will be displayed
-
+    And Close Browser
     Examples:
       | Username | Password |
       | will     | will     |

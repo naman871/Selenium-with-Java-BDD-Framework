@@ -11,7 +11,7 @@ And User Navigate to "Leads" Module
 And Click on Create Lead Dropdown
 And Click on save button
 Then Validate Missing Required Fields Error Message
-
+  And Close Browser
 Examples:
 | Username | Password |
 | will     | will     |

@@ -93,7 +93,6 @@ public class AccountPage extends PageFactory {
     @FindBy(xpath = "//div[@class='dropdown-menu show']")
     public WebElement actionDropdowndisplay;
 
-    //div[contains(text(),'Delete')]
     @FindBy(xpath = "  //div[contains(text(),'Delete')]")
     public WebElement deleteOptionDropdown;
 
