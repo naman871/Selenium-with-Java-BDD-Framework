@@ -45,10 +45,11 @@ public class ContactsSteps extends CommonSteps {
 
     public void contactModuleDisplaySubmodules() throws InterruptedException {
         contactsPage = new ContactsPage(driver);
-        contactsPage.createAccountOption.isDisplayed();
-        contactsPage.createContactsForVcartOption.isDisplayed();
-        contactsPage.viewedContactsOption.isDisplayed();
-        //contactsPage.contactModuleDropdown.isDisplayed();
+        Assert.assertTrue(contactsPage.createAccountOption.isDisplayed());
+        Assert.assertTrue(contactsPage.createContactsForVcartOption.isDisplayed());
+        Assert.assertTrue(contactsPage.viewedContactsOption.isDisplayed());
+        Assert.assertTrue(contactsPage.importOption.isDisplayed());
+
     }
 
 

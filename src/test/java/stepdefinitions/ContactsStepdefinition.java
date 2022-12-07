@@ -20,13 +20,13 @@ import steps.HomePageSteps;
 public class ContactsStepdefinition {
     public ContactsSteps contactsSteps = new ContactsSteps();
 
-    @When("Navigate to contact module")
+    @When("navigate to contact module")
     public void clickOnAccountDropdown() throws InterruptedException {
         Thread.sleep(8000);
         contactsSteps.navigateToContactModule();
     }
 
-    @When("Contact Dropdown should display submodules")
+    @When("contact Dropdown should display submodules")
     public void contactModuleDisplaySubmodules() throws InterruptedException {
         Thread.sleep(8000);
         contactsSteps.contactModuleDisplaySubmodules();

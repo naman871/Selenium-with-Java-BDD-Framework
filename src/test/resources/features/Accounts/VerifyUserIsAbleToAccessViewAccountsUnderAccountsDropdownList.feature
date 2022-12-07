@@ -10,7 +10,7 @@ Feature:Verify user is able to access view Accounts
     When click on Account dropdown
     And  click on view account
     Then validate view account page
-    And  Close Browser
+
 
     Examples:
       | Username | Password |
