@@ -54,7 +54,7 @@ public class OpportunitiesStepdefinition {
     }
 
     @Then("enter a new opportunity name {string} and amount {string}")
-    public void enterANewOpportunityName(String opportunityName, String amount) {
+    public void enterANewOpportunityName(String opportunityName, String amount) throws InterruptedException {
         opportunitiesSteps.updateOpportunityNameAndOpportunityAmount(opportunityName, amount);
     }
 
@@ -66,7 +66,7 @@ public class OpportunitiesStepdefinition {
     }
 
     @And("click on Save Button")
-    public void clickOnSaveButton() {
+    public void clickOnSaveButton() throws InterruptedException {
         opportunitiesSteps.clickOnSaveButton();
     }
 

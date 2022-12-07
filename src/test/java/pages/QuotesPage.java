@@ -27,10 +27,15 @@ public class QuotesPage extends PageFactory {
 
     @FindBy(xpath = "//iframe[@src='./legacy/index.php?return_module=AOS_Quotes&return_action=DetailView&module=AOS_Quotes&action=EditView']")
     public WebElement iframeForQuotesCreatePage;
-
+    @FindBy(xpath = "//iframe[@src='./legacy/index.php?module=AOS_Quotes&action=DetailView&record=71bf689d-3750-53e3-3391-638dc9e846bd']")
+    public WebElement iframeForQuotesViewPage; //    Iframe is constantly changing
     @FindBy(xpath = "//input[@id='SAVE']")
     public WebElement saveButtonQuotesModule;
+    @FindBy(xpath = "//input[@id='billing_account']")
+    public WebElement accountSearchCursorQuotes;
 
+    @FindBy(xpath = "//span[@id='name']")
+    public WebElement verifyTitleNameInNewPageWindow;
     WebDriver driver;
     public QuotesPage(WebDriver driver){
         this.driver=driver;

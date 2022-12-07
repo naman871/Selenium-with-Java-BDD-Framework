@@ -93,17 +93,20 @@ public class OpportunitiesSteps extends CommonSteps {
      * @param opportunityName
      * @param amount
      */
-    public void updateOpportunityNameAndOpportunityAmount(String opportunityName,String amount){
+    public void updateOpportunityNameAndOpportunityAmount(String opportunityName,String amount) throws InterruptedException {
         opportunitiesPage = new OpportunitiesPage(driver);
         String preModifiedOpportunityName = opportunitiesPage.opportunitiyName.getText();
         logger.info("Opportunity name pre modified -->"+preModifiedOpportunityName);
         Assert.assertNotEquals(preModifiedOpportunityName,opportunityName);
+        Thread.sleep(5000);
         opportunitiesPage.opportunitiyName.clear();
         opportunitiesPage.opportunitiyName.sendKeys(opportunityName);
         logger.info("Opportunity name post modified -->"+opportunityName);
         String preModifiedOpportunityamount = opportunitiesPage.oppportunityAmount.getText();
         Assert.assertNotEquals(preModifiedOpportunityamount,amount);
         logger.info("Opportunity amount pre modified -->"+preModifiedOpportunityamount);
+        Thread.sleep(5000);
+        opportunitiesPage.oppportunityAmount.clear();
         opportunitiesPage.oppportunityAmount.sendKeys(amount);
         logger.info("Opportunity amount post modified -->"+amount);
 
@@ -112,8 +115,9 @@ public class OpportunitiesSteps extends CommonSteps {
         opportunitiesPage = new OpportunitiesPage(driver);
         opportunitiesPage.duplicateButton.click();
     }
-    public void clickOnSaveButton(){
+    public void clickOnSaveButton() throws InterruptedException {
         opportunitiesPage = new OpportunitiesPage(driver);
+        Thread.sleep(8000);
         opportunitiesPage.saveButton.click();
     }
     public void clickOnActionDropDown(){
