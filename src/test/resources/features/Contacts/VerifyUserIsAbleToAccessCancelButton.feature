@@ -10,7 +10,7 @@ Feature: Verify User is able to access cancel button
     When click on Contacts dropdown
     And  click on create contacts
     Then user clicks on cancel button
-    And  Close Browser
+    And  close Browser
 
 
     Examples:

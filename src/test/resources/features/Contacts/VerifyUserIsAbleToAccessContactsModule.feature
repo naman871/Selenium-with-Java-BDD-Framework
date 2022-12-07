@@ -9,8 +9,8 @@ Feature: Verify user is able to access Contacts Module
     And clicks on login button
     Then user is on HomePage
     Then clicks on Contacts
-    And Contact Dropdown should display submodules
-    And Close Browser
+    And contact Dropdown should display submodules
+    And close Browser
 
 
 

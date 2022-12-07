@@ -9,7 +9,7 @@ Feature: Verify user is able to select create contact
     And  clicks on login button
     When click on Contacts dropdown
     And  click on create contacts
-    And  Close Browser
+    And  close Browser
 
     Examples:
       | Username | Password |

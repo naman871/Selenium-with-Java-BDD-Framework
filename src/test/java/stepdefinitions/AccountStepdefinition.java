@@ -86,7 +86,7 @@ public class AccountStepdefinition {
         accountSteps.fillAllTheRequiredField();
     }
 
-    @And("Click on save button")
+    @And("click on save button")
     public void clickOnSaveButton() throws InterruptedException {
         accountSteps.clickOnSaveButton();
     }

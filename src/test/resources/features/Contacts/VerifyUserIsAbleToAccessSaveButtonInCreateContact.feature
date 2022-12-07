@@ -10,9 +10,9 @@ Feature: Verify User is able to access save button
     Then user is on HomePage
     When click on Contacts dropdown
     And  click on create contacts
-    Then Enter required details on create contacts page
+    Then enter required details on create contacts page
     And  click save
-    And Close Browser
+    And close Browser
 
 
     Examples:

@@ -47,17 +47,17 @@ public class LeadsStepdefinition {
         leadsSteps.clicksOnCreateLeads();
     }
 
-    @Then("Enter all the mandatory Fields")
+    @Then("enter all the mandatory fields")
     public void enterAllTheMandatoryFields() throws InterruptedException {
         leadsSteps.enterAllTheMandatoryFields();
     }
 
-    @And("User Navigate to {string} Module")
+    @And("user navigate to {string} module")
     public void userNavigateToModule(String arg0) throws InterruptedException {
         leadsSteps.Module(arg0);
     }
 
-    @And("Click on Create Lead Dropdown")
+    @And("click on create lead dropdown")
     public void clickOnCreateLeadDropdown() throws InterruptedException {
         leadsSteps.clickOnCreateLead();
     }
@@ -72,7 +72,7 @@ public class LeadsStepdefinition {
         leadsSteps.cancelButtonLeads();
     }
 
-    @Then("User should be able to create new Lead and new Lead page will be displayed")
+    @Then("user should be able to create new lead and new lead page will be displayed")
     public void userShouldBeAbleToCreateNewLeadAndNewLeadPageWillBeDisplayed() {
         leadsSteps.validateNewLeadPage();
     }

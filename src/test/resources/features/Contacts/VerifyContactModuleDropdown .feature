@@ -9,7 +9,7 @@ Feature:Verify Contact module dropdown
     And clicks on login button
     Then user is on HomePage
     And Navigate to contact module
-    And Contact Dropdown should display submodules
+    And contact Dropdown should display submodules
 
     Examples:
       | Username | Password |
