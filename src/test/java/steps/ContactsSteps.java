@@ -21,8 +21,7 @@ public class ContactsSteps extends CommonSteps {
 
     public void clickOncreatecontacts() {
         contactsPage = new ContactsPage(driver);
-        driver.findElement(By.xpath("(//a[contains(text(),' Create Contact')])[1]")).click();
-        //contactsPage.createContacts.click();
+        contactsPage.createContacts.click();
     }
 
     public void enterdetailsonCreatecontactpage() {
@@ -53,11 +52,7 @@ public class ContactsSteps extends CommonSteps {
     }
 
 
-//    public void clickOnCreateContact() {
-//        contactsPage = new ContactsPage(this.driver);
-//        contactsPage.createContacts.click();
-//
-//    }
+
   public void clickOnCreateContact() {
       contactsPage = new ContactsPage(this.driver);
       contactsPage.createContacts.click();
@@ -69,11 +64,7 @@ public class ContactsSteps extends CommonSteps {
         contactsPage.viewContact.click();
     }
 
-//    public void enterDetailsInFields() {
-//        contactsPage = new ContactsPage(this.driver);
-//        contactsPage.firstName.sendKeys("Mark");
-//        contactsPage.lastName1.sendKeys("zucker");
-//    }
+
 
 
     public void clickOnEditButton() {

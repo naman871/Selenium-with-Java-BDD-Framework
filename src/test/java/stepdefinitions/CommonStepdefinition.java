@@ -27,7 +27,7 @@ public class CommonStepdefinition {
 
     }
 
-    @And("Close Browser")
+    @And("close Browser")
     public void closeBrowser() {
         commonSteps.closeBrowser();
     }

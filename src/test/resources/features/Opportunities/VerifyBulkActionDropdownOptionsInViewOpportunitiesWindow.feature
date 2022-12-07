@@ -11,6 +11,8 @@ Feature:opportunities Module
     Then Select checkbox beside 'Bulk Action' dropdown
     And Click on 'bulk Action' dropdown
     Then User able to view Delete,Export,Merge,Mass updates options
+    And Close Browser
+
     Examples:
       | Username | Password |
       | will     | will     |
