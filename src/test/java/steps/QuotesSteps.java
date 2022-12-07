@@ -8,6 +8,8 @@ import pages.QuotesPage;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class QuotesSteps extends CommonSteps {
 
@@ -44,11 +46,12 @@ public class QuotesSteps extends CommonSteps {
         quotespage = new QuotesPage(this.driver);
         quotespage.createQuotes.click();
     }
-
-    public void titleTextBoxQuotes() {
+    public void  enterTheRequiredFieldsTitleAs(String titleName){
         quotespage = new QuotesPage(driver);
-        driver.switchTo().frame(quotespage.iframeForQuotesCreatePage);
-        quotespage.titleTextBoxQuotes.sendKeys("sukanya");
+        driver.switchTo().frame(quotespage.iframeForQuotesViewPage);
+        quotespage.verifyTitleNameInNewPageWindow.isDisplayed();
+        String title = quotespage.verifyTitleNameInNewPageWindow.getText();
+        Assert.assertEquals(title, titleName);
     }
 
     public void saveButtonQuotes() {
@@ -60,7 +63,52 @@ public class QuotesSteps extends CommonSteps {
         driver.switchTo().frame(quotespage.iframeForQuotesViewPage);
         quotespage.verifyTitleNameInNewPageWindow.isDisplayed();
         String titleName = quotespage.verifyTitleNameInNewPageWindow.getText();
-        Assert.assertEquals(titleName, "sukanya");
+        Assert.assertEquals(titleName, "Quotes");
+    }
+    public void accountFieldCursorQuotes() throws InterruptedException {
+        quotespage = new QuotesPage(driver);
+        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+        WebElement element = quotespage.accountSearchCursorQuotes;
+        element.click();
+    }
+    public void getTheAccountListInTheAccountSearchWindow(){
+        quotespage = new QuotesPage(driver);
+        Assert.assertEquals(2, driver.getWindowHandles());
+        Set<String> secondWindow = driver.getWindowHandles();
+        driver.switchTo().window(String.valueOf(secondWindow));
+        String variable = "Sea Region Inc";
+        ArrayList a = new ArrayList();
+        List <WebElement>accountnames = driver.findElements(By.xpath("//table[4]/tbody"));
+        for (WebElement accountName:accountnames)
+        {
+            a.add(accountName);
+        }
+        quotespage.accountSearchBoxQuotesWindow.sendKeys("Sea Region Inc");
+        quotespage.searchButtonQuotesWindow.click();
+        if (a.contains("Sea Region Inc"))
+        {
+            Assert.assertEquals("Sea Region Inc", variable);
+        }
+    }
+    public void clickOnTheAccountName(){
+        quotespage = new QuotesPage(driver);
+        quotespage.quoteAccountName.click();
+        String firstWindow = driver.getWindowHandle();
+        driver.switchTo().window(firstWindow);
+        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@src='./legacy/index.php?return_module=AOS_Quotes&return_action=DetailView&module=AOS_Quotes&action=EditView']")));
+        String name = quotespage.quoteAccountNameTextBox.getAttribute("value");
+        Assert.assertTrue(name.contains("Sea Region Inc"));
+    }
+    public void clickCrossButtonBesideAccountName(){
+        quotespage.crossButtonBesideAccountName.click();
+    }
+    public void accountFieldCleared(){
+        String accountTextBox = quotespage.quoteAccountNameTextBox.getText();
+        Assert.assertTrue("AccountText box is empty",accountTextBox.isEmpty());
+    }
+    public void verifyCopyAddressCheckboxEnabled(){
+        Boolean copyAddressCheckbox = quotespage.copyAddressCheckbox.isEnabled();
+        Assert.assertTrue("Copy Address from left Checkbox is not enabled",copyAddressCheckbox);
     }
 
 }

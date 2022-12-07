@@ -1,6 +1,6 @@
-@issue:40
+@issue:39
 @author:Vindhyana
-Feature: Verify missing required field error message should be displayed
+Feature: Verify Copy address from left checkbox is working in Address information section.
 
   Scenario Outline: Verify missing required field error message
     Given launch browser
@@ -10,8 +10,10 @@ Feature: Verify missing required field error message should be displayed
     And user clicks on quotes module
     And user click on create quotes modules
     And Enter the required Fields title as "Quotes"
-    And Click on Save
-    And user verify "Missing required field: Title" error message after save
+    And In Address Information section click on cursor beside account field
+    And Account with the entered name should be displayed in the list
+    And Click on the account name
+    And Click on  Copy address from left checkbox in Address Information section is enabled
     And Close Browser
 
     Examples:

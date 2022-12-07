@@ -1,4 +1,4 @@
-@issue:
+@issue:42
 @author:Vindhyana
 Feature: Verify opportunities module display submodules
 
@@ -9,6 +9,7 @@ Feature: Verify opportunities module display submodules
     Then user is on HomePage
     And user clicks on opportunities module
     Then user verify submodules are displayed under opportunities
+    And Close Browser
 
     Examples:
       |Username|Password|
