@@ -9,7 +9,7 @@ Feature: Verify User is able to access edit button
     And  clicks on login button
     When click on Contacts dropdown
     And  click on create contacts
-    Then enter required details on create contacts page
+    Then enter required details:Firstname as "Mithin" and Lastname as "Sam" on create contacts page
     And  click save
     Then user Clicks on Edit Button
     And close Browser

@@ -46,11 +46,6 @@ public class ContactsStepdefinition {
         contactsSteps.clickOncreatecontacts();
     }
 
-    @Then("enter required details on create contacts page")
-    public void enterRequiredDetailsOnCreateContactsPage() {
-        contactsSteps.enterdetailsonCreatecontactpage();
-
-    }
 
     @Then("Validate create page")
     public void validateCreatePage() throws InterruptedException {

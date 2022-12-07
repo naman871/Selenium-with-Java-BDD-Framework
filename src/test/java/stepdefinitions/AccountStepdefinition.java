@@ -144,7 +144,7 @@ public class AccountStepdefinition {
     public void enterRequiredDetailsNameAs(String name) throws InterruptedException {
         accountSteps.enterrequireddetails(name);
     }
-}
+
 
     @And("enter mandatory field like name {string} and website {string} and billingAddress {string} and billingPostalCode {string}")
     public void enterMandatoryFieldLikeNameAndWebsiteAndBillingAddressAndBillingPostalCode(String name, String website, String billingAddress, String billingPostalCode) {

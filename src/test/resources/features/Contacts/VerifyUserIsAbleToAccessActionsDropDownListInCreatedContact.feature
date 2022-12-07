@@ -11,8 +11,8 @@ Feature: Verify user is able to access "actions" dropdown list in created contac
     And  click on create contacts
     Then enter required details on create contacts page
     And  click save
-    And Click on "Actions" dropdown list
-    Then Action dropdown list should be displayed
+    And click on "Actions" dropdown list
+    Then action dropdown list should be displayed
     And  close Browser
     Examples:
       | Username | Password |

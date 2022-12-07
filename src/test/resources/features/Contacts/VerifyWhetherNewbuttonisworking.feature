@@ -9,7 +9,6 @@ Feature:Verify whether "New" button is working.
     And  clicks on login button
     When click on Contacts dropdown
     And  click on create contacts
-    Then enter required details on create contacts page
     Then enter required details:Firstname as "Mithin" and Lastname as "Sam" on create contacts page
     And  click save
     Then delete the account

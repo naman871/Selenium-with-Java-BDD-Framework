@@ -10,11 +10,6 @@ Feature:Verify the user is able to edit the created account.
     Then user is on HomePage
     And navigate to Account module
     And click on Create Account option from the dropdown list
-    Then Fill all the required data
-    And Click on save button
-    And Click on Edit button
-    Then close Browser
-    Then After completion of editing click on save button and data edited successfully
     And enter mandatory field like name "Internet" and website "www.facebook.com" and billingAddress "Pune" and billingPostalCode "225678"
     And click on save button
     And click on Edit button
