@@ -13,8 +13,8 @@ Feature:Verify the user is able to edit the created account.
     Then Fill all the required data
     And Click on save button
     And Click on Edit button
-    Then Close Browser
     Then After completion of editing click on save button and data edited successfully
+    Then Close Browser
 
     Examples:
       | Username | Password |

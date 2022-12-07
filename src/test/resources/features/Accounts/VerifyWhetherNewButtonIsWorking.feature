@@ -4,7 +4,6 @@
 Feature:Verify whether "New" button is working
 
   Scenario Outline:Verify whether "New" button is working
-
     Given launch browser
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
