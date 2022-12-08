@@ -55,17 +55,7 @@ public class QuotesPage extends PageFactory {
     @FindBy(xpath = "//span[@id='name']")
     public WebElement verifyTitleNameInNewPageWindow;
 
-    @FindBy(xpath = "//a[normalize-space()='Sea Region Inc']")
-    public WebElement quoteAccountName;
 
-    @FindBy(xpath = "//input[@name='billing_account']")
-    public WebElement  quoteAccountNameTextBox;
-
-    @FindBy(xpath = "//input[@id='name_advanced']")
-    public WebElement accountSearchBoxQuotesWindow;
-
-    @FindBy(xpath = "//input[@id='search_form_submit']")
-    public WebElement searchButtonQuotesWindow;
     WebDriver driver;
     public QuotesPage(WebDriver driver){
         this.driver=driver;
