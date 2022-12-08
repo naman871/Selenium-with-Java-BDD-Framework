@@ -81,7 +81,7 @@ public class QuotesSteps extends CommonSteps {
     }
     public void getTheAccountListInTheAccountSearchWindow(String accountNameQuote){
         quotespage = new QuotesPage(driver);
-        Assert.assertEquals(2, driver.getWindowHandles());
+
         Set<String> secondWindow = driver.getWindowHandles();
         driver.switchTo().window(String.valueOf(secondWindow));
         quotespage.accountSearchBoxQuotesWindow.sendKeys(accountNameQuote);
@@ -102,6 +102,8 @@ public class QuotesSteps extends CommonSteps {
     public void clickOnTheAccountName() {
         quotespage = new QuotesPage(driver);
         quotespage.quoteAccountName.click();
+        String firstWindow = driver.getWindowHandle();
+        driver.switchTo().window(firstWindow);
     }
     public void clickCrossButtonBesideAccountName(){
         quotespage.crossButtonBesideAccountName.click();
