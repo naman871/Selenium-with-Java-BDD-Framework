@@ -13,7 +13,7 @@ Feature: Verify missing required field error message should be displayed
     And Enter the required Fields title as "Quotes"
     And Click on Save
     And user verify "Missing required field: Title" error message after save
-    And Close Browser
+    And close Browser
 
     Examples:
       |Username|Password|
