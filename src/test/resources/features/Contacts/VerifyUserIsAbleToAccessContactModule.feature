@@ -8,11 +8,10 @@ Feature:Verify Contact module dropdown
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
     Then user is on HomePage
-    And Navigate to contact module
-    And Contact Dropdown should display submodules
-    Then Close Browser
+    And navigate to contact module
+    And contact Dropdown should display submodules
     Then clicks on Contacts
-    And  Close Browser
+    And  close Browser
 
     Examples:
       | Username | Password |
