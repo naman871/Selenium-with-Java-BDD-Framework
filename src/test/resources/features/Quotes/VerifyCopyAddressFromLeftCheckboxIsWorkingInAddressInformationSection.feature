@@ -1,8 +1,9 @@
-@issue:38
+@issue:39
 @author:Vindhyana
-Feature: Verify clicking on cross button clears account field under Address information section.
 
-  Scenario Outline: Verify clicking on cross button clears account field under Address information section
+Feature: Verify Copy address from left checkbox is working in Address information section.
+
+  Scenario Outline: Verify missing required field error message
     Given launch browser
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
@@ -13,9 +14,8 @@ Feature: Verify clicking on cross button clears account field under Address info
     And In Address Information section click on cursor beside account field
     And Account with the entered name should be displayed in the list
     And Click on the account name
-    Then Click on cross button beside account field
-    And Account field should get cleared
-    And Close Browser
+    And Click on  Copy address from left checkbox in Address Information section is enabled
+    And close Browser
 
     Examples:
       |Username|Password|

@@ -108,16 +108,6 @@ public class OpportunitiesStepdefinition {
 //        opportunitiesSteps.enterDetailsToCreateOpportunity(opportunityName,salesStageName);
 //    }
 
-    @Then("Select checkbox beside {string} dropdown")
-    public void selectCheckboxBesideBulkActionDropdown() {
-        opportunitiesSteps.selectAllCheckbox();
-    }
-
-    @And("Click on {string} dropdown")
-    public void clickOnBulkActionDropdown() throws InterruptedException {
-        opportunitiesSteps.clickOnBulkActionDropdown();
-    }
-
     @Then("User able to view Delete,Export,Merge,Mass updates options")
     public void userAbleToViewDeleteExportMergeMassUpdatesOptions() {
         opportunitiesSteps.verifyDropdown();
@@ -128,8 +118,19 @@ public class OpportunitiesStepdefinition {
     }
 
     @Then("Select Mass Update link")
-    public void selectMassUpdateLink() {
-        opportunitiesSteps.SelectMassUpdate();
+    public void selectMassUpdateLink() throws InterruptedException {
+        opportunitiesSteps.selectMassUpdate();
     }
 
+
+    @Then("Select checkbox beside Bulk Action dropdown")
+    public void selectCheckboxBesideBulkActionDropdown() throws InterruptedException {
+        opportunitiesSteps.selectAllCheckbox();
+    }
+
+
+    @And("Click on bulk Action dropdown")
+    public void clickOnBulkActionDropdown() throws InterruptedException {
+        opportunitiesSteps.clickOnBulkActionDropdown();
+    }
 }

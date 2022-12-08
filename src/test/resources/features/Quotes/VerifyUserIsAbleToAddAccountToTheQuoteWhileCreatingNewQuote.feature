@@ -1,6 +1,7 @@
-@issue:39
+@issue:37
 @author:Vindhyana
-Feature: Verify Copy address from left checkbox is working in Address information section.
+
+Feature: Verify user is able to add account to the quote while creating new quote.
 
   Scenario Outline: Verify missing required field error message
     Given launch browser
@@ -12,9 +13,7 @@ Feature: Verify Copy address from left checkbox is working in Address informatio
     And Enter the required Fields title as "Quotes"
     And In Address Information section click on cursor beside account field
     And Account with the entered name should be displayed in the list
-    And Click on the account name
-    And Click on  Copy address from left checkbox in Address Information section is enabled
-    And Close Browser
+    And close Browser
 
     Examples:
       |Username|Password|

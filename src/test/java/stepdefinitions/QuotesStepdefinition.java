@@ -33,14 +33,18 @@ public class QuotesStepdefinition {
         quotesSteps.clickOnQuotesDropdown();
 
     }
+
     @Then("Click on Create Quotes option")
     public void clickOnCreateQuote() {
         quotesSteps.clickOnCreateQuote();
 
     }
+
     @And("Enter the required Fields title as {string}")
     public void enterTheRequiredFieldsTitleAs(String titleName) {
         quotesSteps.enterTheRequiredFieldsTitleAs(titleName);
+    }
+
     @And("In Address Information section click on cursor beside account field")
     public void inAddressInformationSectionClickOnCursorBesideAccountField() throws InterruptedException {
         quotesSteps.accountFieldCursorQuotes();
@@ -50,6 +54,7 @@ public class QuotesStepdefinition {
     public void saveButtonQuotes() {
         quotesSteps.saveButtonQuotes();
     }
+
     @And("Quote with the given title name should be created and displayed in new page")
     public void quoteWithTheGivenTitleNameShouldBeCreatedAndDisplayedInNewPage() {
         quotesSteps.verifyTitleNameInNewPage();
@@ -70,8 +75,24 @@ public class QuotesStepdefinition {
         quotesSteps.theExistingAccountShouldBeSelectedForTheQuote();
     }
 
-    @And("Enter the required Fields title as {string}")
-    public void enterTheRequiredFieldsTitleAs(String titleName) {
-        quotesSteps.enterTheRequiredFieldsTitleAs(titleName);
+    @And("Account with the entered name should be displayed in the list")
+    public void accountWithTheEnteredNameShouldBeDisplayedInTheList() {
+        quotesSteps.getTheAccountListInTheAccountSearchWindow();
     }
+
+    @Then("Click on cross button beside account field")
+    public void clickOnCrossButtonBesideAccountField() {
+        quotesSteps.clickCrossButtonBesideAccountName();
+    }
+
+    @And("Account field should get cleared")
+    public void accountFieldShouldGetCleared() {
+        quotesSteps.accountFieldCleared();
+    }
+
+    @And("Click on  Copy address from left checkbox in Address Information section is enabled")
+    public void clickOnCopyAddressFromLeftCheckboxInAddressInformationSectionIsEnabled() {
+        quotesSteps.verifyCopyAddressCheckboxEnabled();
+    }
+
 }

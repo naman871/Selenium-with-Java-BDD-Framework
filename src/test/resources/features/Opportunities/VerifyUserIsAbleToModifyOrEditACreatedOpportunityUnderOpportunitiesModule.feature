@@ -13,7 +13,7 @@ Feature:Verify user is able to modify or edit a created opportunity under Opport
     And click on Edit button
     Then enter a new opportunity name "Daltons VVC - II" and amount "15000"
     And click on Save Button
-    And Close Browser
+    And close Browser
 
 
 

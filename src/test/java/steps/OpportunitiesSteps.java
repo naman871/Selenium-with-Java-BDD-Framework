@@ -158,11 +158,11 @@ public class OpportunitiesSteps extends CommonSteps {
     public void clickOnViewOpportunities() throws InterruptedException {
         opportunitiesPage = new OpportunitiesPage(driver);
         opportunitiesPage.ViewOpportunitiy.click();
-        Thread.sleep(10000);
     }
 
-    public void selectAllCheckbox() {
+    public void selectAllCheckbox() throws InterruptedException {
         opportunitiesPage = new OpportunitiesPage(driver);
+        Thread.sleep(5000);
         opportunitiesPage.SelectAllCheckbox.click();
     }
 
@@ -183,10 +183,12 @@ public class OpportunitiesSteps extends CommonSteps {
         opportunitiesPage = new OpportunitiesPage(driver);
         Thread.sleep(5000);
         opportunitiesPage.selectRecord.click();
+        Thread.sleep(5000);
     }
 
-    public void SelectMassUpdate() {
+    public void selectMassUpdate() throws InterruptedException {
         opportunitiesPage = new OpportunitiesPage(driver);
+        Thread.sleep(5000);
         opportunitiesPage.selectMassupdate.click();
     }
 }

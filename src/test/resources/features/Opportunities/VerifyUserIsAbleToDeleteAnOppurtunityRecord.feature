@@ -11,7 +11,7 @@ Feature:Verify user is able to delete the opportunity record
     And click on view opportunities
     Then select opportunities from table
     And select delete from action dropdown
-    And Close Browser
+    And close Browser
 
     Examples:
       | Username | Password |

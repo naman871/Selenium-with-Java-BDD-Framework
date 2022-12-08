@@ -102,24 +102,16 @@ public class OpportunitiesPage extends PageFactory {
 
     @FindBy(xpath = "//a[@href='#/opportunities/index?return_module=Opportunities&return_action=DetailView']")
     public WebElement ViewOpportunitiy;
-    @FindBy(xpath = "(//button/label/span[@class='checkmark'])[1]")
+    @FindBy(xpath = "//div[@class='list-view-tableactions table-header']//span[@class='checkmark']")
     public WebElement SelectAllCheckbox;
 
-    @FindBy(xpath = "//div[@class='d-inline-block dropdown-button dropdown bulk-action-group float-left']/button[text()=' Bulk Action ']")
+    @FindBy(xpath = "//div[@class='list-view-tableactions table-header']//button[text()=' Bulk Action ']")
     public WebElement bulkActionDropdown;
     @FindBy(xpath = "//tbody/tr[1]/td[1]/label[1]/span[1]")
     public  WebElement selectRecord;
 
     @FindBy(xpath = "//div[@class='dropdown-menu show']//div[@class='flex-grow-1'][normalize-space()='Mass Update']")
     public WebElement selectMassupdate;
-//    @FindBy(xpath = "//a[@id='ngb-nav-0']")
-//    public WebElement CreateOpportunities;
-//
-//    @FindBy(xpath = "//a[@id='ngb-nav-1']")
-//    public WebElement ClickOpportunities;
-//
-//    @FindBy(xpath = "//a[@id='ngb-nav-2']")
-//    public WebElement ImportOpportunities;
 
     WebDriver driver;
 

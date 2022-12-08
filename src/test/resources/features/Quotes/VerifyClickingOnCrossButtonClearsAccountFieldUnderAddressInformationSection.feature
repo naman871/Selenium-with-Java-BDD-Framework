@@ -1,8 +1,9 @@
-@issue:37
+@issue:38
 @author:Vindhyana
-Feature: Verify user is able to add account to the quote while creating new quote.
 
-  Scenario Outline: Verify missing required field error message
+Feature: Verify clicking on cross button clears account field under Address information section.
+
+  Scenario Outline: Verify clicking on cross button clears account field under Address information section
     Given launch browser
     Then user enters "<Username>" and "<Password>"
     And clicks on login button
@@ -12,8 +13,11 @@ Feature: Verify user is able to add account to the quote while creating new quot
     And Enter the required Fields title as "Quotes"
     And In Address Information section click on cursor beside account field
     And Account with the entered name should be displayed in the list
-    And Close Browser
+    And Click on the account name
+    Then Click on cross button beside account field
+    And Account field should get cleared
+    And close Browser
 
     Examples:
-      |Username|Password|
-      |will    |will    |
+      | Username | Password |
+      | will     | will     |

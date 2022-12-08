@@ -1,5 +1,6 @@
 @issue:036
 @author-Sukanya
+
 Feature: Verify user is able to select the existing account while creating new quote.
 
   Scenario Outline:Verify user is able to select the existing account while creating new quote.
@@ -14,6 +15,7 @@ Feature: Verify user is able to select the existing account while creating new q
     And Get the account list in the Account search window
     And Click on the account name
     And The existing account should be selected for the quote
+
     Examples:
       | Username | Password |
       | will     | will     |
