@@ -1,5 +1,6 @@
 @issue:39
 @author:Vindhyana
+
 Feature: Verify Copy address from left checkbox is working in Address information section.
 
   Scenario Outline: Verify missing required field error message
@@ -14,7 +15,7 @@ Feature: Verify Copy address from left checkbox is working in Address informatio
     And Account with the entered name should be displayed in the list
     And Click on the account name
     And Click on  Copy address from left checkbox in Address Information section is enabled
-    And Close Browser
+    And close Browser
 
     Examples:
       |Username|Password|

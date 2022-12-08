@@ -1,5 +1,6 @@
 @issue:38
 @author:Vindhyana
+
 Feature: Verify clicking on cross button clears account field under Address information section.
 
   Scenario Outline: Verify clicking on cross button clears account field under Address information section
@@ -15,8 +16,8 @@ Feature: Verify clicking on cross button clears account field under Address info
     And Click on the account name
     Then Click on cross button beside account field
     And Account field should get cleared
-    And Close Browser
+    And close Browser
 
     Examples:
-      |Username|Password|
-      |will    |will    |
+      | Username | Password |
+      | will     | will     |

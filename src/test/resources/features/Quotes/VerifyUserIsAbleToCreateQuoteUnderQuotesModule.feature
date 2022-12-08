@@ -1,5 +1,6 @@
 @issue:035
 @author-Sukanya
+
 Feature: Verify user is able to create quote under Quotes module
 
   Scenario Outline:Verify user is able to create quote under Quotes module
@@ -12,7 +13,7 @@ Feature: Verify user is able to create quote under Quotes module
     And Enter the required Fields title as "Quotes"
     And Click on Save
     And Quote with the given title name should be created and displayed in new page
-    And Close Browser
+    And close Browser
 
     Examples:
       | Username | Password |

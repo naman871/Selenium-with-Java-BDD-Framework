@@ -1,5 +1,6 @@
 @issue:37
 @author:Vindhyana
+
 Feature: Verify user is able to add account to the quote while creating new quote.
 
   Scenario Outline: Verify missing required field error message
@@ -12,7 +13,7 @@ Feature: Verify user is able to add account to the quote while creating new quot
     And Enter the required Fields title as "Quotes"
     And In Address Information section click on cursor beside account field
     And Account with the entered name should be displayed in the list
-    And Close Browser
+    And close Browser
 
     Examples:
       |Username|Password|
