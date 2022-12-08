@@ -52,9 +52,9 @@ public class LeadsStepdefinition {
         leadsSteps.enterAllTheMandatoryFields();
     }
 
-    @And("user navigate to {string} module")
-    public void userNavigateToModule(String arg0) throws InterruptedException {
-        leadsSteps.Module(arg0);
+    @And("User Navigate to {string} Module")
+    public void userNavigateToModule(String module) throws InterruptedException {
+        leadsSteps.module(module);
     }
 
     @And("click on create lead dropdown")
@@ -118,5 +118,9 @@ public class LeadsStepdefinition {
         leadsSteps.userShouldBeNavigatedToLEADSCreatePage();
     }
 
+    @Then("enter mandatory fields like last name {string}")
+    public void enterMandatoryFieldsLikeLastName(String Lastname) throws InterruptedException {
+         leadsSteps.enterLastName(Lastname);
+    }
 }
 

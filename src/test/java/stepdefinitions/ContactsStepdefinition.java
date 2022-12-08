@@ -115,4 +115,6 @@ public class ContactsStepdefinition {
     public void actionDropdownListShouldBeDisplayedInCreatedContactsPage() throws InterruptedException {
         contactsSteps.actionDropdwonListDisplayedinContacts();
     }
+
+
 }

@@ -14,7 +14,7 @@ Feature: Verify Ok option on LEADS Create Page Cancel Popupwindow
   And click on Cancel Button
   And click on Ok Button on cancel popup window
   Then user should be navigated to LEADS Create Page
-    And Close Browser
+  And Close Browser
   Examples:
   | Username | Password |
   | will     | will     |
