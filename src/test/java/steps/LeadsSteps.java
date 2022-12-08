@@ -115,9 +115,9 @@ public class LeadsSteps extends CommonSteps {
     }
     public void clickOnCreateLead() throws InterruptedException {
         leadsPage = new LeadsPage(driver);
-        Thread.sleep(10000);
+        Thread.sleep(5000);
         LeadsPage.clickLead.click();
-        Thread.sleep(10000);
+        Thread.sleep(5000);
     }
     public void verifyErrorMessage() {
         leadsPage = new LeadsPage(driver);
