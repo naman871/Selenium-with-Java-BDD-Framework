@@ -9,7 +9,7 @@ Feature:Leads Module
     And clicks on login button
     When click on Leads dropdown
     Then verify Leads dropdown option
-    And  Close Browser
+    And  close Browser
 
     Examples:
       | Username | Password |
