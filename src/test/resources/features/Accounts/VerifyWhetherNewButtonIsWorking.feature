@@ -15,7 +15,6 @@ Feature:Verify whether "New" button is working
     And click on "New" button
     Then create page should be displayed
     And close Browser
-    Then enter mandatory fields like opportunity name "Ab Drivers Limited" sales stage "Prospecting" and amount "5000" date "2022-11-28" Account name "AB Drivers Limited"
 
     Examples:
       | Username | Password |

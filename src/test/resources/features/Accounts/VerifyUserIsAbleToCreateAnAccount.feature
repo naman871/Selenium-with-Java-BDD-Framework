@@ -12,7 +12,6 @@ Feature:Verify user is able to create an account.
     Then Enter required details name as "Ganga"
     And  click save
     And  Validate saved account
-    #Then Delete the account
     And  close Browser
 
     Examples:

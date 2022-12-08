@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import pages.AccountPage;
 import pages.ContactsPage;
 import pages.HomePage;
 
@@ -93,5 +94,15 @@ public class ContactsSteps extends CommonSteps {
 
 
     }
+    public void actionDropdwonListDisplayedinContacts() throws InterruptedException {
+        contactsPage = new ContactsPage(driver);
+        Thread.sleep(50);
+        Assert.assertTrue(contactsPage.deleteoption.isDisplayed());
+        Assert.assertTrue(contactsPage.duplicate.isDisplayed());
+        Assert.assertTrue(contactsPage.viewChangeLog.isDisplayed());
+        Assert.assertTrue(contactsPage.findDuplicates.isDisplayed());
+        Assert.assertTrue(contactsPage.printasPDF.isDisplayed());
+
+}
 
 }
