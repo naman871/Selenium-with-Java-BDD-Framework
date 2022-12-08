@@ -79,12 +79,6 @@ public class QuotesSteps extends CommonSteps {
         String titleName = quotespage.verifyTitleNameInNewPageWindow.getText();
         Assert.assertEquals(titleName, "Quotes");
     }
-    public void accountFieldCursorQuotes() throws InterruptedException {
-        quotespage = new QuotesPage(driver);
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
-        WebElement element = quotespage.accountSearchCursorQuotes;
-        element.click();
-    }
     public void getTheAccountListInTheAccountSearchWindow(){
         quotespage = new QuotesPage(driver);
         Assert.assertEquals(2, driver.getWindowHandles());
