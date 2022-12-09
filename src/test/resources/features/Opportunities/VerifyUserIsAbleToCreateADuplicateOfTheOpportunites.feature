@@ -11,9 +11,12 @@ Feature:Verify user is  able to create a duplicate of  the Opportunites
     And click on view opportunities
     Then select opportunities from table
     And select duplicate from action dropdown
-    Then enter a new opportunity name "Daltons VVC - II" and amount "15000"
+    Then enter a new account name " AB Drivers Limited " and amount "15000"
     And click on Save Button
-    And Close Browser
+    And click on view opportunities
+    And click on filter
+    Then enter filter criteria as opportunity name
+#    And close Browser
 
     #Todo add validation point
 

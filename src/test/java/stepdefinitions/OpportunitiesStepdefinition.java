@@ -53,9 +53,9 @@ public class OpportunitiesStepdefinition {
         opportunitiesSteps.clickOnEditButton();
     }
 
-    @Then("enter a new opportunity name {string} and amount {string}")
-    public void enterANewOpportunityName(String opportunityName, String amount) throws InterruptedException {
-        opportunitiesSteps.updateOpportunityNameAndOpportunityAmount(opportunityName, amount);
+    @Then("enter a new account name {string} and amount {string}")
+    public void enterANewAccountName(String accountName, String amount) throws InterruptedException {
+        opportunitiesSteps.updateAccountNameAndOpportunityAmount(accountName, amount);
     }
 
     @And("select duplicate from action dropdown")
@@ -94,9 +94,9 @@ public class OpportunitiesStepdefinition {
         opportunitiesSteps.clickOnFilterButton();
     }
 
-    @Then("enter filter criteria as opportunity name {string}")
-    public void enterFilterCriteriaAsOpportunityName(String opportunityName) throws InterruptedException {
-        opportunitiesSteps.enterFilterCriteria(opportunityName);
+    @Then("enter filter criteria as opportunity name")
+    public void enterFilterCriteriaAsOpportunityName() throws InterruptedException {
+        opportunitiesSteps.enterFilterCriteria();
     }
     @And("Click on  View Opportunities option")
     public void clickOnViewOpportunitiesOption() throws InterruptedException {

@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
@@ -15,6 +16,7 @@ public class OpportunitiesSteps extends CommonSteps {
 
     private static final Logger logger = LogManager.getLogger(OpportunitiesSteps.class);
     Actions a;
+   public String opportunityName = null;
     public OpportunitiesPage opportunitiesPage;
 
     public void clickOpportunities() {
@@ -74,6 +76,9 @@ public class OpportunitiesSteps extends CommonSteps {
         opportunitiesPage = new OpportunitiesPage(driver);
         Assert.assertTrue(opportunitiesPage.opportunitiesGridFirstOpportunity.isDisplayed());
         Thread.sleep(7000);
+        opportunityName = driver.findElement(By.xpath("//table[@aria-describedby='table-body']//tr[1]/td[2]/scrm-field/scrm-dynamic-field/a/scrm-varchar-detail")).getText();
+        System.out.println("Opportunity name is"+opportunityName);
+        logger.info(opportunityName);
         opportunitiesPage.opportunitiesGridFirstOpportunity.click();
 
     }
@@ -90,18 +95,17 @@ public class OpportunitiesSteps extends CommonSteps {
      * @Author - Naman
      *
      * @ This method is used to modify 2 paramaters while updating opportunity
-     * @param opportunityName
+     * @param accountName
      * @param amount
      */
-    public void updateOpportunityNameAndOpportunityAmount(String opportunityName,String amount) throws InterruptedException {
+    public void updateAccountNameAndOpportunityAmount(String accountName,String amount) throws InterruptedException {
         opportunitiesPage = new OpportunitiesPage(driver);
-        String preModifiedOpportunityName = opportunitiesPage.opportunitiyName.getText();
-        logger.info("Opportunity name pre modified -->"+preModifiedOpportunityName);
-        Assert.assertNotEquals(preModifiedOpportunityName,opportunityName);
+        Actions actions = new Actions(driver);
         Thread.sleep(5000);
-        opportunitiesPage.opportunitiyName.clear();
-        opportunitiesPage.opportunitiyName.sendKeys(opportunityName);
-        logger.info("Opportunity name post modified -->"+opportunityName);
+        opportunitiesPage.crossButtonForAccountNameUnderOpportunities.click();
+        opportunitiesPage.enterAccountName.sendKeys(accountName);
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("/html/body/ng2-dropdown-menu[1]/div")).click();
         String preModifiedOpportunityamount = opportunitiesPage.oppportunityAmount.getText();
         Assert.assertNotEquals(preModifiedOpportunityamount,amount);
         logger.info("Opportunity amount pre modified -->"+preModifiedOpportunityamount);
@@ -147,9 +151,9 @@ public class OpportunitiesSteps extends CommonSteps {
     /**
      * @author- Naman
      * This method is used to enter filter criteria which is opportunity name for filter criteria
-     * @param opportunityName
+     *
      */
-    public void enterFilterCriteria(String opportunityName) throws InterruptedException {
+    public void enterFilterCriteria() throws InterruptedException {
         opportunitiesPage.opportunitiyName.sendKeys(opportunityName);
         opportunitiesPage.searchButton.click();
         Thread.sleep(9000);

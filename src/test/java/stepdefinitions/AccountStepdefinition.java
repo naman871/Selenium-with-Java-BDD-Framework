@@ -73,7 +73,7 @@ public class AccountStepdefinition {
     }
 
     @And("error message {string} should be displayed.")
-    public void errorMessageShouldBeDisplayed(String errorMessageText) {
+    public void errorMessageShouldBeDisplayed(String errorMessageText) throws InterruptedException {
         accountSteps.errorMessageShouldBeDisplayed(errorMessageText);
     }
 
