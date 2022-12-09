@@ -55,29 +55,10 @@ public class QuotesStepdefinition {
         quotesSteps.saveButtonQuotes();
     }
 
-    @And("Quote with the given title name should be created and displayed in new page")
-    public void quoteWithTheGivenTitleNameShouldBeCreatedAndDisplayedInNewPage() {
-        quotesSteps.verifyTitleNameInNewPage();
-    }
-
-    @And("Get the account list in the Account search window")
-    public void getTheAccountListInTheAccountSearchWindow() {
-        quotesSteps.getTheAccountListInTheAccountSearchWindow();
-    }
 
     @And("Click on the account name")
     public void clickOnTheAccountName() {
         quotesSteps.clickOnTheAccountName();
-    }
-
-    @And("The existing account should be selected for the quote")
-    public void theExistingAccountShouldBeSelectedForTheQuote() {
-        quotesSteps.theExistingAccountShouldBeSelectedForTheQuote();
-    }
-
-    @And("Account with the entered name should be displayed in the list")
-    public void accountWithTheEnteredNameShouldBeDisplayedInTheList() {
-        quotesSteps.getTheAccountListInTheAccountSearchWindow();
     }
 
     @Then("Click on cross button beside account field")
@@ -95,4 +76,18 @@ public class QuotesStepdefinition {
         quotesSteps.verifyCopyAddressCheckboxEnabled();
     }
 
+    @And("Account with the entered name {string} should be displayed in the list")
+    public void accountWithTheEnteredNameShouldBeDisplayedInTheList(String accountNameQuote) {
+        quotesSteps.getTheAccountListInTheAccountSearchWindow(accountNameQuote);
+    }
+
+    @And("The existing account {string} should be selected for the quote")
+    public void theExistingAccountShouldBeSelectedForTheQuote(String existingAccountName) {
+        quotesSteps.theExistingAccountShouldBeSelectedForTheQuote(existingAccountName);
+    }
+
+    @And("Quote with the given title name {string} should be created and displayed in new page")
+    public void quoteWithTheGivenTitleNameShouldBeCreatedAndDisplayedInNewPage(String titleNameViewPage) {
+        quotesSteps.verifyTitleNameInNewPage(titleNameViewPage);
+    }
 }

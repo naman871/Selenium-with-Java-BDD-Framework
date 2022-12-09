@@ -73,39 +73,37 @@ public class QuotesSteps extends CommonSteps {
         quotespage.saveButtonQuotesModule.click();
     }
 
-    public void verifyTitleNameInNewPage() {
+    public void verifyTitleNameInNewPage(String titleNameViewPage) {
         driver.switchTo().frame(quotespage.iframeForQuotesViewPage);
         quotespage.verifyTitleNameInNewPageWindow.isDisplayed();
         String titleName = quotespage.verifyTitleNameInNewPageWindow.getText();
-        Assert.assertEquals(titleName, "Quotes");
+        Assert.assertEquals(titleName, titleNameViewPage);
     }
-    public void getTheAccountListInTheAccountSearchWindow(){
+    public void getTheAccountListInTheAccountSearchWindow(String accountNameQuote){
         quotespage = new QuotesPage(driver);
-        Assert.assertEquals(2, driver.getWindowHandles());
+
         Set<String> secondWindow = driver.getWindowHandles();
         driver.switchTo().window(String.valueOf(secondWindow));
-        String variable = "Sea Region Inc";
+        quotespage.accountSearchBoxQuotesWindow.sendKeys(accountNameQuote);
+        quotespage.searchButtonQuotesWindow.click();
         ArrayList a = new ArrayList();
         List <WebElement>accountnames = driver.findElements(By.xpath("//table[4]/tbody"));
+        String account = quotespage.accountSearchBoxQuotesWindow.getText();
         for (WebElement accountName:accountnames)
         {
             a.add(accountName);
         }
-        quotespage.accountSearchBoxQuotesWindow.sendKeys("Sea Region Inc");
-        quotespage.searchButtonQuotesWindow.click();
-        if (a.contains("Sea Region Inc"))
+        if (a.contains(account))
         {
-            Assert.assertEquals("Sea Region Inc", variable);
+            Assert.assertTrue("account name is not displayed",true);
         }
+
     }
-    public void clickOnTheAccountName(){
+    public void clickOnTheAccountName() {
         quotespage = new QuotesPage(driver);
         quotespage.quoteAccountName.click();
         String firstWindow = driver.getWindowHandle();
         driver.switchTo().window(firstWindow);
-        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@src='./legacy/index.php?return_module=AOS_Quotes&return_action=DetailView&module=AOS_Quotes&action=EditView']")));
-        String name = quotespage.quoteAccountNameTextBox.getAttribute("value");
-        Assert.assertTrue(name.contains("Sea Region Inc"));
     }
     public void clickCrossButtonBesideAccountName(){
         quotespage.crossButtonBesideAccountName.click();
@@ -119,11 +117,12 @@ public class QuotesSteps extends CommonSteps {
         Assert.assertTrue("Copy Address from left Checkbox is not enabled",copyAddressCheckbox);
     }
 
-    public void theExistingAccountShouldBeSelectedForTheQuote(){
+    public void theExistingAccountShouldBeSelectedForTheQuote(String existingAccountName){
         quotespage = new QuotesPage(driver);
+        driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
         driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@src='./legacy/index.php?return_module=AOS_Quotes&return_action=DetailView&module=AOS_Quotes&action=EditView']")));
         String name = quotespage.quoteAccountNameTextBox.getAttribute("value");
-        Assert.assertTrue(name.contains("Sea Region Inc"));
+        Assert.assertTrue(name.contains(existingAccountName));
     }
 
 }
