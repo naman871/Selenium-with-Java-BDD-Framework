@@ -52,29 +52,21 @@ public class ContactsSteps extends CommonSteps {
         Assert.assertTrue(contactsPage.importOption.isDisplayed());
 
     }
-
-
-
-  public void clickOnCreateContact() {
-      contactsPage = new ContactsPage(this.driver);
-      contactsPage.createContacts.click();
-
-   }
+//    public void clickOnCreateContact() {
+//      contactsPage = new ContactsPage(this.driver);
+//      contactsPage.createContacts.click();
+//
+//   }
 
     public void clickOnViewContact() {
         contactsPage = new ContactsPage(driver);
         contactsPage.viewContact.click();
     }
-
-
-
-
     public void clickOnEditButton() {
         contactsPage = new ContactsPage(driver);
         contactsPage.editButton.click();
 
     }
-
     public void DeleteContact() {
         contactsPage = new ContactsPage(driver);
         //contactsPage.delete.click();

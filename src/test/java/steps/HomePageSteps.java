@@ -36,12 +36,12 @@ public class HomePageSteps extends CommonSteps {
         homePage.homePageButton.click();
     }
 
-    public void verifyMyCallsLabel() {
-        homePage = new HomePage(driver);
-        driver.switchTo().frame(homePage.iframeForHomepage);
-        //driver.switchTo().frame(homePage.iframeForHomepage);
-        Assert.assertTrue(homePage.myCallsLabel.isDisplayed());
-    }
+//    public void verifyMyCallsLabel() {
+//        homePage = new HomePage(driver);
+//        driver.switchTo().frame(homePage.iframeForHomepage);
+//        //driver.switchTo().frame(homePage.iframeForHomepage);
+//        Assert.assertTrue(homePage.myCallsLabel.isDisplayed());
+//    }
 
     public void validateSuiteCRM() {
         homePage = new HomePage(driver);
@@ -72,10 +72,10 @@ public class HomePageSteps extends CommonSteps {
     }
 
 
-    public void clickContactsModule() {
-        homePage = new HomePage(driver);
-        homePage.contactsModule.click();
-
-
-    }
+//    public void clickContactsModule() {
+//        homePage = new HomePage(driver);
+//        homePage.contactsModule.click();
+//
+//
+//    }
 }
