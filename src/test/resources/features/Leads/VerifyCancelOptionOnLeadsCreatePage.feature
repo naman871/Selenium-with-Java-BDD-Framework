@@ -10,10 +10,10 @@ Feature: Verify Cancel option on LEADS Create Page
     Then user is on HomePage
     And clicks on Leads
     And clicks on Create Leads Sub Module
-    Then Enter all the mandatory Fields
+    Then enter mandatory fields like lead name "Suite"  and mobile number "9956829045"  account name "SuiteCRM"
     And click on Cancel Button
     And user should able to view the warning message
-    And Close Browser
+    And close Browser
 
     Examples:
       | Username | Password |

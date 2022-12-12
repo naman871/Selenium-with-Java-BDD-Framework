@@ -55,10 +55,8 @@ public class QuotesSteps extends CommonSteps {
     }
     public void  enterTheRequiredFieldsTitleAs(String titleName){
         quotespage = new QuotesPage(driver);
-        driver.switchTo().frame(quotespage.iframeForQuotesViewPage);
-        quotespage.verifyTitleNameInNewPageWindow.isDisplayed();
-        String title = quotespage.verifyTitleNameInNewPageWindow.getText();
-        Assert.assertEquals(title, titleName);
+        driver.switchTo().frame(quotespage.iframeForQuotesCreatePage);
+        quotespage.titleTextBoxQuotes.sendKeys(titleName);
     }
 
     public void accountFieldCursorQuotes(){
