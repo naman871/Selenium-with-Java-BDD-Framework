@@ -8,10 +8,10 @@ Feature:opportunities Module
     Then clicks on login button
     And User Navigate to "Opportunities" Module
     And Click on  View Opportunities option
-    Then Select checkbox beside 'Bulk Action' dropdown
-    And Click on 'bulk Action' dropdown
+    Then Select checkbox beside Bulk Action dropdown
+    And Click on bulk Action dropdown
     Then User able to view Delete,Export,Merge,Mass updates options
-    And Close Browser
+    And  close Browser
 
     Examples:
       | Username | Password |

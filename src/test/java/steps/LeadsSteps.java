@@ -1,18 +1,18 @@
 package steps;
-
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import java.io.File;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.util.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import pages.*;
+
+import java.io.File;
+import java.io.IOException;
 
 public class LeadsSteps extends CommonSteps {
     private static final Logger logger = LogManager.getLogger(LeadsSteps.class);
@@ -55,12 +55,7 @@ public class LeadsSteps extends CommonSteps {
         leadsPage= new LeadsPage(driver);
         leadsPage.CreateLeads.click();
     }
-    public String Lastname="J";
-    public void enterAllTheMandatoryFields() throws InterruptedException {
-        leadsPage = new LeadsPage(driver);
-        Thread.sleep(5000);
-        leadsPage.LastName.sendKeys(Lastname);
-    }
+
     public void cancelButtonLeads(){
         leadsPage = new LeadsPage(driver);
         leadsPage.CancelButtonLeads.click();
@@ -73,11 +68,7 @@ public class LeadsSteps extends CommonSteps {
         Assert.assertTrue("Cancel button is not displayed",leadsPage.CancelButtonLeadsPopupwindow.isDisplayed());
         Assert.assertTrue("Ok button is not displayed",leadsPage.OkButtonLeadsPopupwindow.isDisplayed());
     }
-    public void validateNewLeadPage() {
-        leadsPage = new LeadsPage(driver);
-        String name1=leadsPage.NewLeadPage.getText();
-        Assert.assertEquals(Lastname,name1);
-    }
+
     public void verifyTabs(){
         leadsPage = new LeadsPage(driver);
         Assert.assertTrue("Overview tab is not displayed",leadsPage.OverviewTab.isDisplayed());
@@ -123,19 +114,35 @@ public class LeadsSteps extends CommonSteps {
     }
     public void clickOnCreateLead() throws InterruptedException {
         leadsPage = new LeadsPage(driver);
-        Thread.sleep(10000);
+        Thread.sleep(5000);
         LeadsPage.clickLead.click();
-        Thread.sleep(10000);
+        Thread.sleep(5000);
     }
     public void verifyErrorMessage() {
         leadsPage = new LeadsPage(driver);
         Assert.assertTrue(leadsPage.ErrorMessage.isDisplayed());
     }
-    public void Module(String module) throws InterruptedException {
+    public void module(String module) throws InterruptedException {
         leadsPage = new LeadsPage(driver);
         Actions action = new Actions(driver);
         Thread.sleep(5000);
         action.moveToElement(driver.findElement(By.xpath("//a[normalize-space()='"+module+"']"))).perform();
+    }
+    public String Lastname="jami";
+    public void enterAllTheMandatoryFields() throws InterruptedException {
+        leadsPage = new LeadsPage(driver);
+        Thread.sleep(5000);
+        leadsPage.LastName.sendKeys(Lastname);
+    }
+    public void validateNewLeadPage() {
+        leadsPage = new LeadsPage(driver);
+        String name1=leadsPage.NewLeadPage.getText();
+        Assert.assertEquals(Lastname,name1);
+    }
+    public void enterLastName(String Lastname) throws InterruptedException {
+        leadsPage = new LeadsPage(driver);
+        Thread.sleep(5000);
+        leadsPage.LastName.sendKeys(Lastname);
     }
 }
 

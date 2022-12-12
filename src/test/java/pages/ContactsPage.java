@@ -67,6 +67,22 @@ public class ContactsPage extends PageFactory{
     @FindBy(xpath = "//button[normalize-space()='Cancel']")
     public WebElement cancelButton;
 
+    @FindBy(xpath = "//div[contains(text(),'Delete')]")
+    public WebElement deleteoption;
+
+    @FindBy(xpath = "//div[contains(text(),'Duplicate')]")
+    public WebElement duplicate;
+
+    @FindBy(xpath = "//div[contains(text(),'View Change Log')]")
+    public WebElement viewChangeLog;
+
+    @FindBy(xpath = "//div[contains(text(),'Find Duplicates')]")
+    public WebElement findDuplicates;
+
+    @FindBy(xpath = "//div[contains(text(),'Print as PDF')]")
+    public WebElement printasPDF;
+
+
     WebDriver driver;
 
     public ContactsPage(WebDriver driver) {

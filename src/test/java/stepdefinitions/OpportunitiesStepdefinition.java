@@ -53,9 +53,9 @@ public class OpportunitiesStepdefinition {
         opportunitiesSteps.clickOnEditButton();
     }
 
-    @Then("enter a new opportunity name {string} and amount {string}")
-    public void enterANewOpportunityName(String opportunityName, String amount) throws InterruptedException {
-        opportunitiesSteps.updateOpportunityNameAndOpportunityAmount(opportunityName, amount);
+    @Then("enter a new account name {string} and amount {string}")
+    public void enterANewAccountName(String accountName, String amount) throws InterruptedException {
+        opportunitiesSteps.updateAccountNameAndOpportunityAmount(accountName, amount);
     }
 
     @And("select duplicate from action dropdown")
@@ -94,9 +94,9 @@ public class OpportunitiesStepdefinition {
         opportunitiesSteps.clickOnFilterButton();
     }
 
-    @Then("enter filter criteria as opportunity name {string}")
-    public void enterFilterCriteriaAsOpportunityName(String opportunityName) throws InterruptedException {
-        opportunitiesSteps.enterFilterCriteria(opportunityName);
+    @Then("enter filter criteria as opportunity name")
+    public void enterFilterCriteriaAsOpportunityName() throws InterruptedException {
+        opportunitiesSteps.enterFilterCriteria();
     }
     @And("Click on  View Opportunities option")
     public void clickOnViewOpportunitiesOption() throws InterruptedException {
@@ -108,16 +108,6 @@ public class OpportunitiesStepdefinition {
 //        opportunitiesSteps.enterDetailsToCreateOpportunity(opportunityName,salesStageName);
 //    }
 
-    @Then("Select checkbox beside {string} dropdown")
-    public void selectCheckboxBesideBulkActionDropdown() {
-        opportunitiesSteps.selectAllCheckbox();
-    }
-
-    @And("Click on {string} dropdown")
-    public void clickOnBulkActionDropdown() throws InterruptedException {
-        opportunitiesSteps.clickOnBulkActionDropdown();
-    }
-
     @Then("User able to view Delete,Export,Merge,Mass updates options")
     public void userAbleToViewDeleteExportMergeMassUpdatesOptions() {
         opportunitiesSteps.verifyDropdown();
@@ -128,8 +118,19 @@ public class OpportunitiesStepdefinition {
     }
 
     @Then("Select Mass Update link")
-    public void selectMassUpdateLink() {
-        opportunitiesSteps.SelectMassUpdate();
+    public void selectMassUpdateLink() throws InterruptedException {
+        opportunitiesSteps.selectMassUpdate();
     }
 
+
+    @Then("Select checkbox beside Bulk Action dropdown")
+    public void selectCheckboxBesideBulkActionDropdown() throws InterruptedException {
+        opportunitiesSteps.selectAllCheckbox();
+    }
+
+
+    @And("Click on bulk Action dropdown")
+    public void clickOnBulkActionDropdown() throws InterruptedException {
+        opportunitiesSteps.clickOnBulkActionDropdown();
+    }
 }

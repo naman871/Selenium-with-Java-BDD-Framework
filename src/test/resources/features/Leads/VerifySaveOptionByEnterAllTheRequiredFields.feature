@@ -7,7 +7,7 @@ Feature:Lead Module
     Given launch browser
     When user enters "<Username>" and "<Password>"
     Then clicks on login button
-    And user navigate to "Leads" module
+    And User Navigate to "Leads" Module
     And click on create lead dropdown
     Then enter all the mandatory fields
     And click on save button

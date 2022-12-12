@@ -4,10 +4,19 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.QuotesPage;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import static java.lang.System.in;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class QuotesSteps extends CommonSteps {
 
@@ -36,19 +45,27 @@ public class QuotesSteps extends CommonSteps {
     }
 
     public void clickOnQuotesDropdown() {
-        quotespage = new QuotesPage(this.driver);
+        quotespage = new QuotesPage(driver);
         quotespage.quotesDropdown.click();
     }
 
     public void clickOnCreateQuote() {
-        quotespage = new QuotesPage(this.driver);
+        quotespage = new QuotesPage(driver);
         quotespage.createQuotes.click();
     }
-
-    public void titleTextBoxQuotes() {
+    public void  enterTheRequiredFieldsTitleAs(String titleName){
         quotespage = new QuotesPage(driver);
-        driver.switchTo().frame(quotespage.iframeForQuotesCreatePage);
-        quotespage.titleTextBoxQuotes.sendKeys("sukanya");
+        driver.switchTo().frame(quotespage.iframeForQuotesViewPage);
+        quotespage.verifyTitleNameInNewPageWindow.isDisplayed();
+        String title = quotespage.verifyTitleNameInNewPageWindow.getText();
+        Assert.assertEquals(title, titleName);
+    }
+
+    public void accountFieldCursorQuotes(){
+        quotespage = new QuotesPage(driver);
+        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+        WebElement element = quotespage.accountSearchCursorQuotes;
+        element.click();
     }
 
     public void saveButtonQuotes() {
@@ -56,11 +73,56 @@ public class QuotesSteps extends CommonSteps {
         quotespage.saveButtonQuotesModule.click();
     }
 
-    public void verifyTitleNameInNewPage() {
+    public void verifyTitleNameInNewPage(String titleNameViewPage) {
         driver.switchTo().frame(quotespage.iframeForQuotesViewPage);
         quotespage.verifyTitleNameInNewPageWindow.isDisplayed();
         String titleName = quotespage.verifyTitleNameInNewPageWindow.getText();
-        Assert.assertEquals(titleName, "sukanya");
+        Assert.assertEquals(titleName, titleNameViewPage);
+    }
+    public void getTheAccountListInTheAccountSearchWindow(String accountNameQuote){
+        quotespage = new QuotesPage(driver);
+
+        Set<String> secondWindow = driver.getWindowHandles();
+        driver.switchTo().window(String.valueOf(secondWindow));
+        quotespage.accountSearchBoxQuotesWindow.sendKeys(accountNameQuote);
+        quotespage.searchButtonQuotesWindow.click();
+        ArrayList a = new ArrayList();
+        List <WebElement>accountnames = driver.findElements(By.xpath("//table[4]/tbody"));
+        String account = quotespage.accountSearchBoxQuotesWindow.getText();
+        for (WebElement accountName:accountnames)
+        {
+            a.add(accountName);
+        }
+        if (a.contains(account))
+        {
+            Assert.assertTrue("account name is not displayed",true);
+        }
+
+    }
+    public void clickOnTheAccountName() {
+        quotespage = new QuotesPage(driver);
+        quotespage.quoteAccountName.click();
+        String firstWindow = driver.getWindowHandle();
+        driver.switchTo().window(firstWindow);
+    }
+    public void clickCrossButtonBesideAccountName(){
+        quotespage.crossButtonBesideAccountName.click();
+    }
+    public void accountFieldCleared(){
+        String accountTextBox = quotespage.quoteAccountNameTextBox.getText();
+        Assert.assertTrue("AccountText box is empty",accountTextBox.isEmpty());
+    }
+    public void verifyCopyAddressCheckboxEnabled(){
+        boolean copyAddressCheckbox = quotespage.copyAddressCheckbox.isEnabled();
+        Assert.assertTrue("Copy Address from left Checkbox is not enabled",copyAddressCheckbox);
+    }
+
+    public void theExistingAccountShouldBeSelectedForTheQuote(String existingAccountName){
+        quotespage = new QuotesPage(driver);
+        driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
+        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@src='./legacy/index.php?return_module=AOS_Quotes&return_action=DetailView&module=AOS_Quotes&action=EditView']")));
+        String name = quotespage.quoteAccountNameTextBox.getAttribute("value");
+        Assert.assertTrue(name.contains(existingAccountName));
     }
 
 }

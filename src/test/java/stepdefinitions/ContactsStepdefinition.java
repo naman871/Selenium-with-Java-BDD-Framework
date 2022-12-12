@@ -111,4 +111,10 @@ public class ContactsStepdefinition {
     public void enterRequiredDetailsFirstnameAsAndLastnameAsOnCreateContactsPage(String firstname, String lastname) {
         contactsSteps.enterdetailsonCreatecontactpage(firstname,lastname);
     }
+    @Then("action dropdown list should be displayed in created contacts page")
+    public void actionDropdownListShouldBeDisplayedInCreatedContactsPage() throws InterruptedException {
+        contactsSteps.actionDropdwonListDisplayedinContacts();
+    }
+
+
 }

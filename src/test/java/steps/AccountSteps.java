@@ -83,12 +83,12 @@ public class AccountSteps extends CommonSteps {
 //        accountPage.saveButton.click();
 //    }
 
-    public void errorMessageShouldBeDisplayed(String errorMessage) {
+    public void errorMessageShouldBeDisplayed(String errorMessage) throws InterruptedException {
         accountPage = new AccountPage(driver);
+        Thread.sleep(200);
         String errorMessageText = accountPage.errorMessage.getText();
         System.out.println(errorMessageText);
-        Assert.assertEquals("There are validations error, unable to perform actions", errorMessageText, errorMessage);
-        Assert.assertTrue(accountPage.errorMessage.isDisplayed());
+        Assert.assertEquals(errorMessage, errorMessageText);
     }
 
     public void fillAllTheRequiredField(String name, String website, String billingAddress, String billingPostalCode) {

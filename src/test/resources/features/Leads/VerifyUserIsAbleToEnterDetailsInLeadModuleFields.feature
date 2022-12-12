@@ -9,7 +9,7 @@ Feature: Verify user is able to enter details in lead module fields
     And clicks on login button
     Then user is on HomePage
     And clicks on create lead under leads dropdown
-    Then enter mandatory fields like lead name "Suite"  and mobile number "9956829045"  Account name "SuiteCRM"
+    Then enter mandatory fields like lead name "Suite"  and mobile number "9956829045"  account name "SuiteCRM"
     And  close Browser
     Examples:
       | Username | Password |

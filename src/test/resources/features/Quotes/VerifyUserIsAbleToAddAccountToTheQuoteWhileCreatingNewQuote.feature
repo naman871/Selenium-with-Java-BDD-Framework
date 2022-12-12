@@ -1,7 +1,7 @@
-@issue:40
+@issue:37
 @author:Vindhyana
 
-Feature: Verify missing required field error message should be displayed
+Feature: Verify user is able to add account to the quote while creating new quote.
 
   Scenario Outline: Verify missing required field error message
     Given launch browser
@@ -10,9 +10,9 @@ Feature: Verify missing required field error message should be displayed
     Then user is on HomePage
     And user clicks on quotes module
     And user click on create quotes modules
-    And Enter the required Fields title as "Quotes"
-    And Click on Save
-    And user verify "Missing required field: Title" error message after save
+    And Enter the required Fields title as "will westin"
+    And In Address Information section click on cursor beside account field
+    And Account with the entered name "Sea Region Inc" should be displayed in the list
     And close Browser
 
     Examples:

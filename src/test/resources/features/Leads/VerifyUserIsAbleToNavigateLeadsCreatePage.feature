@@ -10,7 +10,7 @@ Feature: Verify user is able to navigate leads create page
     When click on Leads dropdown
     And clicks on Create Leads Sub Module
     Then validate create lead page
-    And  Close Browser
+    And  close Browser
     Examples:
       | Username | Password |
       | will     | will     |
