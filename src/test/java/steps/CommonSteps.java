@@ -1,25 +1,38 @@
 package steps;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import pages.CommonPage;
+
+import java.io.IOException;
 import java.time.Duration;
 
 
 public class CommonSteps {
 
     private static final Logger logger = LogManager.getLogger(CommonPage.class);
-    public static WebDriver driver ;
+    public static WebDriver driver;
+
+//     static ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("extent.html");
+//     static ExtentReports extentReports = new ExtentReports();
+//
+//    public  ExtentTest test = extentReports.createTest("Report", "Description");
+
 
     CommonPage commonPage;
 
 
     public void openBrowser() {
-        String path=System.getProperty("user.dir");
-        System.setProperty("webdriver.chrome.driver",""+path+"\\Drivers\\chromedriver_win32\\chromedriver.exe");
+        String path = System.getProperty("user.dir");
+        System.setProperty("webdriver.chrome.driver", "" + path + "\\Drivers\\chromedriver_win32\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
         driver = new ChromeDriver(options);

@@ -16,7 +16,7 @@ Feature:Verify user is  able to create a duplicate of  the Opportunites
     And click on view opportunities
     And click on filter
     Then enter filter criteria as opportunity name
-#    And close Browser
+    And close Browser
 
     #Todo add validation point
 

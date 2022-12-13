@@ -2,7 +2,11 @@ package runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.After;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 
 
 @RunWith(Cucumber.class)
@@ -10,10 +14,12 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = {"stepdefinitions"},
         monochrome = true,
-        tags = "@log121",
+        tags = "@log11",
         plugin = {"pretty",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "html:target/cucumber-html-report",
-                "junit:target/cucumber-report/cucumber.xml"
+                "junit:target/cucumber-report/cucumber.xml",
+
                 }
 
 )
