@@ -12,6 +12,7 @@ And click on create lead dropdown
 And click on save button
 Then Validate Missing Required Fields Error Message
 And close Browser
+
 Examples:
 | Username | Password |
 | will     | will     |
