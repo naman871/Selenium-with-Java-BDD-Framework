@@ -14,7 +14,7 @@ Feature:Verify user is able to find duplicate opportunity
     And select find duplicates from action dropdown
     And close Browser
 
-    #Todo--- not working because of Iframe issue constantly changing
+    #Todo--- not working because of Iframe issue constantly changing not feasible for automation
 
     Examples:
       | Username | Password |

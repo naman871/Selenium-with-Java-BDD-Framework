@@ -10,11 +10,11 @@ Scenario Outline:Verify Cancel option on LEADS Create Page Cancel Popupwindow
   When user is on HomePage
   And clicks on Leads
   And clicks on Create Leads Sub Module
-  Then Enter all the mandatory Fields
+  Then enter mandatory fields like lead name "Suite"  and mobile number "9956829045"  account name "SuiteCRM"
   And click on Cancel Button
   And click on Cancel Button on cancel popup window
   Then user should be navigated to LEADS Create Page
-  And Close Browser
+  And close Browser
 
   Examples:
 | Username | Password |

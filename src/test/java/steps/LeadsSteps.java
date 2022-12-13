@@ -42,7 +42,6 @@ public class LeadsSteps extends CommonSteps {
 
 
     }
-
     public void validatecreateLeadPage() {
         leadsPage=new LeadsPage(driver);
         Assert.assertTrue(leadsPage.createleadpage.isDisplayed());
