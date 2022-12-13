@@ -13,6 +13,7 @@ Feature:Lead Module
     And click on save button
     Then user should be able to create new lead and new lead page will be displayed
     And close Browser
+
     Examples:
       | Username | Password |
       | will     | will     |
