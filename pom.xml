@@ -147,10 +147,10 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <configuration>
             <testFailureIgnore>true</testFailureIgnore>
-            <systemPropertyVariables>
-              <extent.reporter.spark.start>true</extent.reporter.spark.start>
-              <extent.reporter.spark.out>test-output/reports/automation-test-report.html</extent.reporter.spark.out>
-            </systemPropertyVariables>
+<!--            <systemPropertyVariables>-->
+<!--              <extent.reporter.spark.start>true</extent.reporter.spark.start>-->
+<!--              <extent.reporter.spark.out>test-output/reports/automation-test-report.html</extent.reporter.spark.out>-->
+<!--            </systemPropertyVariables>-->
           </configuration>
         </plugin>
         <plugin>
