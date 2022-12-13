@@ -107,7 +107,7 @@ public class OpportunitiesStepdefinition {
     public void userAbleToViewDeleteExportMergeMassUpdatesOptions() {
         opportunitiesSteps.verifyDropdown();
     }
-    @Then("Select one Checkbox \\(Record) under Opportunities Grid")
+        @Then("Select one Checkbox \\(Record) under Opportunities Grid")
     public void selectOneCheckboxRecordUnderOpportunitiesGrid() throws InterruptedException {
         opportunitiesSteps.selectRecord();
     }
@@ -127,5 +127,15 @@ public class OpportunitiesStepdefinition {
     @And("Click on bulk Action dropdown")
     public void clickOnBulkActionDropdown() throws InterruptedException {
         opportunitiesSteps.clickOnBulkActionDropdown();
+    }
+
+    @Then("enter filter criteria as opportunity name {string}")
+    public void enterFilterCriteriaAsOpportunityName(String opportunityName) {
+        opportunitiesSteps.enterOpportunityName(opportunityName);
+    }
+
+    @Then("enter a new opportunity name {string} and amount {string}")
+    public void enterANewOpportunityNameAndAmount(String opportunityName, String amount) throws InterruptedException {
+        opportunitiesSteps.enterNewOpportunityNameAndAmount(opportunityName,amount);
     }
 }
