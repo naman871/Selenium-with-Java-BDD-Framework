@@ -90,4 +90,24 @@ public class QuotesStepdefinition {
     public void quoteWithTheGivenTitleNameShouldBeCreatedAndDisplayedInNewPage(String titleNameViewPage) {
         quotesSteps.verifyTitleNameInNewPage(titleNameViewPage);
     }
+
+    @And("In Overview section click on cursor beside opportunity field")
+    public void inOverviewSectionClickOnCursorBesideOpportunityField() {
+        quotesSteps.clickCursorBesideOpportunities();
+    }
+
+    @And("Click on the opportunity for the opportunity list in Opportunity search window")
+    public void clickOnTheOpportunityForTheOpportunityListInOpportunitySearchWindow(String opportunityNameQuote) {
+        quotesSteps.clickOnTheOpportunityForTheOpportunityListInOpportunitySearchWindow(opportunityNameQuote);
+
+    }
+    @And("Click on the opportunity name")
+    public void clickOnTheOpportunityName() {
+        quotesSteps.clickOnTheOpportunityName();
+    }
+
+    @And("Selected opportunity {string} should be displayed for the quote.")
+    public void selectedOpportunityShouldBeDisplayedForTheQuote(String selectedOpportunityNameQuote) {
+        quotesSteps.selectedOpportunityShouldBeDisplayedForTheQuote(selectedOpportunityNameQuote);
+    }
 }

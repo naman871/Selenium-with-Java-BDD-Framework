@@ -9,8 +9,7 @@ Feature: Verify missing required field error message should be displayed
     And clicks on login button
     Then user is on HomePage
     And user clicks on quotes module
-    And user click on create quotes modules
-    And Enter the required Fields title as "Quotes"
+    Then Click on Create Quotes option
     And Click on Save
     And user verify "Missing required field: Title" error message after save
     And close Browser

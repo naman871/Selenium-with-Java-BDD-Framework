@@ -9,7 +9,7 @@ Feature: Verify Copy address from left checkbox is working in Address informatio
     And clicks on login button
     Then user is on HomePage
     And user clicks on quotes module
-    And user click on create quotes modules
+    Then Click on Create Quotes option
     And Enter the required Fields title as "will westin"
     And In Address Information section click on cursor beside account field
     And Account with the entered name "Sea Region Inc" should be displayed in the list
