@@ -195,4 +195,22 @@ public class OpportunitiesSteps extends CommonSteps {
         Thread.sleep(5000);
         opportunitiesPage.selectMassupdate.click();
     }
+    public void enterNewOpportunityNameAndAmount(String opportunityName ,String amount) throws InterruptedException {
+        opportunitiesPage = new OpportunitiesPage(driver);
+        opportunitiesPage.opportunitiyName.clear();
+        opportunitiesPage.opportunitiyName.sendKeys(opportunityName);
+        String preModifiedOpportunityamount = opportunitiesPage.oppportunityAmount.getText();
+        Assert.assertNotEquals(preModifiedOpportunityamount,amount);
+        logger.info("Opportunity amount pre modified -->"+preModifiedOpportunityamount);
+        Thread.sleep(5000);
+        opportunitiesPage.oppportunityAmount.clear();
+        opportunitiesPage.oppportunityAmount.sendKeys(amount);
+        logger.info("Opportunity amount post modified -->"+amount);
+
+    }
+    public  void enterOpportunityName(String opportunityName){
+        opportunitiesPage = new OpportunitiesPage(driver);
+        opportunitiesPage.opportunitiyName.clear();
+        opportunitiesPage.opportunitiyName.sendKeys(opportunityName);
+    }
 }

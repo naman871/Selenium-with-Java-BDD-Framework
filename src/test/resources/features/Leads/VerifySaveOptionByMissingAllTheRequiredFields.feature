@@ -2,7 +2,6 @@
 @author:Ramya
 
 Feature:Lead Module
-
   @TC_029
   Scenario Outline: Verify Save option by missing all the required fields
     Given launch browser
