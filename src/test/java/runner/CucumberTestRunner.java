@@ -14,7 +14,7 @@ import org.openqa.selenium.WebDriver;
         features = "src/test/resources/features",
         glue = {"stepdefinitions"},
         monochrome = true,
-        tags = "@TC_028",
+        tags = "@Leads",
         plugin = {"pretty",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "html:target/cucumber-html-report",

@@ -65,17 +65,17 @@ public class AccountSteps extends CommonSteps {
         accountPage = new AccountPage(driver);
         accountPage.actiondropdown.click();
         accountPage.delete.click();
-        driver.findElement(By.xpath("(//button[@type='button'])[20]")).click();
+        //driver.findElement(By.xpath("(//button[@type='button'])[20]")).click();
     }
 
     public void navigateToAccountModule() {
         accountPage = new AccountPage(driver);
-        accountPage.accountModule.click();
+        accountPage.accountDropdown.click();
     }
 
     public void createAccountOptionFromDropdown() {
         accountPage = new AccountPage(driver);
-        accountPage.createAccountModule.click();
+        accountPage.createAccount.click();
         //create
     }
 //    public void FieldsEmptyAndClickOnSaveButton() {
@@ -110,11 +110,11 @@ public class AccountSteps extends CommonSteps {
         Thread.sleep(5000);
     }
 
-    public void clickOnEditButton() throws InterruptedException {
-        accountPage = new AccountPage(driver);
-        accountPage.editButton.click();
-        Thread.sleep(2000);
-    }
+//    public void clickOnEditButton() throws InterruptedException {
+//        accountPage = new AccountPage(driver);
+//        accountPage.editButton.click();
+//        Thread.sleep(2000);
+//    }
     public void afterCompletionOfEditingClickOnSave() {
         accountPage = new AccountPage(driver);
         accountPage.editButton.click();
@@ -128,7 +128,7 @@ public class AccountSteps extends CommonSteps {
 
     public void accountPageDisplayed() {
         accountPage = new AccountPage(driver);
-        accountPage.accounPage.isDisplayed();
+        accountPage.accountPage.isDisplayed();
     }
 
     public void clickOnOkButtonOnPopUpMessage() {

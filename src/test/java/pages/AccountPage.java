@@ -40,11 +40,11 @@ public class AccountPage extends PageFactory {
     @FindBy(xpath = "//a[contains(text(),' View Accounts')]")
     public WebElement viewAccount;
 
-    @FindBy(xpath = "//a[@href='#/accounts']")
-    public WebElement accountModule;
+//    @FindBy(xpath = "//a[@href='#/accounts']")
+//    public WebElement accountModule;
 
-    @FindBy(xpath = "//a[@href='#/accounts/edit?return_module=Accounts&return_action=DetailView']")
-    public WebElement createAccountModule;
+//    @FindBy(xpath = "//a[@href='#/accounts/edit?return_module=Accounts&return_action=DetailView']")
+//    public WebElement createAccountModule;
 
     @FindBy(xpath = "//button[contains(text(),'Save')]")
     public WebElement saveButton;
@@ -82,7 +82,7 @@ public class AccountPage extends PageFactory {
     public WebElement cancelButton;
 
     @FindBy(xpath = "//scrm-module-title[contains(text(),'ACCOUNTS')]")
-    public WebElement accounPage;
+    public WebElement accountPage;
 
     @FindBy(xpath = " //scrm-label[contains(text(),'Ok')]")
     public WebElement okButton;
@@ -91,7 +91,7 @@ public class AccountPage extends PageFactory {
     public WebElement newButton;
 
     @FindBy(xpath = "//span[contains(text(),'Create')]")
-    public WebElement createPage;
+   public WebElement createPage;
 
     @FindBy(xpath = "//button[contains(text(),'Actions')]")
     public WebElement actionDropdown;

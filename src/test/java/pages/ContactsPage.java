@@ -10,8 +10,8 @@ public class ContactsPage extends PageFactory{
     @FindBy(xpath = "//a[@href='#/contacts']")
     public WebElement contactModule;
 
-    @FindBy(xpath = "//a[normalize-space()='Contacts']")
-    public WebElement contactModuleDropdown;
+    //@FindBy(xpath = "//a[normalize-space()='Contacts']")
+    //public WebElement contactModuleDropdown;
 
     @FindBy(xpath = "//a[@href='#/contacts/edit?return_module=Contacts&return_action=DetailView']")
     public WebElement createAccountOption;
@@ -24,8 +24,8 @@ public class ContactsPage extends PageFactory{
 
     @FindBy(xpath = "//li[@class='top-nav nav-item dropdown non-grouped active ng-tns-c303-1 ng-star-inserted']//div[4]//scrm-menu-item-link[1]//scrm-base-menu-item-link[1]//a[1]")
     public WebElement importOption;
-    @FindBy(xpath = "//a[@href='#/contacts']")
-    public WebElement contactsDropdown;
+//    @FindBy(xpath = "//a[@href='#/contacts']")
+//    public WebElement contactsDropdown;
 
     @FindBy(xpath = "(//a[contains(text(),' Create Contact')])[1]")
     public WebElement createContacts;
@@ -45,8 +45,8 @@ public class ContactsPage extends PageFactory{
     @FindBy(xpath = "//span[text()='Create']")
     public WebElement createContactsLabel;
 
-    @FindBy(xpath = "//a[contains(text(),' Create Contact')]")
-    public WebElement createContact;
+//    @FindBy(xpath = "//a[contains(text(),' Create Contact')]")
+//    public WebElement createContact;
 
 
 
@@ -55,11 +55,11 @@ public class ContactsPage extends PageFactory{
 
 
 
-    @FindBy(xpath = "//input[@class='form-control form-control-sm ng-pristine ng-invalid is-invalid ng-touched']")
-    public WebElement lastName1;
+//    @FindBy(xpath = "//input[@class='form-control form-control-sm ng-pristine ng-invalid is-invalid ng-touched']")
+//    public WebElement lastName1;
 
-    @FindBy(xpath = "//button[normalize-space()='Save']")
-    public WebElement saveButton;
+//    @FindBy(xpath = "//button[normalize-space()='Save']")
+//    public WebElement saveButton;
 
     @FindBy(xpath = "//button[normalize-space()='Edit']")
     public WebElement editButton;

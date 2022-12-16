@@ -56,7 +56,7 @@ public class HomePageSteps extends CommonSteps {
         Assert.assertTrue(homePage.mycalls.isDisplayed());
         Assert.assertTrue(homePage.myleads.isDisplayed());
         Assert.assertTrue(homePage.myactivitystream.isDisplayed());
-        Assert.assertTrue(homePage.mymeetings.isDisplayed());
+        //Assert.assertTrue(homePage.mymeetings.isDisplayed());
         Assert.assertTrue(homePage.mytopopenoppurtunities.isDisplayed());
     }
 

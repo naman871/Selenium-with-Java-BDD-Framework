@@ -1,6 +1,6 @@
 @issue:TC_032
 @author-Sukanya
-
+@Leads
 Feature: Verify Ok option on LEADS Create Page Cancel Popupwindow
 
   Scenario Outline:Verify Ok option on LEADS Create Page Cancel Popupwindow
@@ -8,8 +8,10 @@ Feature: Verify Ok option on LEADS Create Page Cancel Popupwindow
     When user enters "<Username>" and "<Password>"
     And clicks on login button
     Then user is on HomePage
-    And clicks on Leads
-    And clicks on Create Leads Sub Module
+    And User Navigate to "Leads" Module
+    And click on create lead dropdown
+    #And clicks on Leads
+    #And clicks on Create Leads Sub Module
     Then enter mandatory fields like lead name "Suite"  and mobile number "9956829045"  account name "SuiteCRM"
     And click on Cancel Button
     And click on Ok Button on cancel popup window

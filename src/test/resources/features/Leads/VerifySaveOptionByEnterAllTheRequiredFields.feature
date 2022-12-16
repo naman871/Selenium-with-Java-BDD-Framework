@@ -1,6 +1,6 @@
 @issue:TC_028
 @author:Ramya
-
+@Leads
 Feature:Lead Module
   @TC_028
   Scenario Outline: Verify Save option by Enter all the required fields

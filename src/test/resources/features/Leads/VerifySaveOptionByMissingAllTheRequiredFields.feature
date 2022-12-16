@@ -1,6 +1,6 @@
 @issue:TC_029
 @author:Ramya
-
+@Leads
 Feature:Lead Module
   @TC_029
   Scenario Outline: Verify Save option by missing all the required fields

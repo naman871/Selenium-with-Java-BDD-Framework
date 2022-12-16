@@ -38,7 +38,7 @@ public class LeadsSteps extends CommonSteps {
     public void clickcreatelead() throws InterruptedException {
         leadsPage = new LeadsPage(driver);
         Thread.sleep(2000);
-        leadsPage.createLeadModule.click();
+        leadsPage.createlead.click();
 
 
     }
@@ -47,14 +47,14 @@ public class LeadsSteps extends CommonSteps {
         Assert.assertTrue(leadsPage.createleadpage.isDisplayed());
     }
 
-    public void clickLeadsModule() {
-        leadsPage= new LeadsPage(driver);
-        leadsPage.leadsModule.click();
-    }
-    public void clicksOnCreateLeads() {
-        leadsPage= new LeadsPage(driver);
-        leadsPage.CreateLeads.click();
-    }
+//    public void clickLeadsModule() {
+//        leadsPage= new LeadsPage(driver);
+//        leadsPage..click();
+//    }
+//    public void clicksOnCreateLeads() {
+//        leadsPage= new LeadsPage(driver);
+//        leadsPage.CreateLeads.click();
+//    }
 
     public void cancelButtonLeads(){
         leadsPage = new LeadsPage(driver);
@@ -93,14 +93,14 @@ public class LeadsSteps extends CommonSteps {
         leadsPage.OkButtonLeadsPopupwindow.click();
     }
 
-    public void clickleads() {
-        leadsPage = new LeadsPage(driver);
-        leadsPage.leads.click();
-    }
-    public void createlead() {
-        leadsPage = new LeadsPage(driver);
-        leadsPage.createLead.click();
-    }
+//    public void clickleads() {
+//        leadsPage = new LeadsPage(driver);
+//        leadsPage.leads.click();
+//    }
+//    public void createlead() {
+//        leadsPage = new LeadsPage(driver);
+//        leadsPage.createLead.click();
+//    }
 
     public void enterDetailsToCreatelead(String leadName, String mobileNumber, String accountName) {
         Actions actions = new Actions(driver);
@@ -112,12 +112,12 @@ public class LeadsSteps extends CommonSteps {
         LeadsPage.leadnum.sendKeys(mobileNumber);
         logger.info(mobileNumber);
     }
-    public void clickOnCreateLead() throws InterruptedException {
-        leadsPage = new LeadsPage(driver);
-        Thread.sleep(5000);
-        LeadsPage.clickLead.click();
-        Thread.sleep(5000);
-    }
+//    public void clickOnCreateLead() throws InterruptedException {
+//        leadsPage = new LeadsPage(driver);
+//        Thread.sleep(5000);
+//        LeadsPage.clickLead.click();
+//        Thread.sleep(5000);
+//    }
     public void verifyErrorMessage() {
         leadsPage = new LeadsPage(driver);
         Assert.assertTrue(leadsPage.ErrorMessage.isDisplayed());

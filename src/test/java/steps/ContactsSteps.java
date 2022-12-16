@@ -16,7 +16,7 @@ public class ContactsSteps extends CommonSteps {
 
     public void clickContactsdropdown() {
         contactsPage = new ContactsPage(driver);
-        contactsPage.contactsDropdown.click();
+        contactsPage.contactModule.click();
 
     }
 
@@ -47,7 +47,7 @@ public class ContactsSteps extends CommonSteps {
 
     public void contactModuleDisplaySubmodules() throws InterruptedException {
         contactsPage = new ContactsPage(driver);
-        Assert.assertTrue(contactsPage.createAccountOption.isDisplayed());
+       // Assert.assertTrue(contactsPage.createAccountOption.isDisplayed());
         Assert.assertTrue(contactsPage.createContactsForVcartOption.isDisplayed());
         Assert.assertTrue(contactsPage.viewedContactsOption.isDisplayed());
         Assert.assertTrue(contactsPage.importOption.isDisplayed());
@@ -65,8 +65,8 @@ public class ContactsSteps extends CommonSteps {
     }
     public void DeleteContact() {
         contactsPage = new ContactsPage(driver);
-        //contactsPage.delete.click();
-        driver.findElement(By.xpath("//div[text()=' Delete ']")).click();
+        contactsPage.delete.click();
+       // driver.findElement(By.xpath("//div[text()=' Delete ']")).click();
         contactsPage.proceed.click();
 
     }

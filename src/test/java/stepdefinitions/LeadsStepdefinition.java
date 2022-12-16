@@ -39,12 +39,12 @@ public class LeadsStepdefinition {
 
     @Then("clicks on Leads")
     public void clicksOnLeads()  {
-        leadsSteps.clickLeadsModule();
+        leadsSteps.clickLeadsDropdown();
     }
 
     @Then("clicks on Create Leads Sub Module")
-    public void clicksOnCreateLeads()  {
-        leadsSteps.clicksOnCreateLeads();
+    public void clicksOnCreateLeads() throws InterruptedException {
+        leadsSteps.clickcreatelead();
     }
 
     @Then("enter all the mandatory fields")
@@ -59,7 +59,7 @@ public class LeadsStepdefinition {
 
     @And("click on create lead dropdown")
     public void clickOnCreateLeadDropdown() throws InterruptedException {
-        leadsSteps.clickOnCreateLead();
+        leadsSteps.clickcreatelead();
     }
 
     @Then("Validate Missing Required Fields Error Message")
@@ -99,8 +99,8 @@ public class LeadsStepdefinition {
     @And("clicks on create lead under leads dropdown")
     public void clicksOnCreateLeadUnderLeadsDropdown() throws InterruptedException {
         Thread.sleep(8000);
-        leadsSteps.clickleads();
-        leadsSteps.createlead();
+        leadsSteps.clickLeadsDropdown();
+        leadsSteps.clickcreatelead();
 
     }
     @Then("enter mandatory fields like lead name {string}  and mobile number {string}  account name {string}")

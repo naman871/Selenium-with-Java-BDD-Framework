@@ -22,17 +22,17 @@ public class LeadsPage extends PageFactory{
     @FindBy(xpath = "//a[contains(text(),'Import Leads')]")
     public WebElement importleads;
 
-    @FindBy(xpath = "//a[@href='#/leads/edit?return_module=Leads&return_action=DetailView']")
-    public WebElement createLeadModule;
+   // @FindBy(xpath = "//a[@href='#/leads/edit?return_module=Leads&return_action=DetailView']")
+    //public WebElement createLeadModule;
 
     @FindBy(xpath = "//span[text()='Create']")
     public WebElement createleadpage;
 
-    @FindBy(xpath = "//a[@href='#/leads']")
-    public WebElement leadsModule;
+   // @FindBy(xpath = "//a[@href='#/leads']")
+    //public WebElement leadsModule;
 
-    @FindBy(xpath = "//a[@href='#/leads/edit?return_module=Leads&return_action=DetailView']")
-    public WebElement CreateLeads;
+    //@FindBy(xpath = "//a[@href='#/leads/edit?return_module=Leads&return_action=DetailView']")
+    //public WebElement CreateLeads;
 
     @FindBy(xpath = "(//scrm-dynamic-field//input[@type='text'])[2]")
     public WebElement FirstName;
@@ -65,11 +65,11 @@ public class LeadsPage extends PageFactory{
     @FindBy(xpath = "//input[@placeholder='Search...']")
     public WebElement SearchBoxLeads;
 
-    @FindBy(xpath = "//a[@href='#/leads']")
-    public WebElement leads;
+    //@FindBy(xpath = "//a[@href='#/leads']")
+   // public WebElement leads;
 
-    @FindBy(xpath = "//a[@href=\"#/leads/edit?return_module=Leads&return_action=DetailView\"]")
-    public WebElement createLead;
+    //@FindBy(xpath = "//a[@href=\"#/leads/edit?return_module=Leads&return_action=DetailView\"]")
+    //public WebElement createLead;
 
     @FindBy(xpath = "(//input[@type='text'])[4]")
     public static WebElement enterleadName;
@@ -80,8 +80,8 @@ public class LeadsPage extends PageFactory{
     @FindBy(xpath = "(//input[@type='text'])[7]")
     public static WebElement leadnum;
 
-    @FindBy(xpath = "//a[@href='#/leads/edit?return_module=Leads&return_action=DetailView']")
-    public static WebElement clickLead;
+   // @FindBy(xpath = "//a[@href='#/leads/edit?return_module=Leads&return_action=DetailView']")
+    //public static WebElement clickLead;
     @FindBy(xpath = "//span[contains(text(),'Missing required field')]")
     public static WebElement ErrorMessage;
     WebDriver driver;

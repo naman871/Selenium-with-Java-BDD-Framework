@@ -1,6 +1,6 @@
 @TC_006
 @author:Sunitha
-
+@Accounts
 Feature:Verify user is able to access create Accounts
 
   Scenario Outline: Verify user is able to access create Accounts

@@ -61,7 +61,7 @@ public class QuotesSteps extends CommonSteps {
 
     public void accountFieldCursorQuotes(){
         quotespage = new QuotesPage(driver);
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
         WebElement element = quotespage.accountSearchCursorQuotes;
         element.click();
     }
@@ -117,7 +117,7 @@ public class QuotesSteps extends CommonSteps {
 
     public void theExistingAccountShouldBeSelectedForTheQuote(String existingAccountName){
         quotespage = new QuotesPage(driver);
-        driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5000,TimeUnit.MILLISECONDS);
         driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@src='./legacy/index.php?return_module=AOS_Quotes&return_action=DetailView&module=AOS_Quotes&action=EditView']")));
         String name = quotespage.quoteAccountNameTextBox.getAttribute("value");
         Assert.assertTrue(name.contains(existingAccountName));
