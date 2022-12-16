@@ -50,7 +50,7 @@ public class ContactsSteps extends CommonSteps {
        // Assert.assertTrue(contactsPage.createAccountOption.isDisplayed());
         Assert.assertTrue(contactsPage.createContactsForVcartOption.isDisplayed());
         Assert.assertTrue(contactsPage.viewedContactsOption.isDisplayed());
-        Assert.assertTrue(contactsPage.importOption.isDisplayed());
+      //  Assert.assertTrue(contactsPage.importOption.isDisplayed());
 
     }
 

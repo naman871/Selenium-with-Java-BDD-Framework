@@ -68,6 +68,7 @@ public class QuotesSteps extends CommonSteps {
 
     public void saveButtonQuotes() {
         quotespage = new QuotesPage(driver);
+        driver.switchTo().frame(quotespage.iframeForQuotesCreatePage);
         quotespage.saveButtonQuotesModule.click();
     }
 
@@ -121,6 +122,46 @@ public class QuotesSteps extends CommonSteps {
         driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@src='./legacy/index.php?return_module=AOS_Quotes&return_action=DetailView&module=AOS_Quotes&action=EditView']")));
         String name = quotespage.quoteAccountNameTextBox.getAttribute("value");
         Assert.assertTrue(name.contains(existingAccountName));
+    }
+    public void clickCursorBesideOpportunities(){
+        quotespage = new QuotesPage(driver);
+        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+        WebElement element = quotespage.cursorBesideOpportunities;
+        element.click();
+    }
+    public void clickOnTheOpportunityForTheOpportunityListInOpportunitySearchWindow(String opportunityNameQuote){
+        quotespage = new QuotesPage(driver);
+        Set<String> secondWindow = driver.getWindowHandles();
+        driver.switchTo().window(String.valueOf(secondWindow));
+        quotespage.accountSearchBoxQuotesWindow.sendKeys(opportunityNameQuote);
+        quotespage.searchButtonQuotesWindow.click();
+        ArrayList a = new ArrayList();
+        List <WebElement>accountnames = driver.findElements(By.xpath("//table[4]/tbody"));
+        String account = quotespage.accountSearchBoxQuotesWindow.getText();
+        for (WebElement accountName:accountnames)
+        {
+            a.add(accountName);
+        }
+        if (a.contains(account))
+        {
+            Assert.assertTrue("opportunity name is not displayed",true);
+        }
+
+    }
+
+    public void clickOnTheOpportunityName() {
+        quotespage = new QuotesPage(driver);
+        quotespage.opportunityNameQuote.click();
+        String firstWindow = driver.getWindowHandle();
+        driver.switchTo().window(firstWindow);
+    }
+    public void selectedOpportunityShouldBeDisplayedForTheQuote(String selectedOpportunityNameQuote){
+        quotespage = new QuotesPage(driver);
+        driver.manage().timeouts().implicitlyWait(5000,TimeUnit.SECONDS);
+        driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@src='./legacy/index.php?return_module=AOS_Quotes&return_action=DetailView&module=AOS_Quotes&action=EditView']")));
+        String name = quotespage.quoteAccountNameTextBox.getAttribute("value");
+        Assert.assertTrue(name.contains(selectedOpportunityNameQuote));
+
     }
 
 }
