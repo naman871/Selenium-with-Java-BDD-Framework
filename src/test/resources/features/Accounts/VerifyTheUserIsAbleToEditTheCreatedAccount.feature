@@ -1,6 +1,6 @@
 @TC_010
 @author:MinalTule
-
+@minal
 Feature:Verify the user is able to edit the created account.
 
   Scenario Outline:Verify the user is able to edit the created account.
@@ -14,6 +14,7 @@ Feature:Verify the user is able to edit the created account.
     And click on save button
     And click on Edit button
     Then after completion of editing click on save button and data edited successfully
+    And  close Browser
 
 
     Examples:

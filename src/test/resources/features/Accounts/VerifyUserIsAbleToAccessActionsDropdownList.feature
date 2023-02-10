@@ -1,6 +1,6 @@
 @TC_013
 @author:MinalTule
-
+@minal
 Feature:Verify User is able to access "Actions" dropdown list
 
   Scenario Outline:Verify User is able to access "Actions" dropdown list
@@ -14,6 +14,7 @@ Feature:Verify User is able to access "Actions" dropdown list
     And click on save button
     And click on "Actions" dropdown list
     Then action dropdown list should be displayed
+    And  close Browser
 
 
 

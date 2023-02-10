@@ -1,6 +1,6 @@
 @TC_015
 @author:MinalTule
-
+@minal
 Feature:Verify Contact module dropdown
 
   Scenario Outline:Verify User Is Able To Access Contact module

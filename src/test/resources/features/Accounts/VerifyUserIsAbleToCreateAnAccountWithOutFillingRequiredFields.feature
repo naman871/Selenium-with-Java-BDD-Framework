@@ -1,6 +1,6 @@
 @TC_009
 @author:MinalTule
-
+@minal
 Feature:Verify user is able to create an account without filling required fields.
 
   Scenario Outline:Verify user is able to create an account without filling required fields.
@@ -12,6 +12,7 @@ Feature:Verify user is able to create an account without filling required fields
     And click on Create Account option from the dropdown list
     Then required fields are empty and click on Save Button
     And error message "There are validations error, unable to perform actions" should be displayed.
+    And  close Browser
 
 
     Examples:

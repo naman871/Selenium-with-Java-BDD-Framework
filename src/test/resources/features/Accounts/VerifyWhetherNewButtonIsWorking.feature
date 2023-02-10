@@ -1,6 +1,6 @@
 @TC_012
 @author:MinalTule
-
+@minal
 Feature:Verify whether "New" button is working
 
   Scenario Outline:Verify whether "New" button is working
