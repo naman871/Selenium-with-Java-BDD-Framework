@@ -1,6 +1,6 @@
 @TC_011
 @author:MinalTule
-@minal
+
 Feature:Verify whether user is able to cancel/clear the data while creating account
 
   Scenario Outline:Verify whether user is able to cancel/clear the data while creating account

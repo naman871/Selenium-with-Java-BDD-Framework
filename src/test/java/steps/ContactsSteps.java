@@ -42,15 +42,15 @@ public class ContactsSteps extends CommonSteps {
 
     public void navigateToContactModule() {
         contactsPage = new ContactsPage(driver);
-        contactsPage.contactModule.click();
+        contactsPage.contactModuleDropdown.click();
     }
 
-    public void contactModuleDisplaySubmodules() throws InterruptedException {
+    public void contactModuleDisplaySubmodules() {
         contactsPage = new ContactsPage(driver);
-       // Assert.assertTrue(contactsPage.createAccountOption.isDisplayed());
+        Assert.assertTrue(contactsPage.createAccountOption.isDisplayed());
         Assert.assertTrue(contactsPage.createContactsForVcartOption.isDisplayed());
         Assert.assertTrue(contactsPage.viewedContactsOption.isDisplayed());
-      //  Assert.assertTrue(contactsPage.importOption.isDisplayed());
+        Assert.assertTrue(contactsPage.importOption.isDisplayed());
 
     }
 

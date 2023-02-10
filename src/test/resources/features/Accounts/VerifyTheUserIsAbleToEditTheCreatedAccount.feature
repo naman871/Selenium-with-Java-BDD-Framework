@@ -1,6 +1,6 @@
 @TC_010
 @author:MinalTule
-@minal
+
 Feature:Verify the user is able to edit the created account.
 
   Scenario Outline:Verify the user is able to edit the created account.

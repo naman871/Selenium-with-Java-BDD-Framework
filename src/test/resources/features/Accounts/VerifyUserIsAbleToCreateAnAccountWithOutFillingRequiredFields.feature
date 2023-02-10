@@ -1,6 +1,6 @@
 @TC_009
 @author:MinalTule
-@minal
+
 Feature:Verify user is able to create an account without filling required fields.
 
   Scenario Outline:Verify user is able to create an account without filling required fields.

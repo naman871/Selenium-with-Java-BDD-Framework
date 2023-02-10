@@ -1,6 +1,6 @@
 @TC_014
 @author:MinalTule
-@minal
+
 Feature:Verify User is able to access "Actions" dropdown list
 
   Scenario Outline:Verify User is able to access "Actions" dropdown list

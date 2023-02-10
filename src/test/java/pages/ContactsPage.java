@@ -8,10 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 public class ContactsPage extends PageFactory{
 
     @FindBy(xpath = "//a[@href='#/contacts']")
-    public WebElement contactModule;
+     public WebElement contactModule;
 
-    //@FindBy(xpath = "//a[normalize-space()='Contacts']")
-    //public WebElement contactModuleDropdown;
+    @FindBy(xpath = "//a[normalize-space()='Contacts']")
+    public WebElement contactModuleDropdown;
 
     @FindBy(xpath = "//a[@href='#/contacts/edit?return_module=Contacts&return_action=DetailView']")
     public WebElement createAccountOption;
